@@ -476,12 +476,12 @@ footer a:hover {
   }
   .asidebar{
 	position: absolute;
-	top: -175px;
+	top: -190px;
 	right: 0px;
   }
   
   .imgsidebar{
-  	width:100px;
+  	width:70px;
   }
 
   .namesidebar{
