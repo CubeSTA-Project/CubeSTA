@@ -369,6 +369,10 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+.imgsidebar{
+	width: 210px;
+}
+
 /* #Media Queries
 ================================================== */
 
