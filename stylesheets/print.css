@@ -224,3 +224,15 @@ footer a {
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
+
+/* SIDE BAR */
+
+.imgsidebar{
+position: absolute;
+top: 10px;
+right: 10px;
+}
+
+.namesidebar{
+  display: none;
+}
