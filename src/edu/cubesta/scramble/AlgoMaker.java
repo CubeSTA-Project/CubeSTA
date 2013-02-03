@@ -13,8 +13,8 @@ public class AlgoMaker {
     /**
      * Variable Globale
      */
-    //ECHO
-    private char[][] scramble;
+
+	private char[][] scramble;
     
     /**
      * Génère un algorithme de mélange du cube
@@ -23,7 +23,7 @@ public class AlgoMaker {
     public AlgoMaker(int number) {
         char[] Mouvement;
         Mouvement = new char[]{'R','L','U','D','F','B'};
-	char[] Sens;
+		char[] Sens;
         Sens = new char[]{'2','\'',' '};
         scramble = new char[2][number];
         int temporaire = randomBW(0,5);
