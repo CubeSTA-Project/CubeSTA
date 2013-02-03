@@ -21,6 +21,8 @@ public class CubeSTA {
     
     static char[][] cubeGUI = new char[Character.MAX_VALUE][10];
     static char tmp;
+    
+    //ECHO
 
 
     /**
