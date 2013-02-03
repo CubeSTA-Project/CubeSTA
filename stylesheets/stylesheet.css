@@ -470,11 +470,14 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
-  .imgsidebar{
+  .asidebar{
 	position: absolute;
-	top: 1px;
-	right: 1px;
-	width: 100px;
+	top: 0px;
+	right: 0px;
+  }
+  
+  .imgsidebar{
+  	width:100px;
   }
 
   .namesidebar{
