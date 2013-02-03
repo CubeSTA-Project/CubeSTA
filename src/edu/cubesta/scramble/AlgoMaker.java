@@ -13,7 +13,7 @@ public class AlgoMaker {
     /**
      * Variable Globale
      */
-    
+    //ECHO
     private char[][] scramble;
     
     /**
