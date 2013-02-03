@@ -470,6 +470,15 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+  .imgsidebar{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+  }
+
+  .namesidebar{
+	display: none;
+  }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
