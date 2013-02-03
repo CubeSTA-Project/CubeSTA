@@ -480,10 +480,12 @@ footer a:hover {
 	position: absolute;
 	top: -190px;
 	right: 0px;
+	border-width:0px;
   }
   
   .imgsidebar{
   	width:70px;
+  	border-width:0px;
   }
 
   .namesidebar{
