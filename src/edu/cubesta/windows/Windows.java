@@ -17,16 +17,13 @@ public class Windows extends JFrame {
      * Permet d'initialiser une fenêtre
      */
     
-    public Windows(){
+    public Windows(char[][] cubeGUI, char[][] algo){
         this.setTitle("Ma première fenêtre Java");
         this.setSize(400, 500);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            
-        
-        JPanel panel = new JPanel();
-        
-        panel.setBackground(Color.ORANGE);
-        this.setContentPane(panel);
+        this.setContentPane(new Graphs(cubeGUI,algo));
         this.setVisible(true);
     }
+    
 }

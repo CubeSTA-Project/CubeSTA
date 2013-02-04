@@ -5,8 +5,8 @@
 package edu.cubesta;
 
 import edu.cubesta.scramble.*;
+import edu.cubesta.windows.*;
 import java.util.Scanner;
-//import edu.cubesta.windows.*;
 
 /**
  *
@@ -32,7 +32,7 @@ public class CubeSTA {
         AlgoMaker algo = new AlgoMaker(read.nextInt());
         cube.scrambleCubeGUI(algo.getScramble());
         cube.displayCube(algo.getScramble());
-        //Windows win = new Windows();
+        Windows win = new Windows(cube.getCubeGUI(),algo.getScramble());
     }
    
     
