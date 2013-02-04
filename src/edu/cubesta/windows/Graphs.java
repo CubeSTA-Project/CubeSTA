@@ -36,7 +36,7 @@ public class Graphs extends JPanel {
     
     public void paintComponent(Graphics g){
         this.setBackground(Color.WHITE);
-        int pointUnit = this.getHeight()/14;
+        int pointUnit = this.getHeight()/12;
         for(int j = 1, k = 9; j <= 3; j++){
             for(int i = 4; i <= 6 ; i++, k--){
                 g.setColor(getColorCube(cubeGUI['W'][k]));
@@ -57,7 +57,7 @@ public class Graphs extends JPanel {
             for(int i = 4; i <= 6 ; i++, k++){
                 g.setColor(getColorCube(cubeGUI['G'][k]));
                 g.fillRect(i*pointUnit, j*pointUnit, 1*pointUnit, 1*pointUnit);
-                g.setColor(Color.BLUE);
+                g.setColor(Color.BLACK);
                 g.drawRect(i*pointUnit-1, j*pointUnit-1, 1*pointUnit+1, 1*pointUnit+1);
             }
         }

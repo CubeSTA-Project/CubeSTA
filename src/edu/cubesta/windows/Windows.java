@@ -4,7 +4,6 @@
  */
 package edu.cubesta.windows;
 
-import java.awt.*;
 import javax.swing.*;
 
 /**
@@ -19,7 +18,7 @@ public class Windows extends JFrame {
     
     public Windows(char[][] cubeGUI, char[][] algo){
         this.setTitle("Ma première fenêtre Java");
-        this.setSize(400, 500);
+        this.setSize(500, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            
         this.setContentPane(new Graphs(cubeGUI,algo));

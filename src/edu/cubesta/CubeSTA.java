@@ -31,7 +31,7 @@ public class CubeSTA {
         CubeGUI cube = new CubeGUI();
         AlgoMaker algo = new AlgoMaker(read.nextInt());
         cube.scrambleCubeGUI(algo.getScramble());
-        cube.displayCube(algo.getScramble());
+        //cube.displayCube(algo.getScramble());
         Windows win = new Windows(cube.getCubeGUI(),algo.getScramble());
     }
    
