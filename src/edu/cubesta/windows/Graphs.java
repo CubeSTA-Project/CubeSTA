@@ -89,6 +89,7 @@ public class Graphs extends JPanel {
         for(int i = 0; i < algo[0].length ; i++){
             algoString += algo[0][i] + "" + algo[1][i] + " ";
         }
+        g.setColor(Color.BLACK);
         Font font = new Font("Ubuntu", Font.BOLD, 20);
         g.setFont(font);
         g.drawString(algoString, 0*pointUnit+5, 11*pointUnit);
