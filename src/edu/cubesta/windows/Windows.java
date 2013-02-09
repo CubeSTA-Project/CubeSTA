@@ -4,6 +4,8 @@
  */
 package edu.cubesta.windows;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.*;
 
 /**
@@ -17,10 +19,13 @@ public class Windows extends JFrame {
      */
     
     public Windows(char[][] cubeGUI, char[][] algo){
-        this.setTitle("Ma première fenêtre Java");
-        this.setSize(500, 400);
+        this.setTitle("CubeSTA");
+        this.setSize(520, 400);
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        Image icon;
+        icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
+        this.setIconImage(icon);
         this.setContentPane(new Graphs(cubeGUI,algo));
         this.setVisible(true);
     }

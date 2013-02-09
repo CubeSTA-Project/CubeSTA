@@ -6,7 +6,7 @@ package edu.cubesta;
 
 import edu.cubesta.scramble.*;
 import edu.cubesta.windows.*;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
@@ -26,13 +26,13 @@ public class CubeSTA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
-        System.out.println("Entrer le nombre de mouvement pour le mélange ?");
+        //Scanner read = new Scanner(System.in);
+        //System.out.println("Entrer le nombre de mouvement pour le mélange ?");
         CubeGUI cube = new CubeGUI();
-        AlgoMaker algo = new AlgoMaker(read.nextInt());
+        AlgoMaker algo = new AlgoMaker(/*read.nextInt()*/20);
         cube.scrambleCubeGUI(algo.getScramble());
         //cube.displayCube(algo.getScramble());
-        Windows win = new Windows(cube.getCubeGUI(),algo.getScramble());
+        new Windows(cube.getCubeGUI(),algo.getScramble());
     }
    
     
