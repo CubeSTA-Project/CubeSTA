@@ -95,6 +95,12 @@ public class Graphs extends JPanel {
         g.drawString(algoString, 0*pointUnit+5, 11*pointUnit);
     }
     
+    /**
+     * 
+     * @param color
+     * @return 
+     */
+    
     public Color getColorCube(char color){
         if(color == 'R'){return Color.RED;}
         else if(color == 'G'){return Color.GREEN;}
