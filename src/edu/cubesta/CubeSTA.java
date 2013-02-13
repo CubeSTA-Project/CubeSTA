@@ -29,7 +29,7 @@ public class CubeSTA {
         //Scanner read = new Scanner(System.in);
         //System.out.println("Entrer le nombre de mouvements pour le mélange :");
         CubeGUI cube = new CubeGUI();
-        AlgoMaker algo = new AlgoMaker(/*read.nextInt()*/20);
+        AlgoMaker algo = new AlgoMaker(/*read.nextInt()*/22);
         cube.scrambleCubeGUI(algo.getScramble());
         //cube.displayCube(algo.getScramble());
         new Windows(cube.getCubeGUI(),algo.getScramble());
