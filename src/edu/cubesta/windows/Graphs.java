@@ -10,8 +10,8 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- *
- * @author julien
+ * Permet de créer le contenue de la fenêtre
+ * @author julien.gardet
  */
 public class Graphs extends JPanel {
     
@@ -19,8 +19,11 @@ public class Graphs extends JPanel {
     char[][] algo;
     
     /**
-     * 
-     * @param cubeGUIsend 
+     * Initialise la classe avec des données d'affichage
+     * @param cubeGUIsend
+     * Le cube à afficher
+     * @param algosend 
+     * Le texte du mélange à afficher
      */
     
     public Graphs(char[][] cubeGUIsend, char[][] algosend){
@@ -30,7 +33,7 @@ public class Graphs extends JPanel {
     }
     
     /**
-     * 
+     * Permet de créer le contenue de la fenêtre avec les données initial
      * @param g 
      */
     
@@ -96,9 +99,11 @@ public class Graphs extends JPanel {
     }
     
     /**
-     * 
+     * Permet de retourner la couleurs corespondant à un caractère
      * @param color
+     * Le caractère corespondant à une couleur (B : blue / W : white / R : red / G : green / Y : yellow / O : orange)
      * @return 
+     * Retourn une couleur (e.g. Color.NomDeLaCouleur)
      */
     
     public Color getColorCube(char color){

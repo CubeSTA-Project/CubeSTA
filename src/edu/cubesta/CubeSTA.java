@@ -9,7 +9,7 @@ import edu.cubesta.windows.*;
 //import java.util.Scanner;
 
 /**
- *
+ * Classe principal permettant d'afficher une fenetre avec un patron mélanger
  * @author julien.gardet yann.droy auxence.araujo
  * @version 1.0 
  */

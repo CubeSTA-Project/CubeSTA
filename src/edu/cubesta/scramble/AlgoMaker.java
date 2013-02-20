@@ -5,7 +5,7 @@
 package edu.cubesta.scramble;
 
 /**
- *
+ * Permet de gégérer aléatoirement des mélanges
  * @author auxence.araujo
  */
 public class AlgoMaker {
@@ -18,6 +18,8 @@ public class AlgoMaker {
     
     /**
      * Génère un algorithme de mélange du cube
+     * @param number 
+     * nombre de mouvements
      */
 
     public AlgoMaker(int number) {

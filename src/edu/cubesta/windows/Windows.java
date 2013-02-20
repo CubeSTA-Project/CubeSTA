@@ -10,12 +10,16 @@ import javax.swing.*;
 
 /**
  *
- * @author julien
+ * @author julien.gardet
  */
 public class Windows extends JFrame {
     
     /**
      * Permet d'initialiser une fenêtre
+     * @param cubeGUI
+     * Le cube à afficher
+     * @param algo 
+     * Le texte du mélange à afficher
      */
     
     public Windows(char[][] cubeGUI, char[][] algo){

@@ -14,6 +14,6 @@ public class Average {
     private double[] temps;
     private int nbcubes;
     
-    public Tableau(nombre){
-    }
+    /*public Tableau(nombre){
+    }*/
 }

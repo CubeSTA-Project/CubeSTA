@@ -5,7 +5,7 @@
 package edu.cubesta.scramble;
 
 /**
- *
+ * Permet de déplacer les couleurs du tableau en fonction des mouvements données
  * @author yann.droy
  */
 public class TurnCube {

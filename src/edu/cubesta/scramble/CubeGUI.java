@@ -5,7 +5,7 @@
 package edu.cubesta.scramble;
 
 /**
- *
+ * Permet d'initialiser un tableau de couleurs pour l'affichage du cube et de la mélanger
  * @author julien.gardet
  */
 public class CubeGUI {
@@ -67,6 +67,7 @@ public class CubeGUI {
      * Affiche le cube ainsi que l'algorithme du mélange
      * @param scramble 
      * Mélange à afficher
+     * @deprecated
      */
 
     public void displayCube(char[][] scramble) {
@@ -104,6 +105,7 @@ public class CubeGUI {
     
     /**
      * Affiche uniquement le cube
+     * @deprecated
      */
     
     public void displayCube() {
