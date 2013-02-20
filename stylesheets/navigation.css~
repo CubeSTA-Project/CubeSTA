@@ -1,0 +1,57 @@
+nav {
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    padding-top:30px;
+    }
+
+nav ul {
+    list-style-type: none;
+    }
+
+nav li {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding-right: 15px; 
+    padding-left: 15px;
+    border: 1px solid white; 
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px; 
+    }
+
+nav a:hover, nav a .selected {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+nav #news:hover {
+    color: blue;
+    border-color: blue;
+    }
+
+nav #apropos:hover {
+    color: orange;
+    border-color: orange;
+    }
+
+nav #javadoc:hover {
+    color: yellow;
+    border-color: yellow;
+    }
+
+nav #contacts:hover {
+    color: pink;
+    border-color: pink;
+    }
+
+nav #legals:hover {
+    color: LimeGreen;
+    border-color: LimeGreen;
+    }
+
