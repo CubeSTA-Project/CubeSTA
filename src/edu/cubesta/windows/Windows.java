@@ -23,7 +23,7 @@ public class Windows extends JFrame {
      */
     
     public Windows(char[][] cubeGUI, char[][] algo){
-        this.setTitle("CubeSTA Lol");
+        this.setTitle("CubeSTA");
         this.setSize(520, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
