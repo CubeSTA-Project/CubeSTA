@@ -1,3 +1,14 @@
+/*
+** Affichage de la police Architects daughter
+** http://fonts.googleapis.com/css?family=Architects+Daughter
+*/
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://themes.googleusercontent.com/static/fonts/architectsdaughter/v3/RXTgOOQ9AAtaVOHxx0IUBOkI_DLF4EgbZt3mhU8gQFo.woff) format('woff');
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
