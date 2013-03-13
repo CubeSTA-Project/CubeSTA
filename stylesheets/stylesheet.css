@@ -74,6 +74,10 @@ a:hover {
   color: #2268b2;
 }
 
+abbr {
+  border-bottom: 1px dotted grey;
+}
+
 header {
   padding-top: 40px;
   padding-bottom: 0px;
