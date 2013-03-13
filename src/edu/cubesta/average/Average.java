@@ -11,9 +11,10 @@ package edu.cubesta.average;
 
 public class Average {
     
-    private double[] temps;
-    private int nbcubes;
+    double[] temps = {12.63,10.36,12.44,13.36,11.78};
     
-    /*public Tableau(nombre){
-    }*/
+    
+    
+    
+    public iiyjyyyyyyyyyyyyyyyyiyyiyyyyyyyyyyyujuijjjjjjjjjjjjjjjjjjkuolkkkkkkkkkkkkkkkkkkkkkkkkkkkkklkijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj;k;kijnjjj,,,,,,,,,,,,,,,,,,,,,,,,,,,bgjjjjjjjjjjjjjjjjjjjjjjjj
 }
