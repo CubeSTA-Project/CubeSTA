@@ -30,7 +30,7 @@ public class Average {
         
         if(L >= 3){
             tous = triCroissant(temps);
-            average = calculAvg(tous, average);
+            average = calculAvg(tous, average,true);
         }
         
         if(L >= 5){
@@ -40,7 +40,7 @@ public class Average {
                 Case++;
             }
             derniers5 = triCroissant(derniers5);
-            average5 = calculAvg(derniers5, average5);
+            average5 = calculAvg(derniers5, average5,false);
         }
         
         if(L >= 12){
@@ -50,7 +50,7 @@ public class Average {
                 Case++;
             }
             derniers12 = triCroissant(derniers12);
-            average12 = calculAvg(derniers12, average12);
+            average12 = calculAvg(derniers12, average12,false);
         }
     }
     
@@ -81,15 +81,25 @@ public class Average {
      * la liste des temps
      * @param avg
      * la moyenne élaguée que l'on veut calculer : tout, 5 ou 12 temps
+     * @param all 
+     * booléen qui dit si la moyenne doit être élaguée ou non
      * @return la valeur de la moyenne élaguée
      */
     
-    public static double calculAvg(double [] temps, double avg){
+    public static double calculAvg(double [] temps, double avg, boolean all){
         
-        for(int i = 1; i < (temps.length)-1; i++){
+        if(all){
+            for(int i = 0; i < temps.length; i++){
                 avg = avg + temps[i];
             }
-        avg = avg/((temps.length)-2);
-        return avg;
+            avg = avg/temps.length;
+            return avg;
+        }else{
+            for(int i = 1; i < (temps.length)-1; i++){
+                avg = avg + temps[i];
+            }
+            avg = avg/((temps.length)-2);
+            return avg;
+        }
     }
 }
