@@ -11,7 +11,7 @@ package edu.cubesta.average;
 
 public class Average {
     
-    double[] temps = {12.89,13.15,17.78,14.63,15.09,10.98,11.32,12.12,21.49,18.61,19.11,16.21,13.08,17.35,20.39,18.12,10.26,11.18,16.77};
+    double[] temps = {12.89,13.15,17.78,14.63,15.09,10.98,11.32,12.12,21.49,18.61,19.11,16.21,13.08,17.35,20.39,18.12,10.26,11.18,16.77,13.02,14.95,12.36,12.78,17,65,16.33,10,44,13,69};
     
     double[] tous;
     double[] derniers5 = new double[5];
@@ -28,10 +28,8 @@ public class Average {
     
     public Average() {
         
-        if(L >= 3){
-            tous = triCroissant(temps);
-            average = calculAvg(tous, average,true);
-        }
+        tous = triCroissant(temps);
+        average = calculAvg(tous, average,true);
         
         if(L >= 5){
             int Case = 0;
@@ -55,7 +53,7 @@ public class Average {
     }
     
     /**
-     * Tri par insertion par ordre croissant les valeurs d'un tableau
+     * Tri par insertion et par ordre croissant des valeurs d'un tableau
      * @param liste
      * le tableau contenant les valeurs
      * @return le tableau trié
