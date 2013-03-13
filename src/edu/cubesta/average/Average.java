@@ -76,7 +76,7 @@ public class Average {
     }
     
     /**
-     * Calcule la moyenne élaguée que l'on souhaite
+     * Calcul de la moyenne élaguée
      * @param temps
      * la liste des temps
      * @param avg
