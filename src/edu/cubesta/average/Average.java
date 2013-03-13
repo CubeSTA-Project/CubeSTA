@@ -82,7 +82,7 @@ public class Average {
      * @param avg
      * la moyenne élaguée que l'on veut calculer : tout, 5 ou 12 temps
      * @param all 
-     * booléen qui dit si la moyenne doit être élaguée ou non
+     * booléen qui dit si la moyenne doit être élaguée ou non; true = oui
      * @return la valeur de la moyenne élaguée
      */
     
