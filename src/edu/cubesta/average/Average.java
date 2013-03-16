@@ -24,8 +24,9 @@ public class Average {
     int L = temps.length;
 
     /**
-     * Va calculer les moyennes élaguées sur 5 et sur 10
-     * Ainsi que la moyenne sur tous les temps
+     * Va calculer les moyennes élaguées sur 5 et sur 10,
+     * la moyenne sur tous les temps
+     * Ainsi que déterminer le meilleur et le moins bon temps
      */
     
     public Average() {
