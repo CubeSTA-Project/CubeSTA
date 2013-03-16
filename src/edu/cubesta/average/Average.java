@@ -61,16 +61,15 @@ public class Average {
     
     public static double[] triCroissant(double [] liste){
         
-        double[] tableau = liste;
         double tmp;
-        for(int i = 1; i < tableau.length; i++){
-            for(int j = i-1; j+1 > 0 && tableau[j+1] <= tableau[j]; j--){
-                tmp = tableau[j+1];
-                tableau[j+1] = tableau[j];
-                tableau[j] = tmp;
+        for(int i = 1; i < liste.length; i++){
+            for(int j = i-1; j+1 > 0 && liste[j+1] <= liste[j]; j--){
+                tmp = liste[j+1];
+                liste[j+1] = liste[j];
+                liste[j] = tmp;
             }
         }
-        return tableau;
+        return liste;
     }
     
     /**
