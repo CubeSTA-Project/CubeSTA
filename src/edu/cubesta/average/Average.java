@@ -19,6 +19,8 @@ public class Average {
     double average;
     double average5;
     double average12;
+    double best;
+    double worst;
     int L = temps.length;
 
     /**
@@ -29,6 +31,8 @@ public class Average {
     public Average() {
         
         tous = triCroissant(temps);
+        best = tous[0];
+        worst = tous[(tous.length)-1];
         average = calculAvg(tous, average,true);
         
         if(L >= 5){
