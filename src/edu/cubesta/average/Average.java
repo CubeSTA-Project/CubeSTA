@@ -78,7 +78,7 @@ public class Average {
     }
     
     /**
-     * Calcul de la moyenne : élaguée sur 5 et 12 temps; non élaguée sur tous les temps
+     * Calcul de la moyenne : élaguée sur les 5 et 12 temps; non élaguée sur tous les temps
      * @param temps
      * la liste des temps
      * @param avg
