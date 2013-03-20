@@ -13,7 +13,7 @@ public class Average {
     
     //Variables globales
     
-    int[] temps = {1,13,15,9,18,12,8,17,10,4,16,5,6,3,1,2,20,0,11,14,19};
+    int[] temps;
     int best;
     int worst;
     int average;
@@ -30,7 +30,6 @@ public class Average {
         if(nombre >= 3){
             average = 0;
             best = 0;
-            temps = triCroissant(temps);
             best = temps[0];
             worst = temps[nombre-1];
             average = calculAvg(temps, nombre);
@@ -68,6 +67,7 @@ public class Average {
     
     public static int calculAvg(int [] temps, int nombre){
         
+        temps = triCroissant(temps);
         int avg = 0;
         for(int i = 1; i < nombre-1; i++){
                 avg = avg + temps[i];
