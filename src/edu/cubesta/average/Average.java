@@ -34,7 +34,7 @@ public class Average {
         tous = triCroissant(temps);
         best = tous[0];
         worst = tous[(tous.length)-1];
-        average = calculAvg(tous, average,true);
+        average = calculAvg(tous,average,0,temps.length,temps.length);
         
         if(L >= 5){
             int Case = 0;
@@ -43,7 +43,7 @@ public class Average {
                 Case++;
             }
             derniers5 = triCroissant(derniers5);
-            average5 = calculAvg(derniers5, average5,false);
+            average5 = calculAvg(derniers5,average5,1,(temps.length)-1,(temps.length)-2);
         }
         
         if(L >= 12){
@@ -53,7 +53,7 @@ public class Average {
                 Case++;
             }
             derniers12 = triCroissant(derniers12);
-            average12 = calculAvg(derniers12, average12,false);
+            average12 = calculAvg(derniers12,average12,1,(temps.length)-1,(temps.length)-2);
         }
     }
     
@@ -78,30 +78,26 @@ public class Average {
     }
     
     /**
-     * Calcul de la moyenne élaguée
+     * Calcul de la moyenne : élaguée sur 5 et 12 temps; non élaguée sur tous les temps
      * @param temps
      * la liste des temps
      * @param avg
      * la moyenne élaguée que l'on veut calculer : tout, 5 ou 12 temps
-     * @param all 
-     * booléen qui dit si la moyenne doit être élaguée ou non; true = oui
-     * @return la valeur de la moyenne élaguée
+     * @param debut
+     * la première valeur qui comptera dans la moyenne
+     * @param fin 
+     * la dernière valeur qui comptera dans la moyenne
+     * @param diviseur
+     * le nombre de temps par lequel on doit diviser la somme des valeurs pour avoir la moyenne
+     * @return la valeur de la moyenne (élaguée ou non)
      */
     
-    public static double calculAvg(double [] temps, double avg, boolean all){
+    public static double calculAvg(double [] temps, double avg, int debut, int fin, int diviseur){
         
-        if(all){
-            for(int i = 0; i < temps.length; i++){
+        for(int i = debut; i < fin; i++){
                 avg = avg + temps[i];
             }
-            avg = avg/temps.length;
-            return avg;
-        }else{
-            for(int i = 1; i < (temps.length)-1; i++){
-                avg = avg + temps[i];
-            }
-            avg = avg/((temps.length)-2);
+            avg = avg/diviseur;
             return avg;
         }
     }
-}
