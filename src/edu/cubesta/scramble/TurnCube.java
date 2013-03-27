@@ -18,10 +18,11 @@ package edu.cubesta.scramble;
  * Permet de déplacer les couleurs du tableau en fonction des mouvements données
  * @author yann.droy
  */
+
 public class TurnCube {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     private char[][] cubeGUI;
@@ -39,11 +40,11 @@ public class TurnCube {
     }
     
     /**
-     * Retourne le nombre d'exécution en fonction du caractère donné
+     * Retourne le nombre d'exécutions en fonction du caractère donné
      * @param direction
-     * direction du mouvement (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction du mouvement (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      * @return 
-     * Retourne le nombre de fois que l'algorithme de déplacement des couleur doit être exécuter
+     * Retourne le nombre de fois que l'algorithme de déplacement des couleur doit être exécuté
      */
     
     public int turnNumber(char direction){
@@ -61,7 +62,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement U (up)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
 
     public void F(char direction){
@@ -74,7 +75,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement D (down)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
     
     public void B(char direction){
@@ -87,7 +88,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement R (right)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
     
     public void R(char direction){
@@ -100,7 +101,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement L (left)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
     
     public void L(char direction){
@@ -113,7 +114,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement F (front)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
     
     public void D(char direction){
@@ -126,7 +127,7 @@ public class TurnCube {
     /**
      * Déplace les couleur selon le mouvement B (back)
      * @param direction 
-     * direction (' : dans le sens anti-horaire / 2 : deux fois / SP : dans le sens horaire) 
+     * direction (' : dans le sens anti-horaire / 2 : deux fois / vide : dans le sens horaire) 
      */
     
     public void U(char direction){
@@ -137,7 +138,7 @@ public class TurnCube {
     }
     
     /**
-     * Exécute une rotation dans le sens horaire des couleur d'une face
+     * Exécute une rotation dans le sens horaire des couleurs d'une face
      * @param face 
      * Choix de la face (B : blue / W : white / R : red / G : green / Y : yellow / O : orange)
      */
@@ -148,7 +149,7 @@ public class TurnCube {
     }
     
     /**
-     * Exécute une rotation dans le sens horaire des couleurs des axes
+     * Exécute une rotation dans le sens horaire des couleurs selon un axe
      * @param colorA
      * Couleur initiales
      * @param positionA
@@ -162,9 +163,9 @@ public class TurnCube {
      * @param positionC
      * Position de la troisième couleur {droite,centre,gauche}
      * @param colorD
-     * Couleur final
+     * Couleur finale
      * @param positionD 
-     * Position de la couleur final {droite,centre,gauche}
+     * Position de la couleur finale {droite,centre,gauche}
      */
     
     public void turnAxes(char colorA, int[] positionA, char colorB, int[] positionB, char colorC, int[] positionC, char colorD, int[] positionD ){
@@ -176,7 +177,7 @@ public class TurnCube {
     /**
      * Permet d'obtenir l'affichage du cube
      * @return 
-     * Retourne un tableau bidimensionnel (dans une dimension la couleur dans l'autre la position)
+     * Retourne un tableau bidimensionnel (dans une dimension la couleur, dans l'autre la position)
      */
 
     public char[][] getCubeGUI() {
@@ -192,6 +193,4 @@ public class TurnCube {
     public void setCubeGUI(char[][] cubeGUI) {
         this.cubeGUI = cubeGUI;
     }
-    
-    
 }
