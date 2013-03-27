@@ -1,10 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+/*****************************************************
+ *       _                _____                        *
+ *      | |              |  __ \                       *
+ *      | | __ _  ______ | |__) |__  _ __   ___ _   _  *
+ *  _   | |/ _` | ______ |  ___/ _ \| '_ \ / _ \ | | | *
+ * | |__| | (_| |        | |  | (_) | | | |  __/ |_| | *
+ *  \____/ \__,_|        |_|   \___/|_| |_|\___|\__, | *
+ *                                               __/ | *
+ *                                              |___/  *
+ *                                                     * ... n'importe quoi !!!
+ ****************************************************/
 package edu.cubesta;
 
 import edu.cubesta.scramble.*;
+import edu.cubesta.timer.*;
 import edu.cubesta.windows.*;
 //import java.util.Scanner;
 
@@ -25,7 +33,7 @@ public class CubeSTA {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Scanner read = new Scanner(System.in);
         //System.out.println("Entrer le nombre de mouvements pour le mélange :");
         CubeGUI cube = new CubeGUI();
@@ -33,6 +41,11 @@ public class CubeSTA {
         cube.scrambleCubeGUI(algo.getScramble());
         //cube.displayCube(algo.getScramble());
         new Windows(cube.getCubeGUI(),algo.getScramble());
+        Timer time = new Timer();
+        time.start();
+        Thread.sleep(103480);
+        time.stop();
+        System.out.print(time.getTime());
     }
    
     
