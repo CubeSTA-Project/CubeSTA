@@ -5,7 +5,7 @@
 package edu.cubesta.average;
 
 /**
- *
+ * Permet de calculer la moyenne élaguée de plusieurs temps
  * @author yann.droy
  */
 
@@ -19,6 +19,7 @@ public class Average {
     static int best;
     static int worst;
     static int average;
+    static int nbr = 0;
 
     /**
      * Va calculer la moyenne sur les temps donnés
@@ -30,7 +31,6 @@ public class Average {
     public Average(int nombre) {
         
         if(nombre >= 3){
-            int nbr = 0;
             temps = new int[nombre];
             average = 0;
             best = 0;
@@ -44,55 +44,10 @@ public class Average {
      * @param fait
      * Le temps qui vient d'être fait
      */
-    
-    public static void insérerTemps(int fait, int nbr){
+        
+    public static void insertTime(int fait){
         temps[nbr] = fait;
         nbr++;
-    }
-    
-    /**
-     * Va recueillir la moyenne
-     * @param temps
-     * le tableau des temps
-     * @param nombre
-     * le nombre de temps
-     */
-    
-    public static void recueillirAverage(int[] temps, int nombre){
-        average = calculAvg(temps, nombre);
-    }
-    
-    /**
-     * Va recueillir le meilleur temps
-     * @param temps
-     * le tableau des temps
-     */
-    
-    public static int recueillirBest(int[] temps){
-        best = temps[0];
-        return best;
-    }
-    
-    /**
-     * Va recueillir le moins bon temps
-     * @param temps
-     * le tableau des temps
-     */
-    
-    public static int recueillirWorst(int[] temps){
-        worst = temps[(temps.length)-1];
-        return worst;
-    }
-    
-    /**
-     * Va recueillir le tableau des temps triés
-     * @param temps
-     * le tableau des temps
-     */
-    
-    public static int[] recueillirTempsTriés(int[] temps){
-        temps = triCroissant(temps);
-        return temps;
     }
     
     /**
@@ -102,7 +57,7 @@ public class Average {
      * @return le tableau trié
      */
     
-    public static int[] triCroissant(int [] liste){
+    public static int[] sortTimes(int [] liste){
         int tmp;
         for(int i = 1; i < liste.length; i++){
             for(int j = i-1; j+1 > 0 && liste[j+1] <= liste[j]; j--){
@@ -123,8 +78,8 @@ public class Average {
      * @return la valeur de la moyenne
      */
     
-    public static int calculAvg(int [] temps, int nombre){
-        temps = triCroissant(temps);
+    public static int calculateAvg(int [] temps, int nombre){
+        temps = sortTimes(temps);
         int avg = 0;
         for(int i = 1; i < nombre-1; i++){
                 avg = avg + temps[i];
@@ -132,4 +87,47 @@ public class Average {
             avg = avg/(nombre-2);
             return avg;
         }
+    
+    /**
+     * Va recueillir la moyenne
+     */
+    
+    public static void getAverage(){
+        average = calculateAvg(temps, nbr);
     }
+    
+    /**
+     * Va recueillir le meilleur temps
+     * @param temps
+     * le tableau des temps
+     */
+    
+    public static int getBest(){
+        temps = sortTimes(temps);
+        best = temps[0];
+        return best;
+    }
+    
+    /**
+     * Va recueillir le moins bon temps
+     * @param temps
+     * le tableau des temps
+     */
+    
+    public static int getWorst(){
+        temps = sortTimes(temps);
+        worst = temps[(temps.length)-1];
+        return worst;
+    }
+    
+    /**
+     * Va recueillir le tableau des temps triés
+     * @param temps
+     * le tableau des temps
+     */
+    
+    public static int[] getSortTimes(){
+        temps = sortTimes(temps);
+        return temps;
+    }
+ }
