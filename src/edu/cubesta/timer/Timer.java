@@ -35,8 +35,8 @@ public class Timer {
     }
     
     /*
-     * Permet de recueillir le temps sous le format souhaité :
-     * pour un temps de 1:45.35 on affiche 14535) [humain readable]
+     * Permet de stopper le chronomètre et de recueillir le temps sous le format souhaité :
+     * pour un temps de 1:45.35 on prend 14535 [humain readable]
      */
     
     public int stop(){
