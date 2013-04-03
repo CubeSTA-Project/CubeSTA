@@ -41,11 +41,6 @@ public class CubeSTA {
         cube.scrambleCubeGUI(algo.getScramble());
         //cube.displayCube(algo.getScramble());
         new Windows(cube.getCubeGUI(),algo.getScramble());
-        Timer time = new Timer();
-        time.start();
-        Thread.sleep(103480);
-        time.stop();
-        System.out.print(time.getTime());
     }
    
     

@@ -4,9 +4,11 @@
  */
 package edu.cubesta.windows;
 
+import edu.cubesta.timer.ClavierListener;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  *
@@ -32,6 +34,7 @@ public class Windows extends JFrame {
         this.setIconImage(icon);
         this.setContentPane(new Graphs(cubeGUI,algo));
         this.setVisible(true);
+        this.addKeyListener(new ClavierListener());
     }
     
 }
