@@ -14,28 +14,41 @@ import javax.swing.*;
  * @author julien
  */
 public class ClavierListener implements KeyListener {
+    
+    boolean start;
+    Timer time;
 
-    /** TODO
-     *  Timer time = new Timer();
-     *  time.start();
-     *  time.stop();
-     *  System.out.print(time.getTime());
-     *  to add
-     **/
+    public ClavierListener() {
+        time = new Timer();
+        start = true;
+    }
     
     @Override
     public void keyTyped(KeyEvent e) {
-        displayInfo(e, "KEY TYPED: ");
+        //displayInfo(e, "KEY TYPED: ");
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        displayInfo(e, "KEY PRESSED: ");
+        //displayInfo(e, "KEY PRESSED: ");
+        if(e.getKeyCode() == 32){
+            if(start){
+                time.start();
+                start = false;
+                System.out.println("Timer started !");
+            }else{
+                int timeDone = time.stop();
+                start = true;
+                String zeroSeconde = "";if((timeDone/100-(timeDone/10000*10000)) <= 9){zeroSeconde = "0";}
+                String zeroMillis = "";if(timeDone%100 <= 9){zeroMillis = "0";}
+                System.out.println("Timer stoped with : " + timeDone/10000 + "'" + zeroSeconde + (timeDone/100-(timeDone/10000*10000)) + "." + zeroMillis + timeDone%100);
+            }
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        displayInfo(e, "KEY RELEASED: ");
+        //displayInfo(e, "KEY RELEASED: ");
     }
     
         private void displayInfo(KeyEvent e, String keyStatus){
