@@ -33,16 +33,17 @@ public class ClavierListener implements KeyListener {
         //displayInfo(e, "KEY PRESSED: ");
         if(e.getKeyCode() == 32){
             if(start){
+                time.reset();
                 time.start();
                 start = false;
                 System.out.println("Timer started !");
             }else{
                 int timeDone = time.stop();
                 start = true;
-                String zeroSeconde = "";if((timeDone/100-(timeDone/10000*10000)) <= 9){zeroSeconde = "0";}
-                String zeroMillis = "";if(timeDone%100 <= 9){zeroMillis = "0";}
-                System.out.println("Timer stoped with : " + timeDone/10000 + "'" + zeroSeconde + (timeDone/100-(timeDone/10000*10000)) + "." + zeroMillis + timeDone%100);
+                System.out.println("Timer stoped with : " + time.time2string(timeDone));
             }
+        }else if(e.getKeyCode() == 0){
+            System.out.println(time.time2string(time.currentTime()));
         }
     }
 
