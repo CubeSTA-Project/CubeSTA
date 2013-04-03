@@ -5,17 +5,17 @@
 package edu.cubesta.timer;
 
 /**
- *
+ * Le chronomètre de notre programme
  * @author auxence.araujo
  */
 public class Timer {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     long tempsStart;
-    long tempsStop;
+    long tempsCurrent;
     
     /**
      * Permet d'initialiser un chronomètre
@@ -23,30 +23,25 @@ public class Timer {
 
     public Timer() {
             tempsStart = 0;
-            tempsStop = 0;
+            tempsCurrent = 0;
     }
     
     /**
-     * Permet de démarrer le chronometre
+     * Permet de démarrer le chronomètre
      */
     
-    public void start() {
+    public void start(){
         tempsStart = System.currentTimeMillis();
     }
     
-    /**
-     * Permet d'arreter le chronomètre
+    /*
+     * Permet de recueillir le temps sous le format souhaité :
+     * pour un temps de 1:45.35 on affiche 14535) [humain readable]
      */
     
-    public void stop() {
-        tempsStop = System.currentTimeMillis();
-    }
-    
-    public int getTime(){
-        long timeDone = tempsStop - tempsStart;
-        timeDone = timeDone / 10; //ja-poney
-        int time = (int)(timeDone/6000)*10000 + (int)(timeDone%6000); // temps de format (pour un temps de 1'45.35 affiche 14535 au lieu de 105350 ms) [humain readable]
-        return  time ;
+    public int stop(){
+        tempsCurrent = System.currentTimeMillis() - tempsStart;
+        int time = (int)((tempsCurrent/10)/6000)*10000 + (int)((tempsCurrent/10)%6000);
+        return  time;
     }
 }
-
