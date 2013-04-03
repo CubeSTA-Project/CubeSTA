@@ -15,7 +15,7 @@ public class Timer {
      */
     
     long tempsStart;
-    long tempsCurrent;
+    long tempsStop;
     
     /**
      * Permet d'initialiser un chronomètre
@@ -23,7 +23,7 @@ public class Timer {
 
     public Timer() {
             tempsStart = 0;
-            tempsCurrent = 0;
+            tempsStop = 0;
     }
     
     /**
@@ -40,8 +40,8 @@ public class Timer {
      */
     
     public int stop(){
-        tempsCurrent = System.currentTimeMillis() - tempsStart;
-        int time = (int)((tempsCurrent/10)/6000)*10000 + (int)((tempsCurrent/10)%6000);
+        tempsStop = System.currentTimeMillis() - tempsStart;
+        int time = (int)((tempsStop/10)/6000)*10000 + (int)((tempsStop/10)%6000);
         return  time;
     }
 }
