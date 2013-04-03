@@ -36,7 +36,7 @@ public class Timer {
     
     /*
      * Permet de stopper le chronomètre et de recueillir le temps sous le format souhaité :
-     * pour un temps de 1:45.35 on prend 14535 [humain readable]
+     * pour un temps de 1:45.35 on prend 14535 ([i]ssmm)[humain readable]
      */
     
     public int stop(){
@@ -46,16 +46,34 @@ public class Timer {
         return  time;
     }
     
+    /**
+     * Remet à zéro le chronomètre
+     */
+    
     public void reset(){
         tempsStart = 0;
         tempsStop = 0;
     }
+    
+    /**
+     * Permet d'obtenir le temps actuel du chronomètre
+     * @return 
+     * retourne un temps du type [i]ssmm (human readable)
+     */
     
     public int currentTime(){
         long diff = ((tempsStop != 0 )? tempsStop : System.currentTimeMillis()) - tempsStart;
         int time = (int)((diff/10)/6000)*10000 + (int)((diff/10)%6000);
         return  time; 
     }
+    
+    /**
+     * Convertie un temps au format [i]ssmm en format [i]:ss.mm
+     * @param time
+     * temps au format [i]ssmm
+     * @return 
+     * retourne un temps au format [i]:ss.mm
+     */
     
     public String time2string(int time){
         String zeroSeconde = "";

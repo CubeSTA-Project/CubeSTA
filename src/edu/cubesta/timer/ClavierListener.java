@@ -10,25 +10,41 @@ import java.awt.event.KeyListener;
 import javax.swing.*;
 
 /**
- *
+ * La classe permet d'écouter sur quelle touche l'utilisateur appuie
  * @author julien
  */
 public class ClavierListener implements KeyListener {
     
+    /**
+     * Variable Globale
+     */
+    
     boolean start;
     Timer time;
+    
+    /**
+     * Initialise la classe avec la classe Timer et Average
+     */
 
     public ClavierListener() {
         time = new Timer();
         start = true;
     }
     
-    @Override
+    /**
+     * La fonction est appeler lorsque la touche retourne un charactère unicode
+     * @param e 
+     */
+    
     public void keyTyped(KeyEvent e) {
         //displayInfo(e, "KEY TYPED: ");
     }
+    
+    /**
+     * la fonction est appeler lorsque la touche vient d'être appuyer
+     * @param e 
+     */
 
-    @Override
     public void keyPressed(KeyEvent e) {
         //displayInfo(e, "KEY PRESSED: ");
         if(e.getKeyCode() == 32){
@@ -47,12 +63,25 @@ public class ClavierListener implements KeyListener {
         }
     }
 
-    @Override
+    /**
+     * La fonction est appeler lorsque la touche est relacher
+     * @param e 
+     */
+    
     public void keyReleased(KeyEvent e) {
         //displayInfo(e, "KEY RELEASED: ");
     }
     
-        private void displayInfo(KeyEvent e, String keyStatus){
+    /**
+     * Affiche une information sur la touche qui vient d'être appuyer
+     * @param e
+     * parametre de la touche appuyer
+     * @param keyStatus 
+     * Statut de la touche (Pressed/Typed/Released)
+     * @deprecated
+     */
+    
+    private void displayInfo(KeyEvent e, String keyStatus){
         
         //You should only rely on the key char if the event
         //is a key typed event.
