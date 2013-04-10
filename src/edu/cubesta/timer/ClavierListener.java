@@ -23,6 +23,7 @@ public class ClavierListener implements KeyListener {
     boolean start;
     Timer time;
     Average avg;
+    int numberAVG;
     
     /**
      * Initialise la classe avec la classe Timer et Average
@@ -31,7 +32,8 @@ public class ClavierListener implements KeyListener {
     public ClavierListener() {
         time = new Timer();
         start = true;
-        avg = new Average(5);
+        numberAVG = 5;
+        avg = new Average(numberAVG);
     }
     
     /**
@@ -39,6 +41,7 @@ public class ClavierListener implements KeyListener {
      * @param e 
      */
     
+    @Override
     public void keyTyped(KeyEvent e) {
         //displayInfo(e, "KEY TYPED: ");
     }
@@ -48,9 +51,10 @@ public class ClavierListener implements KeyListener {
      * @param e 
      */
 
+    @Override
     public void keyPressed(KeyEvent e) {
         //displayInfo(e, "KEY PRESSED: ");
-        if(e.getKeyCode() == 32){
+        if(e.getKeyCode() == 32){//Space
             if(start){
                 time.reset();
                 time.start();
@@ -61,9 +65,22 @@ public class ClavierListener implements KeyListener {
                 avg.insertTime(timeDone/**verif format**/);
                 start = true;
                 System.out.println("Timer stopped with : " + time.time2string(timeDone));
+                int[] temps = avg.getSortTimes();
+                for(int i=0; i<5; i++){
+                    System.out.println(i + " : " + time.time2string(temps[i]));
+                }
+                System.out.print("AVG : " + time.time2string(avg.getAverage()));
+                System.out.println("\tBEST : " + time.time2string(avg.getBest()));
             }
-        }else if(e.getKeyCode() == 0){
+        }else if(e.getKeyCode() == 84){//T
             System.out.println(time.time2string(time.currentTime()));
+        }else if(e.getKeyCode() == 65){//A
+            int[] temps = avg.getSortTimes();
+            for(int i=0; i<5; i++){
+                System.out.println(i + " : " + time.time2string(temps[i]));
+            }
+            System.out.print("AVG : " + time.time2string(avg.getAverage()));
+            System.out.println("\tBEST : " + time.time2string(avg.getBest()));
         }
     }
 
@@ -72,6 +89,7 @@ public class ClavierListener implements KeyListener {
      * @param e 
      */
     
+    @Override
     public void keyReleased(KeyEvent e) {
         //displayInfo(e, "KEY RELEASED: ");
     }

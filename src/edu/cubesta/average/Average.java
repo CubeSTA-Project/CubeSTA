@@ -27,6 +27,7 @@ public class Average {
     static int worst;
     static int average;
     static int nbr = 0;
+    static int maxnbr;
 
     /**
      * Va calculer la moyenne sur les temps donnés
@@ -41,6 +42,7 @@ public class Average {
             temps = new int[nombre];
             average = 0;
             best = 0;
+            maxnbr = nombre;
         }else{
             System.out.println("Pas assez de temps pour moyenne élaguée");
         }
@@ -53,8 +55,12 @@ public class Average {
      */
         
     public static void insertTime(int fait){
+        if(nbr < maxnbr){
         temps[nbr] = fait;
         nbr++;
+        }else{
+        //RESET
+        }
     }
     
     /**
@@ -64,16 +70,20 @@ public class Average {
      * @return le tableau trié
      */
     
-    public static int[] sortTimes(int [] liste){
+    public static int[] sortTimes(int[] liste){
+        int[] sortedlist = new int[liste.length];
+        for(int i = 0;i<liste.length;i++){
+            sortedlist[i] = liste[i]; 
+        }
         int tmp;
-        for(int i = 1; i < liste.length; i++){
-            for(int j = i-1; j+1 > 0 && liste[j+1] <= liste[j]; j--){
-                tmp = liste[j+1];
-                liste[j+1] = liste[j];
-                liste[j] = tmp;
+        for(int i = 1; i < sortedlist.length; i++){
+            for(int j = i-1; j+1 > 0 && sortedlist[j+1] <= sortedlist[j]; j--){
+                tmp = sortedlist[j+1];
+                sortedlist[j+1] = sortedlist[j];
+                sortedlist[j] = tmp;
             }
         }
-        return liste;
+        return sortedlist;
     }
     
     /**
@@ -86,10 +96,10 @@ public class Average {
      */
     
     public static int calculateAvg(int [] temps, int nombre){
-        temps = sortTimes(temps);
+        int[] temptemps = sortTimes(temps);
         int avg = 0;
         for(int i = 1; i < nombre-1; i++){
-                avg = avg + temps[i];
+                avg = avg + temptemps[i];
             }
             avg = avg/(nombre-2);
             return avg;
@@ -99,8 +109,13 @@ public class Average {
      * Va recueillir la moyenne
      */
     
-    public static void getAverage(){
-        average = calculateAvg(temps, nbr);
+    public static int getAverage(){
+        if(nbr == maxnbr){
+            average = calculateAvg(temps, maxnbr);
+        }else{
+            average = 0;  
+        }
+        return average;
     }
     
     /**
@@ -110,8 +125,8 @@ public class Average {
      */
     
     public static int getBest(){
-        temps = sortTimes(temps);
-        best = temps[0];
+        int[] temptemps = sortTimes(temps);
+        best = temptemps[0];
         return best;
     }
     
@@ -122,8 +137,8 @@ public class Average {
      */
     
     public static int getWorst(){
-        temps = sortTimes(temps);
-        worst = temps[(temps.length)-1];
+        int[] temptemps = sortTimes(temps);
+        worst = temptemps[(temptemps.length)-1];
         return worst;
     }
     
@@ -134,7 +149,7 @@ public class Average {
      */
     
     public static int[] getSortTimes(){
-        temps = sortTimes(temps);
-        return temps;
+        int[] temptemps = sortTimes(temps);
+        return temptemps;
     }
  }
