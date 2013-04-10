@@ -62,7 +62,12 @@ public class Timer {
      */
     
     public int currentTime(){
-        long diff = ((tempsStop != 0 )? tempsStop : System.currentTimeMillis()) - tempsStart;
+        long diff;
+        if(tempsStart == 0){
+            diff = 0;
+        }else{
+            diff = ((tempsStop != 0 )? tempsStop : System.currentTimeMillis()) - tempsStart;
+        }
         int time = (int)((diff/10)/6000)*10000 + (int)((diff/10)%6000);
         return  time; 
     }

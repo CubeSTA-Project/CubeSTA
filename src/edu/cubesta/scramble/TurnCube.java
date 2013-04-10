@@ -15,7 +15,7 @@
 package edu.cubesta.scramble;
 
 /**
- * Permet de déplacer les couleurs du tableau en fonction des mouvements données
+ * Permet de déplacer les couleurs du tableau en fonction des mouvements donnés
  * @author yann.droy
  */
 
@@ -187,7 +187,7 @@ public class TurnCube {
     /**
      * Permet de modifier l'affichage du cube
      * @param cubeGUI 
-     * Nouvelle affichage du cube
+     * Nouvel affichage du cube
      */
 
     public void setCubeGUI(char[][] cubeGUI) {

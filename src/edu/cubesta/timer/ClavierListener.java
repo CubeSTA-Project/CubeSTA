@@ -4,6 +4,7 @@
  */
 package edu.cubesta.timer;
 
+import edu.cubesta.average.Average;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -21,6 +22,7 @@ public class ClavierListener implements KeyListener {
     
     boolean start;
     Timer time;
+    Average avg;
     
     /**
      * Initialise la classe avec la classe Timer et Average
@@ -29,6 +31,7 @@ public class ClavierListener implements KeyListener {
     public ClavierListener() {
         time = new Timer();
         start = true;
+        avg = new Average(5);
     }
     
     /**
@@ -55,8 +58,9 @@ public class ClavierListener implements KeyListener {
                 System.out.println("Timer started !");
             }else{
                 int timeDone = time.stop();
+                avg.insertTime(timeDone/**verif format**/);
                 start = true;
-                System.out.println("Timer stoped with : " + time.time2string(timeDone));
+                System.out.println("Timer stopped with : " + time.time2string(timeDone));
             }
         }else if(e.getKeyCode() == 0){
             System.out.println(time.time2string(time.currentTime()));
