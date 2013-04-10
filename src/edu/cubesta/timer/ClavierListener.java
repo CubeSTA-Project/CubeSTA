@@ -32,7 +32,7 @@ public class ClavierListener implements KeyListener {
     public ClavierListener() {
         time = new Timer();
         start = true;
-        numberAVG = 5;
+        numberAVG = 7;
         avg = new Average(numberAVG);
     }
     
@@ -60,14 +60,15 @@ public class ClavierListener implements KeyListener {
                 time.start();
                 start = false;
                 System.out.println("Timer started !");
+                avg.checkToReset(numberAVG);//Check if the AVG must be reset
             }else{
                 int timeDone = time.stop();
                 avg.insertTime(timeDone/**verif format**/);
                 start = true;
                 System.out.println("Timer stopped with : " + time.time2string(timeDone));
                 int[] temps = avg.getSortTimes();
-                for(int i=0; i<5; i++){
-                    System.out.println(i + " : " + time.time2string(temps[i]));
+                for(int i=0; i < numberAVG; i++){
+                    System.out.println(i+1 + " : " + time.time2string(temps[i]));
                 }
                 System.out.print("AVG : " + time.time2string(avg.getAverage()));
                 System.out.println("\tBEST : " + time.time2string(avg.getBest()));
@@ -76,8 +77,8 @@ public class ClavierListener implements KeyListener {
             System.out.println(time.time2string(time.currentTime()));
         }else if(e.getKeyCode() == 65){//A
             int[] temps = avg.getSortTimes();
-            for(int i=0; i<5; i++){
-                System.out.println(i + " : " + time.time2string(temps[i]));
+            for(int i=0; i < numberAVG; i++){
+                System.out.println(i+1  + " : " + time.time2string(temps[i]));
             }
             System.out.print("AVG : " + time.time2string(avg.getAverage()));
             System.out.println("\tBEST : " + time.time2string(avg.getBest()));

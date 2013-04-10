@@ -37,7 +37,6 @@ public class Average {
      */
     
     public Average(int nombre) {
-        
         if(nombre >= 3){
             temps = new int[nombre];
             average = 0;
@@ -56,10 +55,10 @@ public class Average {
         
     public static void insertTime(int fait){
         if(nbr < maxnbr){
-        temps[nbr] = fait;
-        nbr++;
+            temps[nbr] = fait;
+            nbr++;
         }else{
-        //RESET
+            System.out.print("The average need to be reset");
         }
     }
     
@@ -151,5 +150,21 @@ public class Average {
     public static int[] getSortTimes(){
         int[] temptemps = sortTimes(temps);
         return temptemps;
+    }
+    
+    /**
+     * Verifie si l'average est remplis si il est rempli il sera vidé
+     * @param nombre 
+     * le nombre de temps qui sont entrés
+     */
+    
+    public static void checkToReset(int nombre){
+        if(nombre >= 3 && nbr == maxnbr){
+            temps = new int[nombre];
+            average = 0;
+            best = 0;
+            maxnbr = nombre;
+            nbr = 0;
+        }
     }
  }
