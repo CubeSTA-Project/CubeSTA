@@ -8,11 +8,10 @@
  *                                               __/ | *
  *                                              |___/  *
  *                                                     * ... n'importe quoi !!!
- ****************************************************/
+ *******************************************************/
 package edu.cubesta;
 
 import edu.cubesta.scramble.*;
-import edu.cubesta.timer.*;
 import edu.cubesta.windows.*;
 //import java.util.Scanner;
 
