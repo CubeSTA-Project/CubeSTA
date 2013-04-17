@@ -14,8 +14,8 @@ public class Timer {
      * Variables globales
      */
     
-    long tempsStart;
-    long tempsStop;
+    static long tempsStart;
+    static long tempsStop;
     
     /**
      * Permet d'initialiser un chronomètre
@@ -30,7 +30,7 @@ public class Timer {
      * Permet de démarrer le chronomètre
      */
     
-    public void start(){
+    public static void start(){
         tempsStart = System.currentTimeMillis();
     }
     
@@ -39,7 +39,7 @@ public class Timer {
      * pour un temps de 1:45.35 on prend 14535 ([i]ssmm)[humain readable]
      */
     
-    public int stop(){
+    public static int stop(){
         tempsStop = System.currentTimeMillis();
         long diff = tempsStop - tempsStart;
         int time = (int)((diff/10)/6000)*10000 + (int)((diff/10)%6000);
@@ -50,7 +50,7 @@ public class Timer {
      * Remet à zéro le chronomètre
      */
     
-    public void reset(){
+    public static void reset(){
         tempsStart = 0;
         tempsStop = 0;
     }
@@ -61,7 +61,7 @@ public class Timer {
      * retourne un temps du type [i]ssmm (human readable)
      */
     
-    public int currentTime(){
+    public static int currentTime(){
         long diff;
         if(tempsStart == 0){
             diff = 0;
@@ -80,7 +80,7 @@ public class Timer {
      * retourne un temps au format [i]:ss.mm
      */
     
-    public String time2string(int time){
+    public static String time2string(int time){
         String zeroSeconde = "";
         if((time/100-(time/10000*10000)) <= 9){
             zeroSeconde = "0";

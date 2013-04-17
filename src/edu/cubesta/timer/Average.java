@@ -9,7 +9,7 @@
  *                                                                              _|_|    *
  *                                                                                      *
  ***************************************************************************************/
-package edu.cubesta.average;
+package edu.cubesta.timer;
 
 /**
  * Permet de calculer la moyenne élaguée de plusieurs temps
@@ -167,4 +167,15 @@ public class Average {
             nbr = 0;
         }
     }
+    
+    /**
+     * 
+     * @return 
+     */
+
+    public static int getRound() {
+        int retour = (nbr >= maxnbr)?maxnbr:nbr;
+        return retour;
+    }
+
  }

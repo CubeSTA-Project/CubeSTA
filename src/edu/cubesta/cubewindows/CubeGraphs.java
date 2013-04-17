@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cubesta.windows;
+package edu.cubesta.cubewindows;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  * Permet de créer le contenue de la fenêtre
  * @author julien.gardet
  */
-public class Graphs extends JPanel {
+public class CubeGraphs extends JPanel {
     
     char[][] cubeGUI;
     char[][] algo;
@@ -26,7 +26,7 @@ public class Graphs extends JPanel {
      * Le texte du mélange à afficher
      */
     
-    public Graphs(char[][] cubeGUIsend, char[][] algosend){
+    public CubeGraphs(char[][] cubeGUIsend, char[][] algosend){
         cubeGUI = cubeGUIsend;
         algo = algosend;
         

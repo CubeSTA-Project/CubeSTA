@@ -2,19 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cubesta.timer;
+package edu.cubesta.timerwindows;
 
-import edu.cubesta.average.Average;
-import java.awt.*;
+import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.timer.Average;
+import edu.cubesta.timer.Timer;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.*;
 
 /**
  * La classe permet d'écouter sur quelle touche l'utilisateur appuie
  * @author julien
  */
-public class ClavierListener implements KeyListener {
+public class Listener implements KeyListener {
     
     /**
      * Variable Globale
@@ -29,7 +29,7 @@ public class ClavierListener implements KeyListener {
      * Initialise la classe avec la classe Timer et Average
      */
 
-    public ClavierListener() {
+    public Listener() {
         time = new Timer();
         start = true;
         numberAVG = 5;
@@ -56,32 +56,16 @@ public class ClavierListener implements KeyListener {
         //displayInfo(e, "KEY PRESSED: ");
         if(e.getKeyCode() == 32){//Space
             if(start){
-                time.reset();
-                time.start();
+                Timer.reset();
+                Timer.start();
                 start = false;
-                System.out.println("Timer started !");
-                avg.checkToReset(numberAVG);//Check if the AVG must be reset
+                Average.checkToReset(numberAVG);//Verifie si les temps sont plein afin d'être de remis à zéro
             }else{
-                int timeDone = time.stop();
-                avg.insertTime(timeDone/**verif format**/);
+                int timeDone = Timer.stop();
+                Average.insertTime(timeDone);
                 start = true;
-                System.out.println("Timer stopped with : " + time.time2string(timeDone));
-                int[] temps = avg.getSortTimes();
-                for(int i=0; i < numberAVG; i++){
-                    System.out.println(i+1 + " : " + time.time2string(temps[i]));
-                }
-                System.out.print("AVG : " + time.time2string(avg.getAverage()));
-                System.out.println("\tBEST : " + time.time2string(avg.getBest()));
+                CubeWindows.changeScreen();
             }
-        }else if(e.getKeyCode() == 84){//T
-            System.out.println(time.time2string(time.currentTime()));
-        }else if(e.getKeyCode() == 65){//A
-            int[] temps = avg.getSortTimes();
-            for(int i=0; i < numberAVG; i++){
-                System.out.println(i+1  + " : " + time.time2string(temps[i]));
-            }
-            System.out.print("AVG : " + time.time2string(avg.getAverage()));
-            System.out.println("\tBEST : " + time.time2string(avg.getBest()));
         }
     }
 

@@ -11,9 +11,8 @@
  *******************************************************/
 package edu.cubesta;
 
-import edu.cubesta.scramble.*;
-import edu.cubesta.windows.*;
-//import java.util.Scanner;
+import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.timerwindows.TimerWindows;
 
 /**
  * Classe principal permettant d'afficher une fenetre avec un patron mélanger
@@ -23,22 +22,11 @@ import edu.cubesta.windows.*;
 public class CubeSTA {
     
     /**
-     * Varibale globale
-     */
-    
-    static char[][] cubeGUI = new char[Character.MAX_VALUE][10];
-    static char tmp;
-    
-    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException {
-        //Scanner read = new Scanner(System.in);
-        //System.out.println("Entrer le nombre de mouvements pour le mélange :");
-        //for(int i=0;i<=5;i++){
-        //cube.displayCube(algo.getScramble());
-        Windows win = new Windows();
-        //}
+        CubeWindows cube = new CubeWindows();
+        TimerWindows time = new TimerWindows();
     }
    
     
