@@ -35,11 +35,10 @@ public class CubeSTA {
     public static void main(String[] args) throws InterruptedException {
         //Scanner read = new Scanner(System.in);
         //System.out.println("Entrer le nombre de mouvements pour le mélange :");
-        CubeGUI cube = new CubeGUI();
-        AlgoMaker algo = new AlgoMaker(/*read.nextInt()*/22);
-        cube.scrambleCubeGUI(algo.getScramble());
+        //for(int i=0;i<=5;i++){
         //cube.displayCube(algo.getScramble());
-        new Windows(cube.getCubeGUI(),algo.getScramble());
+        Windows win = new Windows();
+        //}
     }
    
     

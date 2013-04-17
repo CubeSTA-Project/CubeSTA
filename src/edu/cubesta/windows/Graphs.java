@@ -37,9 +37,12 @@ public class Graphs extends JPanel {
      * @param g 
      */
     
+    @Override
     public void paintComponent(Graphics g){
-        this.setBackground(Color.WHITE);
-        int pointUnit = this.getHeight()/12;
+        this.setBackground(Color.BLUE);
+        g.setColor(Color.WHITE);
+        g.fillRect(0,0,this.getWidth(),this.getHeight());
+        int pointUnit = ((this.getHeight()<this.getWidth())?this.getHeight():this.getWidth()-30)/12;
         for(int j = 1, k = 9; j <= 3; j++){
             for(int i = 4; i <= 6 ; i++, k--){
                 g.setColor(getColorCube(cubeGUI['W'][k]));
@@ -93,7 +96,7 @@ public class Graphs extends JPanel {
             algoString += algo[0][i] + "" + algo[1][i] + " ";
         }
         g.setColor(Color.BLACK);
-        Font font = new Font("Ubuntu", Font.BOLD, 20);
+        Font font = new Font("Ubuntu", Font.BOLD, 15);
         g.setFont(font);
         g.drawString(algoString, 0*pointUnit+5, 11*pointUnit);
     }

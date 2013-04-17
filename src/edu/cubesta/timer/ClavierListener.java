@@ -32,7 +32,7 @@ public class ClavierListener implements KeyListener {
     public ClavierListener() {
         time = new Timer();
         start = true;
-        numberAVG = 7;
+        numberAVG = 5;
         avg = new Average(numberAVG);
     }
     
