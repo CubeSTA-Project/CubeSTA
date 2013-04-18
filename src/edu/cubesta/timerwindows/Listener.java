@@ -20,7 +20,7 @@ public class Listener implements KeyListener {
      * Variable Globale
      */
     
-    boolean start;
+    static boolean start;
     Timer time;
     Average avg;
     int numberAVG;

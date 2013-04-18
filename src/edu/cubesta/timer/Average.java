@@ -174,7 +174,12 @@ public class Average {
      */
 
     public static int getRound() {
-        int retour = (nbr >= maxnbr)?maxnbr:nbr;
+        int retour;
+        if(Timer.tempsStop != 0){
+            retour = (nbr >= maxnbr)?maxnbr:nbr;
+        }else{
+            retour = 0;
+        }
         return retour;
     }
 

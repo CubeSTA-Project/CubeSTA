@@ -4,9 +4,9 @@
  */
 package edu.cubesta.timerwindows;
 
-import edu.cubesta.scramble.AlgoMaker;
-import edu.cubesta.scramble.CubeGUI;
 import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
@@ -31,30 +31,35 @@ public class TimerWindows extends JFrame {
      */
     
     public TimerWindows(){
-        this.setTitle("CubeSTA");
+        this.setTitle("Chronomètre");
         this.setSize(240, 435);
         this.setLocation(660, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-        Image icon;
-        icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
         this.setIconImage(icon);
         TimerGraphs pan = new TimerGraphs();
         content.setLayout(cl);
-        content.add(pan, "cube");
+        content.add(pan, "timer");
         this.setContentPane(content);
         this.setVisible(true);
         this.addKeyListener(new Listener());
-        while(true){
-            changeScreen();
-        }
+        refreshScreen();
+        
     }
     
     /**
      * 
      */
-     public static void changeScreen(){
-            TimerGraphs panel = new TimerGraphs();
-            content.add(panel, "timer");
-            cl.show(content, "timer");
+     public static void refreshScreen(){
+         while(true){
+            try {
+                TimerGraphs panel = new TimerGraphs();
+                content.add(panel, "timer");
+                cl.show(content, "timer");
+                Thread.sleep(10);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(TimerWindows.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
      }
 }

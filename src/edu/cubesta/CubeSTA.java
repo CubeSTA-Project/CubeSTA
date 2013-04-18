@@ -12,7 +12,10 @@
 package edu.cubesta;
 
 import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.timer.Timer;
 import edu.cubesta.timerwindows.TimerWindows;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Classe principal permettant d'afficher une fenetre avec un patron mélanger
@@ -29,5 +32,4 @@ public class CubeSTA {
         TimerWindows time = new TimerWindows();
     }
    
-    
 }

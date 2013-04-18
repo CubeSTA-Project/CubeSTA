@@ -82,14 +82,14 @@ public class Timer {
     
     public static String time2string(int time){
         String zeroSeconde = "";
-        if((time/100-(time/10000*10000)) <= 9){
+        if((time/100-(time/10000*100)) <= 9){
             zeroSeconde = "0";
         }
         String zeroMillis = "";
         if(time%100 <= 9){
             zeroMillis = "0";
         }
-        String text = time/10000 + ":" + zeroSeconde + (time/100-(time/10000*10000)) + "." + zeroMillis + time%100;
+        String text = time/10000 + ":" + zeroSeconde + (time/100-(time/10000*100)) + "." + zeroMillis + time%100;
         return text;
     }
     

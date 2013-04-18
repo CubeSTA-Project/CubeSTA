@@ -34,7 +34,7 @@ public class CubeWindows extends JFrame {
      */
     
     public CubeWindows(){
-        this.setTitle("CubeSTA");
+        this.setTitle("Mélange - CubeSTA");
         this.setSize(550, 450);
         this.setLocation(100, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
