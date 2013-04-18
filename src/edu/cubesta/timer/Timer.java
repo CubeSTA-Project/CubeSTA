@@ -1,11 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.timer
+ * Class : Timer.java
  */
 package edu.cubesta.timer;
 
 /**
- * Le chronomètre de notre programme
+ * Permet de gérer le fonctionnement du chronomètre
  * @author auxence.araujo
  */
 public class Timer {

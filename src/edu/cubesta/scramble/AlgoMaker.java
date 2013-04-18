@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.scramble
+ * Class : AlgoMaker.java
  */
 package edu.cubesta.scramble;
 
@@ -23,10 +23,8 @@ public class AlgoMaker {
      */
 
     public AlgoMaker(int number) {
-        char[] Mouvement;
-        Mouvement = new char[]{'R','L','U','D','F','B'};
-		char[] Sens;
-        Sens = new char[]{'2','\'',' '};
+        char[] Mouvement = new char[]{'R','L','U','D','F','B'};
+	char[] Sens = new char[]{'2','\'',' '};
         scramble = new char[2][number];
         int temporaire = randomBW(0,5);
         int temporaire2 = randomBW(0,5);

@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.timerwindows
+ * Class : TimerGraphs.java
  */
 package edu.cubesta.timerwindows;
 
@@ -12,7 +12,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de créer le contenue de la fenêtre
+ * Permet de créer le contenue de la fenêtre du chronomètre
  * @author julien.gardet
  */
 public class TimerGraphs extends JPanel {

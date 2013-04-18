@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.cubewindows
+ * Class : CubeWindows.java
  */
 package edu.cubesta.cubewindows;
 
@@ -11,7 +11,7 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- *
+ * Permet de créer et gérer la fenêtre de mélange
  * @author julien.gardet
  */
 public class CubeWindows extends JFrame {
@@ -27,10 +27,6 @@ public class CubeWindows extends JFrame {
         
     /**
      * Permet d'initialiser une fenêtre
-     * @param cubeGUI
-     * Le cube à afficher
-     * @param algo 
-     * Le texte du mélange à afficher
      */
     
     public CubeWindows(){
@@ -51,7 +47,7 @@ public class CubeWindows extends JFrame {
     }
     
     /**
-     * 
+     * Permet de générer un nouveau mélange
      */
     
     public static void createCube(){
@@ -63,7 +59,7 @@ public class CubeWindows extends JFrame {
     }
     
     /**
-     * 
+     * Permet de recharger le mélange de la fenêtre
      */
      public static void changeScreen(){
             createCube();

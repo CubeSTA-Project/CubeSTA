@@ -1,14 +1,7 @@
-/****************************************************************************************
- *                                                                                      *  
- *  _|      _|                                  _|_|_|                                  * 
- *    _|  _|    _|_|_|  _|_|_|    _|_|_|        _|    _|  _|  _|_|    _|_|    _|    _|  * 
- *      _|    _|    _|  _|    _|  _|    _|      _|    _|  _|_|      _|    _|  _|    _|  * 
- *      _|    _|    _|  _|    _|  _|    _|      _|    _|  _|        _|    _|  _|    _|  * 
- *      _|      _|_|_|  _|    _|  _|    _|      _|_|_|    _|          _|_|      _|_|_|  * 
- *                                                                                  _|  * 
- *                                                                              _|_|    *
- *                                                                                      *
- ***************************************************************************************/
+/* Project : CubeSTA
+ * Location : edu.cubesta.timer
+ * Class : Average.java
+ */
 package edu.cubesta.timer;
 
 /**
@@ -119,8 +112,6 @@ public class Average {
     
     /**
      * Va recueillir le meilleur temps
-     * @param temps
-     * le tableau des temps
      */
     
     public static int getBest(){
@@ -131,8 +122,6 @@ public class Average {
     
     /**
      * Va recueillir le moins bon temps
-     * @param temps
-     * le tableau des temps
      */
     
     public static int getWorst(){
@@ -143,8 +132,6 @@ public class Average {
     
     /**
      * Va recueillir le tableau des temps triés
-     * @param temps
-     * le tableau des temps
      */
     
     public static int[] getSortTimes(){
@@ -169,8 +156,9 @@ public class Average {
     }
     
     /**
-     * 
+     * Permet d'obtenir le numéro du tour effectuer
      * @return 
+     * retourne le numéro du tours (0 si il n'est pas définit)
      */
 
     public static int getRound() {

@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.timerwindows
+ * Class : TimerWindows.java
  */
 package edu.cubesta.timerwindows;
 
@@ -23,11 +23,7 @@ public class TimerWindows extends JFrame {
     static JPanel content = new JPanel();
         
     /**
-     * Permet d'initialiser une fenêtre
-     * @param cubeGUI
-     * Le cube à afficher
-     * @param algo 
-     * Le texte du mélange à afficher
+     * Permet de créer et de gérer le contenue fenêtre du chronomètre
      */
     
     public TimerWindows(){
@@ -48,7 +44,7 @@ public class TimerWindows extends JFrame {
     }
     
     /**
-     * 
+     * Permet d'actualiser le temps du chronomètre
      */
      public static void refreshScreen(){
          while(true){

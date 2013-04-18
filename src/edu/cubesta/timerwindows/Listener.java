@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.timerwindows
+ * Class : Listener.java
  */
 package edu.cubesta.timerwindows;
 
@@ -12,7 +12,7 @@ import java.awt.event.KeyListener;
 
 /**
  * La classe permet d'écouter sur quelle touche l'utilisateur appuie
- * @author julien
+ * @author julien.gardet
  */
 public class Listener implements KeyListener {
     
@@ -80,7 +80,7 @@ public class Listener implements KeyListener {
     }
     
     /**
-     * Affiche une information sur la touche qui vient d'être appuyer
+     * Affiche une information sur la touche qui vient d'être appuyer (from Oracle)
      * @param e
      * parametre de la touche appuyer
      * @param keyStatus 

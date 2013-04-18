@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.cubewindows
+ * Class : CubeGraphs.java
  */
 package edu.cubesta.cubewindows;
 
@@ -10,7 +10,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de créer le contenue de la fenêtre
+ * Permet de créer le contenue de la fenêtre de mélange
  * @author julien.gardet
  */
 public class CubeGraphs extends JPanel {

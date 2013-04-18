@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.scramble
+ * Class : CubeGUI.java
  */
 package edu.cubesta.scramble;
 
@@ -32,7 +32,7 @@ public class CubeGUI {
         }
     }
     
-        /**
+    /**
      * Permet de mélanger l'affichage du cube
      * @param scramble 
      * Mélange à exécuter
