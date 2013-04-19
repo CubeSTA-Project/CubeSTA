@@ -52,7 +52,7 @@ public class Listener implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        displayInfo(e, "KEY PRESSED: ");
+        //displayInfo(e, "KEY PRESSED: ");
         if(e.getKeyCode() == 32){//Space
             if(start){
                 Timer.reset();
