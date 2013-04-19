@@ -76,6 +76,7 @@ public class Listener implements KeyListener {
             CubeWindows.changeScreen();
         }else if(e.getKeyCode() == KeyEvent.VK_R){//R
             Average.reset(Dialog.getNumberOfTime());
+            Timer.reset();
         }
     }
 
