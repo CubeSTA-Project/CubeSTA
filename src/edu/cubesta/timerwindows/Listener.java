@@ -53,7 +53,7 @@ public class Listener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         //displayInfo(e, "KEY PRESSED: ");
-        if(e.getKeyCode() == 32){//Space
+        if(e.getKeyCode() ==  KeyEvent.VK_SPACE){//Space
             if(start){
                 Timer.reset();
                 Timer.start();
@@ -65,16 +65,16 @@ public class Listener implements KeyListener {
                 start = true;
                 CubeWindows.changeScreen();
             }
-        }else if(e.getKeyCode() == 27){//Echap
+        }else if(e.getKeyCode() == KeyEvent.VK_ESCAPE){//Echap
             System.exit(0);
-        }else if(e.getKeyCode() == 112){//F1
+        }else if(e.getKeyCode() == KeyEvent.VK_F1){//F1
             int setNOS = Dialog.setNOS();
             CubeWindows.changeScreen();
-        }else if(e.getKeyCode() == 113){//F2
+        }else if(e.getKeyCode() == KeyEvent.VK_F2){//F2
             int setNOT = Dialog.setNOT();
-        }else if(e.getKeyCode() == 123){//F12
+        }else if(e.getKeyCode() == KeyEvent.VK_F12){//F12
             CubeWindows.changeScreen();
-        }else if(e.getKeyCode() == 82){//R
+        }else if(e.getKeyCode() == KeyEvent.VK_R){//R
             Average.reset(Dialog.getNumberOfTime());
         }
     }
