@@ -147,12 +147,16 @@ public class Average {
     
     public static void checkToReset(int nombre){
         if(nombre >= 3 && nbr == maxnbr){
-            temps = new int[nombre];
-            average = 0;
-            best = 0;
-            maxnbr = nombre;
-            nbr = 0;
+            reset(nombre);
         }
+    }
+    
+    public static void reset(int nombre){
+        temps = new int[nombre];
+        average = 0;
+        best = 0;
+        maxnbr = nombre;
+        nbr = 0;
     }
     
     /**
@@ -169,6 +173,23 @@ public class Average {
             retour = 0;
         }
         return retour;
+    }
+    
+    public static void changeAverageSize(int size){
+        if(size >= 3){
+            int[] tempTable = new int[temps.length];
+            for(int i = 0;i<temps.length;i++){
+                tempTable[i] = temps[i]; 
+            }
+            temps = new int[size];
+            for(int i = 0;i < tempTable.length && i < temps.length ;i++){
+                temps[i] = tempTable[i]; 
+            }
+            maxnbr = size;
+            nbr = (nbr > maxnbr)?maxnbr:nbr;
+        }else{
+            System.out.println("Pas assez de temps pour moyenne élaguée");
+        }
     }
 
  }

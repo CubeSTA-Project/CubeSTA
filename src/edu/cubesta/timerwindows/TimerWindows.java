@@ -40,7 +40,6 @@ public class TimerWindows extends JFrame {
         this.setVisible(true);
         this.addKeyListener(new Listener());
         refreshScreen();
-        
     }
     
     /**

@@ -4,6 +4,7 @@
  */
 package edu.cubesta.cubewindows;
 
+import edu.cubesta.Dialog;
 import edu.cubesta.scramble.AlgoMaker;
 import edu.cubesta.scramble.CubeGUI;
 import edu.cubesta.timerwindows.Listener;
@@ -52,7 +53,7 @@ public class CubeWindows extends JFrame {
     
     public static void createCube(){
         CubeGUI cube = new CubeGUI();
-        AlgoMaker algo = new AlgoMaker(/*read.nextInt()*/22);
+        AlgoMaker algo = new AlgoMaker(Dialog.getNumberOfScramble());
         cube.scrambleCubeGUI(algo.getScramble());
         cubeGUI = cube.getCubeGUI();
         algoGUI = algo.getScramble();

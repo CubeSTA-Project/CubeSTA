@@ -25,6 +25,7 @@ public class CubeSTA {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException {
+        Dialog dial = new Dialog();
         CubeWindows cube = new CubeWindows();
         TimerWindows time = new TimerWindows();
     }

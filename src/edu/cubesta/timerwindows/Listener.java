@@ -4,6 +4,7 @@
  */
 package edu.cubesta.timerwindows;
 
+import edu.cubesta.Dialog;
 import edu.cubesta.cubewindows.CubeWindows;
 import edu.cubesta.timer.Average;
 import edu.cubesta.timer.Timer;
@@ -23,7 +24,6 @@ public class Listener implements KeyListener {
     static boolean start;
     Timer time;
     Average avg;
-    int numberAVG;
     
     /**
      * Initialise la classe avec la classe Timer et Average
@@ -32,8 +32,7 @@ public class Listener implements KeyListener {
     public Listener() {
         time = new Timer();
         start = true;
-        numberAVG = 5;
-        avg = new Average(numberAVG);
+        avg = new Average(Dialog.getNumberOfTime());
     }
     
     /**
@@ -53,19 +52,30 @@ public class Listener implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        //displayInfo(e, "KEY PRESSED: ");
+        displayInfo(e, "KEY PRESSED: ");
         if(e.getKeyCode() == 32){//Space
             if(start){
                 Timer.reset();
                 Timer.start();
                 start = false;
-                Average.checkToReset(numberAVG);//Verifie si les temps sont plein afin d'être de remis à zéro
+                Average.checkToReset(Dialog.getNumberOfTime());//Verifie si les temps sont plein afin d'être de remis à zéro
             }else{
                 int timeDone = Timer.stop();
                 Average.insertTime(timeDone);
                 start = true;
                 CubeWindows.changeScreen();
             }
+        }else if(e.getKeyCode() == 27){//Echap
+            System.exit(0);
+        }else if(e.getKeyCode() == 112){//F1
+            int setNOS = Dialog.setNOS();
+            CubeWindows.changeScreen();
+        }else if(e.getKeyCode() == 113){//F2
+            int setNOT = Dialog.setNOT();
+        }else if(e.getKeyCode() == 123){//F12
+            CubeWindows.changeScreen();
+        }else if(e.getKeyCode() == 82){//R
+            Average.reset(Dialog.getNumberOfTime());
         }
     }
 
