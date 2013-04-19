@@ -151,6 +151,12 @@ public class Average {
         }
     }
     
+    /**
+     * Permet de remettre à zéro le tableau de l'average
+     * @param nombre 
+     * taille du tableau
+     */
+    
     public static void reset(int nombre){
         temps = new int[nombre];
         average = 0;
@@ -174,6 +180,12 @@ public class Average {
         }
         return retour;
     }
+    
+    /**
+     * Permet de modifier la taille du tableau en cour d'usage
+     * @param size 
+     * Nouvelle taille du tableau
+     */
     
     public static void changeAverageSize(int size){
         if(size >= 3){
