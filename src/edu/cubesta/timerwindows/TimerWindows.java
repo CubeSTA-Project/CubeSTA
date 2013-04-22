@@ -4,6 +4,8 @@
  */
 package edu.cubesta.timerwindows;
 
+import edu.cubesta.resources.L10n;
+import edu.cubesta.resources.Listener;
 import java.awt.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +29,7 @@ public class TimerWindows extends JFrame {
      */
     
     public TimerWindows(){
-        this.setTitle("Chronomètre");
+        this.setTitle(L10n.getLanguage(4));
         this.setSize(240, 435);
         this.setLocation(660, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
@@ -45,9 +47,11 @@ public class TimerWindows extends JFrame {
     /**
      * Permet d'actualiser le temps du chronomètre
      */
-     public static void refreshScreen(){
+    
+     public void refreshScreen(){
          while(true){
             try {
+                this.setTitle(L10n.getLanguage(4));
                 TimerGraphs panel = new TimerGraphs();
                 content.add(panel, "timer");
                 cl.show(content, "timer");

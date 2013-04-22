@@ -15,11 +15,11 @@ public class Average {
      * Variables globales
      */
     
-    static int[] temps;
+    public static int[][] temps;
     static int best;
     static int worst;
     static int average;
-    static int nbr = 0;
+    public static int nbr = 0;
     static int maxnbr;
 
     /**
@@ -31,7 +31,7 @@ public class Average {
     
     public Average(int nombre) {
         if(nombre >= 3){
-            temps = new int[nombre];
+            temps = new int[3][nombre];
             average = 0;
             best = 0;
             maxnbr = nombre;
@@ -48,7 +48,7 @@ public class Average {
         
     public static void insertTime(int fait){
         if(nbr < maxnbr){
-            temps[nbr] = fait;
+            temps[0][nbr] = fait;
             nbr++;
         }else{
             System.out.print("The average need to be reset");
@@ -69,7 +69,7 @@ public class Average {
         }
         int tmp;
         for(int i = 1; i < sortedlist.length; i++){
-            for(int j = i-1; j+1 > 0 && sortedlist[j+1] <= sortedlist[j]; j--){
+            for(int j = i-1; j+1 > 0 && sortedlist[j+1] <= sortedlist[j]; j--){ //TRI par insertion
                 tmp = sortedlist[j+1];
                 sortedlist[j+1] = sortedlist[j];
                 sortedlist[j] = tmp;
@@ -90,10 +90,13 @@ public class Average {
     public static int calculateAvg(int [] temps, int nombre){
         int[] temptemps = sortTimes(temps);
         int avg = 0;
+        boolean hasDNF = false;
         for(int i = 1; i < nombre-1; i++){
                 avg = avg + temptemps[i];
+                if(temptemps[i] < 0){hasDNF = true;}
             }
             avg = avg/(nombre-2);
+            if(hasDNF){avg = -1;}
             return avg;
         }
     
@@ -103,7 +106,7 @@ public class Average {
     
     public static int getAverage(){
         if(nbr == maxnbr){
-            average = calculateAvg(temps, maxnbr);
+            average = calculateAvg(temps[0], maxnbr);
         }else{
             average = 0;  
         }
@@ -115,8 +118,10 @@ public class Average {
      */
     
     public static int getBest(){
-        int[] temptemps = sortTimes(temps);
-        best = temptemps[0];
+        int[] temptemps = sortTimes(temps[0]);
+        for(int i = temptemps.length-1; i >= 0;i--){//Exclue les temps négatifs
+            best = (temptemps[i] < 0)? best : temptemps[i];
+        }
         return best;
     }
     
@@ -125,9 +130,17 @@ public class Average {
      */
     
     public static int getWorst(){
-        int[] temptemps = sortTimes(temps);
+        int[] temptemps = sortTimes(temps[0]);
         worst = temptemps[(temptemps.length)-1];
         return worst;
+    }
+    
+    /**
+     * Va retourner le tableau des temps
+     */
+    
+    public static int[][] getTimes(){
+        return temps;
     }
     
     /**
@@ -135,7 +148,7 @@ public class Average {
      */
     
     public static int[] getSortTimes(){
-        int[] temptemps = sortTimes(temps);
+        int[] temptemps = sortTimes(temps[0]);
         return temptemps;
     }
     
@@ -158,7 +171,7 @@ public class Average {
      */
     
     public static void reset(int nombre){
-        temps = new int[nombre];
+        temps = new int[3][nombre];
         average = 0;
         best = 0;
         maxnbr = nombre;
@@ -189,13 +202,17 @@ public class Average {
     
     public static void changeAverageSize(int size){
         if(size >= 3){
-            int[] tempTable = new int[temps.length];
-            for(int i = 0;i<temps.length;i++){
-                tempTable[i] = temps[i]; 
+            int[][] tempTable = new int[3][temps[0].length];
+            for(int i = 0;i<temps[0].length;i++){
+                for(int j = 0; j< 3; j++){
+                    tempTable[j][i] = temps[j][i]; 
+                }
             }
-            temps = new int[size];
-            for(int i = 0;i < tempTable.length && i < temps.length ;i++){
-                temps[i] = tempTable[i]; 
+            temps = new int[3][size];
+            for(int i = 0;i < tempTable[0].length && i < temps[0].length ;i++){
+                for(int j = 0; j < 3; j++){
+                    temps[j][i] = tempTable[j][i]; 
+                }
             }
             maxnbr = size;
             nbr = (nbr > maxnbr)?maxnbr:nbr;

@@ -4,11 +4,14 @@
  */
 package edu.cubesta.cubewindows;
 
-import edu.cubesta.Dialog;
+import edu.cubesta.resources.Dialog;
+import edu.cubesta.resources.L10n;
 import edu.cubesta.scramble.AlgoMaker;
 import edu.cubesta.scramble.CubeGUI;
-import edu.cubesta.timerwindows.Listener;
+import edu.cubesta.resources.Listener;
 import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
@@ -31,7 +34,7 @@ public class CubeWindows extends JFrame {
      */
     
     public CubeWindows(){
-        this.setTitle("Mélange - CubeSTA");
+        this.setTitle(L10n.getLanguage(3) + " - CubeSTA");
         this.setSize(550, 450);
         this.setLocation(100, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
@@ -68,4 +71,5 @@ public class CubeWindows extends JFrame {
             content.add(panel, "cube");
             cl.show(content, "cube");
      }
+
 }

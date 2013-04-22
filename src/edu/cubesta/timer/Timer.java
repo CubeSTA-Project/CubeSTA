@@ -14,8 +14,8 @@ public class Timer {
      * Variables globales
      */
     
-    static long tempsStart;
-    static long tempsStop;
+    public static long tempsStart;
+    public static long tempsStop;
     
     /**
      * Permet d'initialiser un chronomètre
@@ -81,6 +81,7 @@ public class Timer {
      */
     
     public static String time2string(int time){
+        time = (time < 0) ? -time : time ;
         String zeroSeconde = "";
         if((time/100-(time/10000*100)) <= 9){
             zeroSeconde = "0";

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.cubesta;
+package edu.cubesta.resources;
 
 import edu.cubesta.timer.Average;
 import javax.swing.JOptionPane;
@@ -36,8 +36,13 @@ public class Dialog {
      */
     
     public static int setNOS(){
-        int retour = Integer.valueOf(showInputDialog("Option - Scramble", "Entrer le nombre de mouvement pour les mélanges !")).intValue();
-        setNumberOfScramble(retour);
+        int retour = numberOfScramble;
+        try{
+            retour = Integer.valueOf(showInputDialog(L10n.getLanguage(5) + " - CubeSTA", L10n.getLanguage(7))).intValue();
+            setNumberOfScramble(retour);
+        } catch (NumberFormatException ex) {
+            showErrorDialog(L10n.getLanguage(13) + " - CubeSTA", L10n.getLanguage(12));
+        }
         return retour;
     }
     
@@ -48,14 +53,27 @@ public class Dialog {
      */
     
     public static int setNOT(){
-        int retour = Integer.valueOf(showInputDialog("Option - Scramble", "Entrer le nombre de temps par average !")).intValue();
+        int retour = numberOfTime;
+        try{
+            retour = Integer.valueOf(showInputDialog(L10n.getLanguage(5) + " - CubeSTA", L10n.getLanguage(8))).intValue();
+        } catch (NumberFormatException ex) {
+            showErrorDialog(L10n.getLanguage(13) + " - CubeSTA", L10n.getLanguage(12));
+        }
         if(retour < 3){
-            showAlertDialog("Alert - CubeSTA", "Le nombre est trop petit");
+            showAlertDialog(L10n.getLanguage(6) + " - CubeSTA", L10n.getLanguage(9));
         }else{
             Average.changeAverageSize(retour);
             setNumberOfTime(retour);
         }
         return retour;
+    }
+    
+    /**
+     * Permet de modifier la langue
+     */
+    
+    public static void setLAN(){
+        L10n.setLanguage((String)JOptionPane.showInputDialog(null,L10n.getLanguage(10),L10n.getLanguage(5) + " - CubeSTA", JOptionPane.QUESTION_MESSAGE, null, L10n.listLanguage(), L10n.listLanguage()[0]));
     }
     
     /**
@@ -83,6 +101,18 @@ public class Dialog {
     
     public static void showAlertDialog(String title, String question){
         JOptionPane.showMessageDialog(null, question, title, JOptionPane.WARNING_MESSAGE);
+    }
+    
+    /**
+     * Affiche une boite de dialogue d'erreur
+     * @param title
+     * Titre de la fenêtre
+     * @param question 
+     * Question à poser
+     */
+    
+    public static void showErrorDialog(String title, String question){
+        JOptionPane.showMessageDialog(null, question, title, JOptionPane.ERROR_MESSAGE);
     }
     
     /**

@@ -12,6 +12,8 @@
 package edu.cubesta;
 
 import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.resources.Dialog;
+import edu.cubesta.resources.L10n;
 import edu.cubesta.timerwindows.TimerWindows;
 
 /**
@@ -25,6 +27,7 @@ public class CubeSTA {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException {
+        L10n l10n = new L10n();
         Dialog dial = new Dialog();
         CubeWindows cube = new CubeWindows();
         TimerWindows time = new TimerWindows();
