@@ -30,8 +30,10 @@ public class TimerWindows extends JFrame {
     
     public TimerWindows(){
         this.setTitle(L10n.getLanguage(4));
-        this.setSize(240, 435);
-        this.setLocation(660, 100);
+        this.setSize(250, 450);
+        int posX = (Toolkit.getDefaultToolkit().getScreenSize().width-810)/2+570;
+        int posY = (Toolkit.getDefaultToolkit().getScreenSize().height-450)/2;
+        this.setLocation(posX, posY);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
         this.setIconImage(icon);

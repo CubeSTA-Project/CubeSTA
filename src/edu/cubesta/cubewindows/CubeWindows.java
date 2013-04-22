@@ -36,7 +36,9 @@ public class CubeWindows extends JFrame {
     public CubeWindows(){
         this.setTitle(L10n.getLanguage(3) + " - CubeSTA");
         this.setSize(550, 450);
-        this.setLocation(100, 100);
+        int posX = (Toolkit.getDefaultToolkit().getScreenSize().width-810)/2;
+        int posY = (Toolkit.getDefaultToolkit().getScreenSize().height-450)/2;
+        this.setLocation(posX, posY);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         Image icon;
         icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
