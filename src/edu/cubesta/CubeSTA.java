@@ -26,7 +26,7 @@ public class CubeSTA {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         L10n l10n = new L10n();
         Dialog dial = new Dialog();
         CubeWindows cube = new CubeWindows();

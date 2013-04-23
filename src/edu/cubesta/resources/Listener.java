@@ -107,13 +107,14 @@ public class Listener implements KeyListener {
             penality();
         } else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {
             Timer.reset();
+            Average.checkToReset(Dialog.getNumberOfTime());
             Timer.tempsStart = System.currentTimeMillis() + 15000;
             inspection = true;
             startPenality = false;
             endPenality = false;
             DNS = false;
             DNF = false;
-        } else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection){
+        } else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection && !DNS){
             didNotFinish();
         } else if (e.getKeyCode() == KeyEvent.VK_S && start && !inspection){
             Average.checkToReset(Dialog.getNumberOfTime());

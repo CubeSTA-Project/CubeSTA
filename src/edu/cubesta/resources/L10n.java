@@ -40,13 +40,15 @@ public class L10n {
     
     public static String getOrdinal(int number){
         String retour;
-        if("fr".equals(language)){
+        if("fr".equals(language)){//French
             switch(number){
                 case 1 : retour = "er"; break;
                 case 2 : retour = "nd"; break;
                 default : retour = "ème"; break;
             }
-        }else{
+        }else if("de".equals(language)){//Deutsch
+            retour = ".";
+        }else{//English and Default
             if(number <= 20){
                switch(number){
                     case 1 : retour = "st"; break;

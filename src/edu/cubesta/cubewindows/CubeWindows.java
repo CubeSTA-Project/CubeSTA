@@ -6,12 +6,10 @@ package edu.cubesta.cubewindows;
 
 import edu.cubesta.resources.Dialog;
 import edu.cubesta.resources.L10n;
+import edu.cubesta.resources.Listener;
 import edu.cubesta.scramble.AlgoMaker;
 import edu.cubesta.scramble.CubeGUI;
-import edu.cubesta.resources.Listener;
 import java.awt.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
