@@ -12,6 +12,7 @@
 package edu.cubesta;
 
 import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.help.KeyHelpDialog;
 import edu.cubesta.resources.Dialog;
 import edu.cubesta.resources.L10n;
 import edu.cubesta.timerwindows.TimerWindows;

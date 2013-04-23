@@ -5,6 +5,8 @@
 package edu.cubesta.resources;
 
 import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.help.KeyHelpDialog;
+import edu.cubesta.help.MoveHelpDialog;
 import edu.cubesta.timer.Average;
 import edu.cubesta.timer.Timer;
 import java.awt.event.KeyEvent;
@@ -85,10 +87,10 @@ public class Listener implements KeyListener {
             }
         } else if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {//Echap
             System.exit(0);
-        } else if (e.getKeyCode() == KeyEvent.VK_F10) {//F1
+        } else if (e.getKeyCode() == KeyEvent.VK_F10) {//F10
             int setNOS = Dialog.setNOS();
             CubeWindows.changeScreen();
-        } else if (e.getKeyCode() == KeyEvent.VK_F11) {//F2
+        } else if (e.getKeyCode() == KeyEvent.VK_F11) {//F11
             int setNOT = Dialog.setNOT();
         } else if (e.getKeyCode() == KeyEvent.VK_F12) {//F12
             CubeWindows.changeScreen();
@@ -101,11 +103,19 @@ public class Listener implements KeyListener {
             inspection = false;
             DNS = false;
             DNF = false;
-        } else if (e.getKeyCode() == KeyEvent.VK_F3) {//R
+        }else if(e.getKeyCode() == KeyEvent.VK_F1){ //F1
+            start = true;
+            Timer.reset();
+            KeyHelpDialog khd = new KeyHelpDialog(null, "\u2328 " + L10n.getLanguage(15), true);
+        }else if(e.getKeyCode() == KeyEvent.VK_F2){ //F1
+            start = true;
+            Timer.reset();
+            MoveHelpDialog mhd = new MoveHelpDialog(null, "\u2328 " + L10n.getLanguage(16), true);
+        }else if (e.getKeyCode() == KeyEvent.VK_F3) {//F3
             Dialog.setLAN();
-        } else if (e.getKeyCode() == KeyEvent.VK_ENTER && start && Average.nbr != 0 && !DNS && !DNF && !inspection) {
+        } else if (e.getKeyCode() == KeyEvent.VK_ENTER && start && Average.nbr != 0 && !DNS && !DNF && !inspection) {//entrer
             penality();
-        } else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {
+        } else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {//Maj
             Timer.reset();
             Average.checkToReset(Dialog.getNumberOfTime());
             Timer.tempsStart = System.currentTimeMillis() + 15000;
@@ -114,9 +124,9 @@ public class Listener implements KeyListener {
             endPenality = false;
             DNS = false;
             DNF = false;
-        } else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection && !DNS){
+        } else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection && !DNS){//D
             didNotFinish();
-        } else if (e.getKeyCode() == KeyEvent.VK_S && start && !inspection){
+        } else if (e.getKeyCode() == KeyEvent.VK_S && start && !inspection){//S
             Average.checkToReset(Dialog.getNumberOfTime());
             didNotStart();
         }

@@ -11,7 +11,8 @@ package edu.cubesta.resources;
 public class L10n {
     
     static String language;
-    static String[] i18n = new String[15];
+    static String[] i18n = new String[17];
+    static String[] i18nHelp = new String[22];
 
     public L10n() {
         setEN();
@@ -36,6 +37,10 @@ public class L10n {
     
     public static String getLanguage(int opt){
         return i18n[opt];
+    }
+    
+    public static String getLanguageHelp(int opt){
+        return i18nHelp[opt];
     }
     
     public static String getOrdinal(int number){
@@ -70,6 +75,7 @@ public class L10n {
 
     private static void setEN() {
         language = "en";
+        //MAIN I18N
         i18n[0] = "Round";
         i18n[1] = "Average";
         i18n[2] = "Best";
@@ -85,10 +91,36 @@ public class L10n {
         i18n[12] = "This is not a number";
         i18n[13] = "Error";
         i18n[14] = "Inspection";
+        i18n[15] = "KeyBoard Help";
+        i18n[16] = "Scramble Help";
+        //HELP I18N
+        i18nHelp[0] = "Escape : Quit the program";
+        i18nHelp[1] = "Espace : Start the timer";
+        i18nHelp[2] = "Shift : Start the inspection timer";
+        i18nHelp[3] = "Enter : Add a penality of 2 seconds";
+        i18nHelp[4] = "D : Set the previous time as DNF";
+        i18nHelp[5] = "S : Set the next time as DNS";
+        i18nHelp[6] = "R : Reset all times";
+        i18nHelp[7] = "F1 : Display the keyboard help";
+        i18nHelp[8] = "F2 : Display the synthax movement help";
+        i18nHelp[9] = "F3 : Set the language of the program";
+        i18nHelp[10] = "F10 : Set the number of movement for the scramble";
+        i18nHelp[11] = "F11 : Set the number of times to calculate the average";
+        i18nHelp[12] = "F12 : Regen a new scramble";
+        i18nHelp[13] = "F : Front side";
+        i18nHelp[14] = "B : Back side";
+        i18nHelp[15] = "U : Up side";
+        i18nHelp[16] = "D : Down side";
+        i18nHelp[17] = "R : Right side";
+        i18nHelp[18] = "L : Left side";
+        i18nHelp[19] = "  : Clockwise";
+        i18nHelp[20] = "' : Anticlockwise";
+        i18nHelp[21] = "² : Twice";
     }
     
     private static void setFR() {
         language = "fr";
+        //MAIN I18N
         i18n[0] = "Tour";
         i18n[1] = "Moyenne";
         i18n[2] = "Meilleur";
@@ -104,6 +136,31 @@ public class L10n {
         i18n[12] = "Ce n'est pas un nombre";
         i18n[13] = "Erreur";
         i18n[14] = "Inspection";
+        i18n[15] = "Aide Clavier";
+        i18n[16] = "Aide Mélange";
+        //HELP I18N
+        i18nHelp[0] = "Echape : Quiter le programme";
+        i18nHelp[1] = "Espace : Démarre le chronomètre";
+        i18nHelp[2] = "Majuscule : Démarre le temps d'inspection";
+        i18nHelp[3] = "Entrer : Ajoute une pénaliter de 2 secondes";
+        i18nHelp[4] = "D : Définie le temps précédent comme DNF";
+        i18nHelp[5] = "S : Définie le temps suivant comme DNS";
+        i18nHelp[6] = "R : Remet à zéro tous les temps";
+        i18nHelp[7] = "F1 : Afficher l'aide clavier";
+        i18nHelp[8] = "F2 : Afficher l'aide de la synthaxe des mouvements";
+        i18nHelp[9] = "F3 : Définie la langue du programme";
+        i18nHelp[10] = "F10 : Définie le nombre de mouvement du mélange";
+        i18nHelp[11] = "F11 : Définie le nombre de temps pour le calcul de la moyenne";
+        i18nHelp[12] = "F12 : Permet de régénérer un mélange";
+        i18nHelp[13] = "F : Face avant";
+        i18nHelp[14] = "B : Face arrière";
+        i18nHelp[15] = "U : Face du haut";
+        i18nHelp[16] = "D : Face du bas";
+        i18nHelp[17] = "R : Face de droite";
+        i18nHelp[18] = "L : Face de gauche";
+        i18nHelp[19] = "  : Dans le sens horaire";
+        i18nHelp[20] = "' : Dans le sens antihoraire";
+        i18nHelp[21] = "² : Deux fois";
     }
     
     private static void setDE() {
