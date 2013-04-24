@@ -11,6 +11,13 @@ package edu.cubesta.resources;
 public class L10n {
     
     /**
+     * Tips and tricks : 
+     * Utiliser fileformat.info pour retrouver le code unicode des caractères
+     * http://www.fileformat.info/info/unicode/char/search.htm?q=&preview=entity
+     * Character : U+0041  ->  Java : \u0041
+     */
+    
+    /**
      * Variable Globale
      */
     
@@ -156,7 +163,7 @@ public class L10n {
         i18nHelp[10] = "F9 : Set the inspection time";
         i18nHelp[11] = "F10 : Set the number of movement for the scramble";
         i18nHelp[12] = "F11 : Set the number of times to calculate the average";
-        i18nHelp[13] = "F12 : Regen a new scramble";
+        i18nHelp[13] = "F12 : Regenerates a new scramble";
         i18nHelp[14] = "F : Front side";
         i18nHelp[15] = "B : Back side";
         i18nHelp[16] = "U : Up side";
@@ -237,13 +244,37 @@ public class L10n {
         i18n[8] = "Geben Sie die Nummer der Zeit f\u00fcr der Mittelwert !";
         i18n[9] = "Die Zahl ist zu klein (muss gr\u00f6\u00dfer als 3)";
         i18n[10] = "W\u00e4hlen Sie Ihre Sprache";
-        i18n[11] = "Sekunden";
+        i18n[11] = "Strafsekunden";
         i18n[12] = "Das ist nicht eine Nummer";
         i18n[13] = "Fehler";
         i18n[14] = "Pr\u00fcfung";
-        i18n[15] = "Keyboard-Hilfe";
+        i18n[15] = "Tastatur-Hilfe";
         i18n[16] = "Scramble-Hilfe";
         i18n[17] = "Geben Sie die Pr\u00fcfung Zeit (in Sekunden) !";
+        //HELP I18N
+         i18nHelp [0] = "Escape-Taste: Beenden das Programm";
+         i18nHelp [1] = "Leertaste: Starten der Stoppuhr";
+         i18nHelp [2] = "Umschalttaste: Starten der Pr\u00fcfung Stoppuhr";
+         i18nHelp [3] = "Eingabetaste: F\u00fcgt 2 Strafsekunden";
+         i18nHelp [4] = "D: Definiert der vorherige Zeit als DNF";
+         i18nHelp [5] = "S: Definiert der n\u00e4chste Zeit als DNS";
+         i18nHelp [6] = "R: Zur\u00fccksetzen aller Zeiten";
+         i18nHelp [7] = "F1: Zeigt die Tastatur-Hilfe";
+         i18nHelp [8] = "F2: Zeigt die Scramble-Hilfe";
+         i18nHelp [9] = "F3: Definiert die Sprache des Programms";
+         i18nHelp [10] = "F9: Definiert der Pr\u00fcfung Stoppuhr";
+         i18nHelp [11] = "F10: Definiert die Anzahl der Bewegung f\u00fcr die Scramble";
+         i18nHelp [12] = "F11: Definiert die Anzahl der f\u00fcr die Berechnung des Mittelwertes";
+         i18nHelp [13] = "F12: Regeneriert eine neue Scramble";
+         i18nHelp [14] = "F: Vorderseite";
+         i18nHelp [15] = "B: R\u00fcckseite";
+         i18nHelp [16] = "U: Obenseite";
+         i18nHelp [17] = "D: Unterseite";
+         i18nHelp [18] = "R: Richtigseite";
+         i18nHelp [19] = "L: Linkenseite";
+         i18nHelp [20] = " : Im Uhrzeigersinn";
+         i18nHelp [21] = "': Gegen den Uhrzeigersinn";
+         i18nHelp [22] = "²: Zweimal";
     }
     
     /**
