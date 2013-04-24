@@ -88,7 +88,7 @@ public class L10n {
     
     /**
      * Retourne l'internationalisation des adjectifs numérals ordinaux
-     * @param opt
+     * @param number
      * Le numéro
      * @return 
      * Retourne l'abreviation
