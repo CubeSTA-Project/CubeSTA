@@ -1,5 +1,5 @@
 /* Project : CubeSTA
- * Location : edu.cubesta.timerwindows
+ * Location : edu.cubesta.ressources
  * Class : Listener.java
  */
 package edu.cubesta.resources;
@@ -14,7 +14,6 @@ import java.awt.event.KeyListener;
 
 /**
  * La classe permet d'écouter sur quelle touche l'utilisateur appuie
- *
  * @author julien.gardet
  */
 public class Listener implements KeyListener {
@@ -22,18 +21,20 @@ public class Listener implements KeyListener {
     /**
      * Variable Globale
      */
-    static boolean start;
+    
+    public static boolean start;
     public static boolean endPenality;
     public static boolean startPenality;
     public static boolean inspection;
     public static boolean DNS;
     public static boolean DNF;
-    Timer time;
-    Average avg;
+    private Timer time;
+    private Average avg;
 
     /**
      * Initialise la classe avec la classe Timer et Average
      */
+    
     public Listener() {
         time = new Timer();
         start = true;
@@ -47,9 +48,9 @@ public class Listener implements KeyListener {
 
     /**
      * La fonction est appeler lorsque la touche retourne un charactère unicode
-     *
      * @param e
      */
+    
     @Override
     public void keyTyped(KeyEvent e) {
         //displayInfo(e, "KEY TYPED: ");
@@ -57,9 +58,9 @@ public class Listener implements KeyListener {
 
     /**
      * la fonction est appeler lorsque la touche vient d'être appuyer
-     *
      * @param e
      */
+    
     @Override
     public void keyPressed(KeyEvent e) {
         //displayInfo(e, "KEY PRESSED: ");
@@ -108,11 +109,11 @@ public class Listener implements KeyListener {
         }else if(e.getKeyCode() == KeyEvent.VK_F1){ //F1
             start = true;
             Timer.reset();
-            KeyHelpDialog khd = new KeyHelpDialog(null, "\u2328 " + L10n.getLanguage(15), true);
+            KeyHelpDialog khd = new KeyHelpDialog(null, "\u2328 " + L10n.getLanguage(15));
         }else if(e.getKeyCode() == KeyEvent.VK_F2){ //F1
             start = true;
             Timer.reset();
-            MoveHelpDialog mhd = new MoveHelpDialog(null, "\u2328 " + L10n.getLanguage(16), true);
+            MoveHelpDialog mhd = new MoveHelpDialog(null, "\u2328 " + L10n.getLanguage(16));
         }else if (e.getKeyCode() == KeyEvent.VK_F3) {//F3
             Dialog.setLAN();
         } else if (e.getKeyCode() == KeyEvent.VK_ENTER && start && Average.nbr != 0 && !DNS && !DNF && !inspection) {//entrer
@@ -136,26 +137,27 @@ public class Listener implements KeyListener {
 
     /**
      * La fonction est appeler lorsque la touche est relacher
-     *
      * @param e
      */
+    
     @Override
     public void keyReleased(KeyEvent e) {
         //displayInfo(e, "KEY RELEASED: ");
     }
 
     /**
-     * Affiche une information sur la touche qui vient d'être appuyer (from
-     * Oracle)
-     *
+     * Affiche une information sur la touche qui vient d'être appuyer,
+     * /!\ this method is under copyright,
+     * /!\ please use this method only for debugging.
      * @param e parametre de la touche appuyer
      * @param keyStatus Statut de la touche (Pressed/Typed/Released)
      * @deprecated
      */
+    
     private void displayInfo(KeyEvent e, String keyStatus) {
-
-        //You should only rely on the key char if the event
-        //is a key typed event.
+        /**
+         * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
+         */ 
         int id = e.getID();
         String keyString;
         if (id == KeyEvent.KEY_TYPED) {
@@ -205,6 +207,10 @@ public class Listener implements KeyListener {
                 + "    " + actionString + "\n"
                 + "    " + locationString + "\n");
     }
+    
+    /**
+     * Ajout ou enlève une pénaliter de deux seconde au temps
+     */
 
     public void penality() {
         if (endPenality) {
@@ -219,6 +225,10 @@ public class Listener implements KeyListener {
             Average.temps[1][Average.nbr - 1] = Average.temps[1][Average.nbr - 1] + 2;
         }
     }
+    
+    /**
+     * Définie le temps suivant comme DNS (did not start)
+     */
 
     public static void didNotStart() {
         Average.insertTime(-1);
@@ -232,6 +242,10 @@ public class Listener implements KeyListener {
         inspection = false;
         CubeWindows.changeScreen();
     }
+    
+    /**
+     * Définie le temps précédent comme DNF (did not finish)
+     */
 
     public static void didNotFinish() {
         Average.temps[0][Average.nbr - 1] = -1;

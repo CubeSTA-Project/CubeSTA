@@ -37,7 +37,7 @@ public class TurnCube {
      * Retourne le nombre de fois que l'algorithme de déplacement des couleur doit être exécuté
      */
     
-    public int turnNumber(char direction){
+    private int turnNumber(char direction){
         int N;
         if(direction == '\''){
             N = 3;
@@ -133,7 +133,7 @@ public class TurnCube {
      * Choix de la face (B : blue / W : white / R : red / G : green / Y : yellow / O : orange)
      */
     
-    public void turnFace(char face){
+    private void turnFace(char face){
         tmp = cubeGUI[face][1]; cubeGUI[face][1] = cubeGUI[face][7]; cubeGUI[face][7] = cubeGUI[face][9]; cubeGUI[face][9] = cubeGUI[face][3]; cubeGUI[face][3] = tmp;
         tmp = cubeGUI[face][2]; cubeGUI[face][2] = cubeGUI[face][4]; cubeGUI[face][4] = cubeGUI[face][8]; cubeGUI[face][8] = cubeGUI[face][6]; cubeGUI[face][6] = tmp;
     }
@@ -158,7 +158,7 @@ public class TurnCube {
      * Position de la couleur finale {droite,centre,gauche}
      */
     
-    public void turnAxes(char colorA, int[] positionA, char colorB, int[] positionB, char colorC, int[] positionC, char colorD, int[] positionD ){
+    private void turnAxes(char colorA, int[] positionA, char colorB, int[] positionB, char colorC, int[] positionC, char colorD, int[] positionD ){
         tmp = cubeGUI[colorD][positionD[0]]; cubeGUI[colorD][positionD[0]] = cubeGUI[colorC][positionC[0]]; cubeGUI[colorC][positionC[0]] = cubeGUI[colorB][positionB[0]]; cubeGUI[colorB][positionB[0]] = cubeGUI[colorA][positionA[0]]; cubeGUI[colorA][positionA[0]] = tmp;
         tmp = cubeGUI[colorD][positionD[1]]; cubeGUI[colorD][positionD[1]] = cubeGUI[colorC][positionC[1]]; cubeGUI[colorC][positionC[1]] = cubeGUI[colorB][positionB[1]]; cubeGUI[colorB][positionB[1]] = cubeGUI[colorA][positionA[1]]; cubeGUI[colorA][positionA[1]] = tmp;
         tmp = cubeGUI[colorD][positionD[2]]; cubeGUI[colorD][positionD[2]] = cubeGUI[colorC][positionC[2]]; cubeGUI[colorC][positionC[2]] = cubeGUI[colorB][positionB[2]]; cubeGUI[colorB][positionB[2]] = cubeGUI[colorA][positionA[2]]; cubeGUI[colorA][positionA[2]] = tmp;

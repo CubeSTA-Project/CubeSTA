@@ -64,12 +64,17 @@ public class Average {
     
     public static int[] sortTimes(int[] liste){
         int[] sortedlist = new int[liste.length];
-        for(int i = 0;i<liste.length;i++){
-            sortedlist[i] = liste[i]; 
-        }
+        System.arraycopy(liste, 0, sortedlist, 0, liste.length);
         int tmp;
         for(int i = 1; i < sortedlist.length; i++){
             for(int j = i-1; j+1 > 0 && sortedlist[j+1] <= sortedlist[j]; j--){ //TRI par insertion
+                tmp = sortedlist[j+1];
+                sortedlist[j+1] = sortedlist[j];
+                sortedlist[j] = tmp;
+            }
+        }
+        for(int i = sortedlist.length; i >= 0; i--){
+            for(int j = i; j < sortedlist.length-1 && sortedlist[j] < 0; j++){ //TRI par selection des nombre négaitf (nombre négatif en bout de chaine)
                 tmp = sortedlist[j+1];
                 sortedlist[j+1] = sortedlist[j];
                 sortedlist[j] = tmp;
@@ -119,8 +124,11 @@ public class Average {
     
     public static int getBest(){
         int[] temptemps = sortTimes(temps[0]);
-        for(int i = temptemps.length-1; i >= 0;i--){//Exclue les temps négatifs
-            best = (temptemps[i] < 0)? best : temptemps[i];
+        best =  temptemps[0];
+        for(int i =0; i < temptemps.length && temptemps[i] == 0;i++){//Exclue les temps égals à zéro
+            if(i+1 < temptemps.length){
+                best =  temptemps[i+1];  
+            }
         }
         return best;
     }

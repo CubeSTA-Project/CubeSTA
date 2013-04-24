@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
- *
+ * Permet de gérer le contenue de la fenêtre du chronomètre
  * @author julien.gardet
  */
 public class TimerWindows extends JFrame {
@@ -21,8 +21,8 @@ public class TimerWindows extends JFrame {
      * Variable Globale
      */
 
-    static CardLayout cl = new CardLayout();
-    static JPanel content = new JPanel();
+    private static CardLayout cl = new CardLayout();
+    private static JPanel content = new JPanel();
         
     /**
      * Permet de créer et de gérer le contenue fenêtre du chronomètre

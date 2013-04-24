@@ -14,7 +14,7 @@ public class AlgoMaker {
      * Variable Globale
      */
 
-	private char[][] scramble;
+    private char[][] scramble;
     
     /**
      * Génère un algorithme de mélange du cube

@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.ressource
+ * Class : Dialog.java
  */
 package edu.cubesta.resources;
 
@@ -8,8 +8,8 @@ import edu.cubesta.timer.Average;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author julien
+ * Permet de gerer le contenue de la boite de dialogue d'aide des mouvements
+ * @author julien.gardet
  */
 public class Dialog {
     
@@ -75,11 +75,16 @@ public class Dialog {
      */
     
     public static void setLAN(){
-        L10n.setLanguage((String)JOptionPane.showInputDialog(null,L10n.getLanguage(10),L10n.getLanguage(5) + " - CubeSTA", JOptionPane.QUESTION_MESSAGE, null, L10n.listLanguage(), L10n.listLanguage()[0]));
+        try{
+            L10n.setLanguage((String)JOptionPane.showInputDialog(null,L10n.getLanguage(10),L10n.getLanguage(5) + " - CubeSTA", JOptionPane.QUESTION_MESSAGE, null, L10n.listLanguage(), L10n.listLanguage()[0]));
+        } catch (NullPointerException ex) {
+        }
     }
     
     /**
      * Permet de modifier le temps d'inspection
+     * @return 
+     * Retourne la valeur entrer
      */
     
     public static int setINS(){
@@ -103,7 +108,7 @@ public class Dialog {
      * Retourne la valeur entrer
      */
     
-    public static String showInputDialog(String title, String question){
+    private static String showInputDialog(String title, String question){
         String answer = JOptionPane.showInputDialog(null, question, title, JOptionPane.QUESTION_MESSAGE);
         return answer;
     }
@@ -116,7 +121,7 @@ public class Dialog {
      * Question à poser
      */
     
-    public static void showAlertDialog(String title, String question){
+    private static void showAlertDialog(String title, String question){
         JOptionPane.showMessageDialog(null, question, title, JOptionPane.WARNING_MESSAGE);
     }
     
@@ -128,7 +133,7 @@ public class Dialog {
      * Question à poser
      */
     
-    public static void showErrorDialog(String title, String question){
+    private static void showErrorDialog(String title, String question){
         JOptionPane.showMessageDialog(null, question, title, JOptionPane.ERROR_MESSAGE);
     }
     
@@ -171,12 +176,24 @@ public class Dialog {
     private static void setNumberOfTime(int numberOfTime) {
         Dialog.numberOfTime = numberOfTime;
     }
+    
+    /**
+     * Permet d'obtenir la valeur de la variable du temps d'inspection
+     * @return 
+     * Retourne sa valeur
+     */
 
     public static int getInspectionTime() {
         return inspectionTime;
     }
+    
+    /**
+     * Permet de définir la variable de temps d'inspection
+     * @param inspectionTime 
+     * Le nouvelle valeur à définir
+     */
 
-    public static void setInspectionTime(int inspectionTime) {
+    private static void setInspectionTime(int inspectionTime) {
         Dialog.inspectionTime = inspectionTime;
     }
     

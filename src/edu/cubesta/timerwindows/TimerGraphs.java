@@ -80,6 +80,24 @@ public class TimerGraphs extends JPanel {
         g.setFont(font3);
         g = drawLeftResume(g);
     }
+    
+    /**
+     * Affiche le numéro du tour centrer
+     * @param number
+     * numéro du tour
+     * @param superscript
+     * abréviation
+     * @param round
+     * I18n du mot "Tour"
+     * @param g
+     * le graphic sur lequel l'appliquer
+     * @param fontN
+     * police normale
+     * @param fontE
+     * police réduite
+     * @return 
+     * retourne le graphic finale
+     */
 
     private Graphics drawRoundCenter(String number, String superscript, String round, Graphics g, Font fontN, Font fontE) {
         round = " " + round; //ajout d'un espace avant le texte
@@ -100,6 +118,28 @@ public class TimerGraphs extends JPanel {
         return g;
     }
     
+    /**
+     * Affiche le chronomètre au centre
+     * @param string
+     * Le temps du chronomètre
+     * @param posY
+     * Position verticale
+     * @param g
+     * Le graphic sur lequel appliquer
+     * @param font
+     * La police du chronomètre
+     * @param note
+     * L'annotation en dessous du chronomètre
+     * @param fontNote
+     * La police de l'annotation
+     * @param color1
+     * La couleur du temps
+     * @param color2
+     * La couleur de l'annotation
+     * @return 
+     * Retourne le graphic finale
+     */
+    
     private Graphics drawTimerCenter(String string, int posY, Graphics g, Font font, String note, Font fontNote, Color color1, Color color2) {
         g.setColor(color1);
         g.setFont(font);
@@ -114,6 +154,26 @@ public class TimerGraphs extends JPanel {
         g.setColor(Color.BLACK);
         return g;
     }
+    
+    /**
+     * Affiche la liste de temps
+     * @param position
+     * Position du temps
+     * @param time
+     * le temps de la position
+     * @param penality
+     * Seconde de pénalité du temps
+     * @param state
+     * Etat du temps (Noir si false et Rouge si true)
+     * @param fontN
+     * Police normal
+     * @param fontI
+     * Police réduite
+     * @param g
+     * Le graphic sur lequel appliquer
+     * @return 
+     * Retourn le graphic final
+     */
     
     private Graphics drawTimeList(int position, String time, int penality, int state, Font fontN, Font fontI, Graphics g ){
         g.setColor(Color.BLACK);
@@ -137,6 +197,14 @@ public class TimerGraphs extends JPanel {
         g.setColor(Color.BLACK);
         return g;
     }
+    
+    /**
+     * Affiche le résumer à gauche
+     * @param g
+     * le graphic sur lequel l'appliquer
+     * @return 
+     * Retourne le graphic finale
+     */
     
     private Graphics drawLeftResume(Graphics g){
         //Obtenir le plus grand texte

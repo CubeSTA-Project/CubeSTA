@@ -9,8 +9,11 @@ import edu.cubesta.resources.L10n;
 import edu.cubesta.resources.Listener;
 import edu.cubesta.scramble.AlgoMaker;
 import edu.cubesta.scramble.CubeGUI;
-import java.awt.*;
-import javax.swing.*;
+import java.awt.CardLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  * Permet de créer et gérer la fenêtre de mélange
@@ -22,10 +25,10 @@ public class CubeWindows extends JFrame {
      * Variable Globale
      */
     
-    static char[][] cubeGUI;
-    static char[][] algoGUI;
-    static CardLayout cl = new CardLayout();
-    static JPanel content = new JPanel();
+    private static char[][] cubeGUI;
+    private static char[][] algoGUI;
+    private static CardLayout cl = new CardLayout();
+    private static JPanel content = new JPanel();
         
     /**
      * Permet d'initialiser une fenêtre
@@ -54,7 +57,7 @@ public class CubeWindows extends JFrame {
      * Permet de générer un nouveau mélange
      */
     
-    public static void createCube(){
+    private static void createCube(){
         CubeGUI cube = new CubeGUI();
         AlgoMaker algo = new AlgoMaker(Dialog.getNumberOfScramble());
         cube.scrambleCubeGUI(algo.getScramble());

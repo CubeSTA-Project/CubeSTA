@@ -1,24 +1,38 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.ressources
+ * Class : L10n.java
  */
 package edu.cubesta.resources;
 
 /**
- *
- * @author julien
+ * Permet de gérer l'internationalisation du programme
+ * @author julien.gardet yann.droy auxence.araujo
  */
 public class L10n {
     
-    static String language;
-    static String[] i18n = new String[18];
-    static String[] i18nHelp = new String[23];
+    /**
+     * Variable Globale
+     */
+    
+    private static String language;
+    private static String[] i18n = new String[18];
+    private static String[] i18nHelp = new String[23];
+    
+    /**
+     * Définie la langue d'affichage par défault
+     */
 
     public L10n() {
         setEN();
         language = System.getProperty("user.language");
         setLanguage(language);
     }
+    
+    /**
+     * Modifie la langue d'affichage
+     * @param language 
+     * la langue à définir
+     */
 
     public static void setLanguage(String language) {
         switch(language){
@@ -30,18 +44,48 @@ public class L10n {
         }
     }
     
+    /**
+     * Retourne la liste des langues disponible
+     * @return 
+     * retourne la liste des langues
+     */
+    
     public static String[] listLanguage(){
         String[] s = {"en", "de", "fr"};
         return s;
     }
     
+    /**
+     * Retourne l'internationalisation d'un message
+     * @param opt
+     * Le numéro du méssage
+     * @return 
+     * Retourn le message traduit
+     */
+    
     public static String getLanguage(int opt){
         return i18n[opt];
     }
     
+    /**
+     * Retourne l'internationalisation d'un message d'aide
+     * @param opt
+     * Le numéro du méssage
+     * @return 
+     * Retourne le message traduit
+     */
+    
     public static String getLanguageHelp(int opt){
         return i18nHelp[opt];
     }
+    
+    /**
+     * Retourne l'internationalisation des adjectifs numérals ordinaux
+     * @param opt
+     * Le numéro
+     * @return 
+     * Retourne l'abreviation
+     */
     
     public static String getOrdinal(int number){
         String retour;
@@ -49,7 +93,7 @@ public class L10n {
             switch(number){
                 case 1 : retour = "er"; break;
                 case 2 : retour = "nd"; break;
-                default : retour = "ème"; break;
+                default : retour = "\u00e8me"; break;
             }
         }else if("de".equals(language)){//Deutsch
             retour = ".";
@@ -72,6 +116,10 @@ public class L10n {
         }
         return retour;
     }
+    
+    /**
+     * The english translation
+     */
 
     private static void setEN() {
         language = "en";
@@ -120,6 +168,10 @@ public class L10n {
         i18nHelp[22] = "² : Twice";
     }
     
+    /**
+     * La traduction française
+     */
+    
     private static void setFR() {
         language = "fr";
         //MAIN I18N
@@ -139,25 +191,25 @@ public class L10n {
         i18n[13] = "Erreur";
         i18n[14] = "Inspection";
         i18n[15] = "Aide Clavier";
-        i18n[16] = "Aide Mélange";
+        i18n[16] = "Aide M\u00e9lange";
         i18n[17] = "Entrer le temps d'inspection (en seconde) !";
         //HELP I18N
         i18nHelp[0] = "Echape : Quiter le programme";
-        i18nHelp[1] = "Espace : Démarre le chronomètre";
-        i18nHelp[2] = "Majuscule : Démarre le temps d'inspection";
-        i18nHelp[3] = "Entrer : Ajoute une pénaliter de 2 secondes";
-        i18nHelp[4] = "D : Définie le temps précédent comme DNF";
-        i18nHelp[5] = "S : Définie le temps suivant comme DNS";
-        i18nHelp[6] = "R : Remet à zéro tous les temps";
+        i18nHelp[1] = "Espace : D\u00e9marre le chronom\u00e8tre";
+        i18nHelp[2] = "Majuscule : D\u00e9marre le temps d'inspection";
+        i18nHelp[3] = "Entrer : Ajoute une p\u00e9naliter de 2 secondes";
+        i18nHelp[4] = "D : D\u00e9finie le temps pr\u00e9c\u00e9dent comme DNF";
+        i18nHelp[5] = "S : D\u00e9finie le temps suivant comme DNS";
+        i18nHelp[6] = "R : Remet à z\u00e9ro tous les temps";
         i18nHelp[7] = "F1 : Afficher l'aide clavier";
         i18nHelp[8] = "F2 : Afficher l'aide de la synthaxe des mouvements";
-        i18nHelp[9] = "F3 : Définie la langue du programme";
-        i18nHelp[10] = "F9 : Définie le temps d'inspection";
-        i18nHelp[11] = "F10 : Définie le nombre de mouvement du mélange";
-        i18nHelp[12] = "F11 : Définie le nombre de temps pour le calcul de la moyenne";
-        i18nHelp[13] = "F12 : Permet de régénérer un mélange";
+        i18nHelp[9] = "F3 : D\u00e9finie la langue du programme";
+        i18nHelp[10] = "F9 : D\u00e9finie le temps d'inspection";
+        i18nHelp[11] = "F10 : D\u00e9finie le nombre de mouvement du m\u00e9lange";
+        i18nHelp[12] = "F11 : D\u00e9finie le nombre de temps pour le calcul de la moyenne";
+        i18nHelp[13] = "F12 : Permet de r\u00e9g\u00e9n\u00e9rer un m\u00e9lange";
         i18nHelp[14] = "F : Face avant";
-        i18nHelp[15] = "B : Face arrière";
+        i18nHelp[15] = "B : Face arri\u00e8re";
         i18nHelp[16] = "U : Face du haut";
         i18nHelp[17] = "D : Face du bas";
         i18nHelp[18] = "R : Face de droite";
@@ -167,8 +219,13 @@ public class L10n {
         i18nHelp[22] = "² : Deux fois";
     }
     
+    /**
+     * Die deutsche Übersetzung
+     */
+    
     private static void setDE() {
         language = "de";
+        //Main Help
         i18n[0] = "Runde";
         i18n[1] = "Mittelwert";
         i18n[2] = "Beste";
@@ -184,7 +241,14 @@ public class L10n {
         i18n[12] = "Das ist nicht eine Nummer";
         i18n[13] = "Fehler";
         i18n[14] = "Pr\u00fcfung";
+        i18n[15] = "Keyboard-Hilfe";
+        i18n[16] = "Scramble-Hilfe";
+        i18n[17] = "Geben Sie die Pr\u00fcfung Zeit (in Sekunden) !";
     }
+    
+    /**
+     * Tłumaczenie na polski
+     */
     
     private static void setPL() {
         throw new UnsupportedOperationException("Not yet implemented");

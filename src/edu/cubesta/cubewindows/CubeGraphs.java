@@ -15,8 +15,12 @@ import javax.swing.JPanel;
  */
 public class CubeGraphs extends JPanel {
     
-    char[][] cubeGUI;
-    char[][] algo;
+    /**
+     * Variable Globale
+     */
+    
+    private char[][] cubeGUI;
+    private char[][] algo;
     
     /**
      * Initialise la classe avec des données d'affichage
@@ -109,7 +113,7 @@ public class CubeGraphs extends JPanel {
      * Retourn une couleur (e.g. Color.NomDeLaCouleur)
      */
     
-    public Color getColorCube(char color){
+    private Color getColorCube(char color){
         if(color == 'R'){return Color.RED;}
         else if(color == 'G'){return Color.GREEN;}
         else if(color == 'B'){return Color.BLUE;}

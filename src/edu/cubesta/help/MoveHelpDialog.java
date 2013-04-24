@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.help
+ * Class : MoveHelpDialog.java
  */
 package edu.cubesta.help;
 
@@ -10,13 +10,21 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- *
- * @author julien
+ * Créer la boite de dialogue d'aide des mouvements
+ * @author julien.gardet
  */
 public class MoveHelpDialog extends JDialog {
+    
+    /**
+     * Permet de créer la fenêtre de la boite de dialogue d'aide des mouvements
+     * @param parent
+     * Le contenue de la fenêtre
+     * @param title
+     * Le titre de la fenêtre
+     */
 
-    public MoveHelpDialog(JFrame parent, String title, boolean modal) {
-        super(parent, title, modal);
+    public MoveHelpDialog(JFrame parent, String title) {
+        super(parent, title);
         this.setSize(300,250);
         this.setLocationRelativeTo(null); 
         this.setResizable(false);

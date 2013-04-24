@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.help
+ * Class : KeyHelpDialog.java
  */
 package edu.cubesta.help;
 
@@ -10,13 +10,21 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- *
- * @author julien
+ * Créer la boite de dialogue d'aide des touches
+ * @author julien.gardet
  */
 public class KeyHelpDialog extends JDialog {
+    
+    /**
+     * Permet de créer la fenêtre de la boite de dialogue d'aide des touches
+     * @param parent
+     * Le contenue de la fenêtre
+     * @param title
+     * Le titre de la fenêtre
+     */
 
-    public KeyHelpDialog(JFrame parent, String title, boolean modal) {
-        super(parent, title, modal);
+    public KeyHelpDialog(JFrame parent, String title) {
+        super(parent, title);
         this.setSize(500,320);
         this.setLocationRelativeTo(null); 
         this.setResizable(false);

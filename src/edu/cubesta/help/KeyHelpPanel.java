@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Project : CubeSTA
+ * Location : edu.cubesta.help
+ * Class : KeyHelpPanel.java
  */
 package edu.cubesta.help;
 
@@ -11,10 +11,15 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- *
- * @author julien
+ * Permet de gerer le contenue de la boite de dialogue d'aide des touches
+ * @author julien.gardet
  */
 public class KeyHelpPanel extends JPanel {
+    
+    /**
+     * Permet de créer le contenue de la boite de dialogue d'aide des touches
+     * @param g 
+     */
     
     @Override
     public void paintComponent(Graphics g){
