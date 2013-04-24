@@ -76,6 +76,8 @@ public class TimerGraphs extends JPanel {
         for(int i = 1 ; i <= time[0].length ; i++){
             drawTimeList(i, Timer.time2string(time[0][i-1]), time[1][i-1], time[2][i-1], font3, font5, g );
         }
+        g.setColor(Color.BLACK);
+        g.setFont(font3);
         g = drawLeftResume(g);
     }
 

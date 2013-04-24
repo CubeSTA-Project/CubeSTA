@@ -19,6 +19,7 @@ public class Dialog {
     
     private static int numberOfScramble;
     private static int numberOfTime;
+    private static int inspectionTime;
     
     /**
      * Définit les variable par défault
@@ -27,6 +28,7 @@ public class Dialog {
     public Dialog() {
         numberOfScramble = 25;
         numberOfTime = 5;
+        inspectionTime = 15000;
     }
     
     /**
@@ -74,6 +76,21 @@ public class Dialog {
     
     public static void setLAN(){
         L10n.setLanguage((String)JOptionPane.showInputDialog(null,L10n.getLanguage(10),L10n.getLanguage(5) + " - CubeSTA", JOptionPane.QUESTION_MESSAGE, null, L10n.listLanguage(), L10n.listLanguage()[0]));
+    }
+    
+    /**
+     * Permet de modifier le temps d'inspection
+     */
+    
+    public static int setINS(){
+        int retour = inspectionTime;
+        try{
+            retour = Integer.valueOf(showInputDialog(L10n.getLanguage(5) + " - CubeSTA", L10n.getLanguage(17))).intValue()*1000;
+            setInspectionTime(retour);
+        } catch (NumberFormatException ex) {
+            showErrorDialog(L10n.getLanguage(13) + " - CubeSTA", L10n.getLanguage(12));
+        }
+        return retour;
     }
     
     /**
@@ -153,6 +170,14 @@ public class Dialog {
 
     private static void setNumberOfTime(int numberOfTime) {
         Dialog.numberOfTime = numberOfTime;
+    }
+
+    public static int getInspectionTime() {
+        return inspectionTime;
+    }
+
+    public static void setInspectionTime(int inspectionTime) {
+        Dialog.inspectionTime = inspectionTime;
     }
     
 }

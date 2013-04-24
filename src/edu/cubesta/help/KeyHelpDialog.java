@@ -17,7 +17,7 @@ public class KeyHelpDialog extends JDialog {
 
     public KeyHelpDialog(JFrame parent, String title, boolean modal) {
         super(parent, title, modal);
-        this.setSize(500,300);
+        this.setSize(500,320);
         this.setLocationRelativeTo(null); 
         this.setResizable(false);
         Image icon;

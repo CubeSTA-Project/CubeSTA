@@ -87,6 +87,8 @@ public class Listener implements KeyListener {
             }
         } else if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {//Echap
             System.exit(0);
+        } else if (e.getKeyCode() == KeyEvent.VK_F9) {//F10
+            int setINS = Dialog.setINS();
         } else if (e.getKeyCode() == KeyEvent.VK_F10) {//F10
             int setNOS = Dialog.setNOS();
             CubeWindows.changeScreen();
@@ -118,7 +120,7 @@ public class Listener implements KeyListener {
         } else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {//Maj
             Timer.reset();
             Average.checkToReset(Dialog.getNumberOfTime());
-            Timer.tempsStart = System.currentTimeMillis() + 15000;
+            Timer.tempsStart = System.currentTimeMillis() + Dialog.getInspectionTime();
             inspection = true;
             startPenality = false;
             endPenality = false;

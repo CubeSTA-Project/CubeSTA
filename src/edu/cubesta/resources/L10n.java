@@ -11,8 +11,8 @@ package edu.cubesta.resources;
 public class L10n {
     
     static String language;
-    static String[] i18n = new String[17];
-    static String[] i18nHelp = new String[22];
+    static String[] i18n = new String[18];
+    static String[] i18nHelp = new String[23];
 
     public L10n() {
         setEN();
@@ -93,6 +93,7 @@ public class L10n {
         i18n[14] = "Inspection";
         i18n[15] = "KeyBoard Help";
         i18n[16] = "Scramble Help";
+        i18n[17] = "Enter the inspection time (in second) !";
         //HELP I18N
         i18nHelp[0] = "Escape : Quit the program";
         i18nHelp[1] = "Espace : Start the timer";
@@ -104,18 +105,19 @@ public class L10n {
         i18nHelp[7] = "F1 : Display the keyboard help";
         i18nHelp[8] = "F2 : Display the synthax movement help";
         i18nHelp[9] = "F3 : Set the language of the program";
-        i18nHelp[10] = "F10 : Set the number of movement for the scramble";
-        i18nHelp[11] = "F11 : Set the number of times to calculate the average";
-        i18nHelp[12] = "F12 : Regen a new scramble";
-        i18nHelp[13] = "F : Front side";
-        i18nHelp[14] = "B : Back side";
-        i18nHelp[15] = "U : Up side";
-        i18nHelp[16] = "D : Down side";
-        i18nHelp[17] = "R : Right side";
-        i18nHelp[18] = "L : Left side";
-        i18nHelp[19] = "  : Clockwise";
-        i18nHelp[20] = "' : Anticlockwise";
-        i18nHelp[21] = "² : Twice";
+        i18nHelp[10] = "F9 : Set the inspection time";
+        i18nHelp[11] = "F10 : Set the number of movement for the scramble";
+        i18nHelp[12] = "F11 : Set the number of times to calculate the average";
+        i18nHelp[13] = "F12 : Regen a new scramble";
+        i18nHelp[14] = "F : Front side";
+        i18nHelp[15] = "B : Back side";
+        i18nHelp[16] = "U : Up side";
+        i18nHelp[17] = "D : Down side";
+        i18nHelp[18] = "R : Right side";
+        i18nHelp[19] = "L : Left side";
+        i18nHelp[20] = "  : Clockwise";
+        i18nHelp[21] = "' : Anticlockwise";
+        i18nHelp[22] = "² : Twice";
     }
     
     private static void setFR() {
@@ -138,6 +140,7 @@ public class L10n {
         i18n[14] = "Inspection";
         i18n[15] = "Aide Clavier";
         i18n[16] = "Aide Mélange";
+        i18n[17] = "Entrer le temps d'inspection (en seconde) !";
         //HELP I18N
         i18nHelp[0] = "Echape : Quiter le programme";
         i18nHelp[1] = "Espace : Démarre le chronomètre";
@@ -149,18 +152,19 @@ public class L10n {
         i18nHelp[7] = "F1 : Afficher l'aide clavier";
         i18nHelp[8] = "F2 : Afficher l'aide de la synthaxe des mouvements";
         i18nHelp[9] = "F3 : Définie la langue du programme";
-        i18nHelp[10] = "F10 : Définie le nombre de mouvement du mélange";
-        i18nHelp[11] = "F11 : Définie le nombre de temps pour le calcul de la moyenne";
-        i18nHelp[12] = "F12 : Permet de régénérer un mélange";
-        i18nHelp[13] = "F : Face avant";
-        i18nHelp[14] = "B : Face arrière";
-        i18nHelp[15] = "U : Face du haut";
-        i18nHelp[16] = "D : Face du bas";
-        i18nHelp[17] = "R : Face de droite";
-        i18nHelp[18] = "L : Face de gauche";
-        i18nHelp[19] = "  : Dans le sens horaire";
-        i18nHelp[20] = "' : Dans le sens antihoraire";
-        i18nHelp[21] = "² : Deux fois";
+        i18nHelp[10] = "F9 : Définie le temps d'inspection";
+        i18nHelp[11] = "F10 : Définie le nombre de mouvement du mélange";
+        i18nHelp[12] = "F11 : Définie le nombre de temps pour le calcul de la moyenne";
+        i18nHelp[13] = "F12 : Permet de régénérer un mélange";
+        i18nHelp[14] = "F : Face avant";
+        i18nHelp[15] = "B : Face arrière";
+        i18nHelp[16] = "U : Face du haut";
+        i18nHelp[17] = "D : Face du bas";
+        i18nHelp[18] = "R : Face de droite";
+        i18nHelp[19] = "L : Face de gauche";
+        i18nHelp[20] = "  : Dans le sens horaire";
+        i18nHelp[21] = "' : Dans le sens antihoraire";
+        i18nHelp[22] = "² : Deux fois";
     }
     
     private static void setDE() {

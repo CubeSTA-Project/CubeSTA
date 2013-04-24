@@ -25,7 +25,7 @@ public class KeyHelpPanel extends JPanel {
         g.drawString("\u2328 " + L10n.getLanguage(15), 10, 25);
         font = new Font("Sans", 0, 12);
         g.setFont(font);
-        for(int i = 0; i <= 12; i++){
+        for(int i = 0; i <= 13; i++){
             g.drawString(L10n.getLanguageHelp(i), 10, 50+20*i);
         }
     }

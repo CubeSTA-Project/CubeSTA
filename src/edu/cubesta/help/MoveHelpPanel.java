@@ -25,7 +25,7 @@ public class MoveHelpPanel extends JPanel {
         g.drawString("\u2328 " + L10n.getLanguage(16), 10, 25);
         font = new Font("Sans", 0, 12);
         g.setFont(font);
-        for(int i = 13; i <= 21; i++){
+        for(int i = 14; i <= 22; i++){
             g.drawString(L10n.getLanguageHelp(i), 10, 50+20*(i-13));
         }
     }

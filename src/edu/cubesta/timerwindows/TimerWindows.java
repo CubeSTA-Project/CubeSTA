@@ -50,7 +50,7 @@ public class TimerWindows extends JFrame {
      * Permet d'actualiser le temps du chronomètre
      */
     
-     public void refreshScreen(){
+     private void refreshScreen(){
          while(true){
             try {
                 this.setTitle(L10n.getLanguage(4));
