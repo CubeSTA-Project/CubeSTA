@@ -44,11 +44,11 @@ public class KeyHelpPanel extends JPanel {
     @Override
     public void paintComponent(Graphics g){
         this.setBackground(Color.WHITE);
-        Font font = new Font("Sans", Font.BOLD, 20);
+        Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
         g.setColor(Color.black);
         g.setFont(font);
         g.drawString("\u2328 " + L10n.getLanguage(15), 10, 25);
-        font = new Font("Sans", 0, 12);
+        font = new Font(Font.SANS_SERIF, 0, 12);
         g.setFont(font);
         for(int i = 0; i <= 13; i++){
             g.drawString(L10n.getLanguageHelp(i), 10, 50+20*i);

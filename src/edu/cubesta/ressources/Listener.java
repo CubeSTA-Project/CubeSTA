@@ -25,6 +25,7 @@
 package edu.cubesta.ressources;
 
 import edu.cubesta.cubewindows.CubeWindows;
+import edu.cubesta.help.Apropos;
 import edu.cubesta.help.KeyHelpDialog;
 import edu.cubesta.help.MoveHelpDialog;
 import edu.cubesta.timer.Average;
@@ -130,15 +131,17 @@ public class Listener implements KeyListener {
             start = true;
             Timer.reset();
             KeyHelpDialog khd = new KeyHelpDialog(null, "\u2328 " + L10n.getLanguage(15));
-        }else if(e.getKeyCode() == KeyEvent.VK_F2){ //F1
+        }else if(e.getKeyCode() == KeyEvent.VK_F2){ //F2
             start = true;
             Timer.reset();
             MoveHelpDialog mhd = new MoveHelpDialog(null, "\u2328 " + L10n.getLanguage(16));
         }else if (e.getKeyCode() == KeyEvent.VK_F3) {//F3
             Dialog.setLAN();
-        } else if (e.getKeyCode() == KeyEvent.VK_ENTER && start && Average.nbr != 0 && !DNS && !DNF && !inspection) {//entrer
+        }else if (e.getKeyCode() == KeyEvent.VK_F4) {//F4
+            Apropos ap = new Apropos(null, "About - CubeSTA");
+        }else if (e.getKeyCode() == KeyEvent.VK_ENTER && start && Average.nbr != 0 && !DNS && !DNF && !inspection) {//entrer
             penality();
-        } else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {//Maj
+        }else if (e.getKeyCode() == KeyEvent.VK_SHIFT && start && !inspection) {//Maj
             Timer.reset();
             Average.checkToReset(Dialog.getNumberOfTime());
             Timer.tempsStart = System.currentTimeMillis() + Dialog.getInspectionTime();
@@ -147,9 +150,9 @@ public class Listener implements KeyListener {
             endPenality = false;
             DNS = false;
             DNF = false;
-        } else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection && !DNS){//D
+        }else if ((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_F) && start && Average.nbr != 0 && !inspection && !DNS){//D
             didNotFinish();
-        } else if (e.getKeyCode() == KeyEvent.VK_S && start && !inspection){//S
+        }else if (e.getKeyCode() == KeyEvent.VK_S && start && !inspection){//S
             Average.checkToReset(Dialog.getNumberOfTime());
             didNotStart();
         }
