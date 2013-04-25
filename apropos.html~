@@ -60,6 +60,8 @@
             </p>
           <h2>Les membres du projets</h2>
             <p>Ce projets est dirigé par trois membres (Julien Gardet, Yann Droy et Auxence Araujo).</p>
+          <h2>Pourquoi appeler ce projet CubeSTA ?</h2>
+            <p>STA est simplement l'acronymie des trois partie importante de notre projet qui est l'affichage d'un mélange (en anglais "Scramble"), l'affichage d'un chronomètre (en anglais "Timer") et le calcule d'une moyenne élaguée (en anglais "Average")</p>
           <h2>Pourquoi ce projet sur le Rubik's cube ?</h2>
             <p>Nous sommes fan de Rubik's cube et plus particulièrement de speedcubing, mais nous ne trouvons jamais de programme suffisamment adapter à nos besoin (par exemple des chronomètre qui ne sont pas assez précis ou qui n'ont pas de temps d'inspection).</p>
           <h2>Pourquoi ce projet est-il sous licenses libre ?</h2>
