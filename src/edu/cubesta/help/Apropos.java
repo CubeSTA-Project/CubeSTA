@@ -24,18 +24,22 @@
 
 package edu.cubesta.help;
 
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JTextArea;
 
 /**
- *
+ * Créer la boite de dialogue Apropos
  * @author julien.gardet
  */
 public class Apropos extends JDialog {
+    
+    /**
+     * Permet de créer la fenêtre de la boite de dialogue Apropos
+     * @param parent
+     * Le contenue de la fenêtre
+     * @param title
+     * Le titre de la fenêtre
+     */
     
     public Apropos(JFrame parent, String title) {
         super(parent, title);

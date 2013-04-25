@@ -25,22 +25,25 @@
 package edu.cubesta.help;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 /**
- *
+ * Permet de gerer le contenue de la boite de dialogue Apropos
  * @author julien
  */
 public class AproposPanel extends JPanel {
         
-        @Override
+    /**
+     * Permet de créer le contenue de la boite de dialogue Apropos
+     * @param g 
+     */
+    
+    @Override
     public void paintComponent(Graphics g){
         this.setBackground(Color.WHITE);
         g.setColor(Color.WHITE);
