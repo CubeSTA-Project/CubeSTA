@@ -32,13 +32,13 @@
       	    <a href="./index.html" id="news">News</a>
       	  </li>
       	  <li>
-      	    <a href="./apropos.html" id="apropos">&Agrave; propos</a>
+      	    <a href="./apropos.html" id="apropos" class="selected">&Agrave; propos</a>
       	  </li>
       	  <li>
       	    <a href="./javadoc.html" id="javadoc">Javadoc</a>
       	  </li>
       	  <li>
-      	    <a href="./contacts.html" id="contacts" class="selected">Nous contacter</a>
+      	    <a href="./contacts.html" id="contacts">Nous contacter</a>
       	  </li>
       	  <li>
       	    <a href="./legals.html" id="legals">Mentions l&eacute;gales</a>
@@ -50,41 +50,20 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>Nous contacter</h1>
-          <h2>CubeSTA Project</h2>
-            <p>
-              <ul>
-                <li>Localisation: <div style="width:200px;text-align:center;position:relative;left:100px;bottom:15px">Association Bussièroise de Speedcubing (ABS)<br/>Rue de la République<br/>42510 Bussières</div></li>
-                <li>e-mail: <a href="mailto:j.gardet.j36@orange.fr">j.gardet.j36@orange.fr</a></li>
-              </ul>
+          <h1>&Agrave; propos</h1>
+          <h2>Le but du projet</h2>
+            <p>Ce projet est un projet d'<abbr title="Informatique et Science du Numérique">ISN</abbr> ayant deux buts :
+             <ul>
+               <li>Le premier étant de dévelloper nos connaissances en programmation afin de les présenter lors de l'oral d'<abbr title="Informatique et Science du Numérique">ISN</abbr>;</li>
+               <li>Le deuxième étant de concevoir un programme qui soit utile aux compétiteurs de Rubik's Cube lorsqu'ils sont chez eux pour qu'ils puissent s'évaluer plus facilement.</li>
+             </ul>
             </p>
-          <h2>Julien Gardet</h2>
-            <p>
-              <ul>
-                <li>Langue: <abbr title="Cet utilisateur a pour langue maternelle le français.">FR-N</abbr> / <abbr title="This user has advanced knowledge of English.">EN-3</abbr> / <abbr title="Dieser Benutzer beherrscht Deutsch auf grundlegendem Niveau.">DE-1</abbr></li>
-                <li>e-mail: <a href="mailto:julien.gardet.pro@orange.fr">julien.gardet.pro@orange.fr</a></li>
-                <li>microblogage: <a href="https://www.facebook.com/julien.gardet">Facebook</a></li>
-                <li><abbr title="World Cube Association">WCA ID</abbr> : <a href="http://www.worldcubeassociation.org/results/p.php?i=2012GARD02">2012GARD02</a></li>
-              </ul>
-            </p>
-            <h2>Auxence Araujo</h2>
-              <p>
-                <ul>
-                  <li>Langue: <abbr title="Cet utilisateur a pour langue maternelle le français.">FR-N</abbr> / <abbr title="This user has advanced knowledge of English.">EN-3</abbr> / <abbr title="Questo utente pu&ograve; contribuire con un livello elementare in italiano.">IT-1</abbr></li>
-                  <li>e-mail: <a href="mailto:auxence-pepito@hotmail.fr">auxence-pepito@hotmail.fr</a></li>
-                  <li>microblogage: <a href="https://www.facebook.com/auxence.araujo">Facebook</a> <a href="https://www.youtube.com/user/DatantPePito">YouTube</a></li>
-                  <li><abbr title="World Cube Association">WCA ID</abbr> : <a href="http://www.worldcubeassociation.org/results/p.php?i=2012ARAU02">2012ARAU02</a></li>
-                </ul>
-              </p>
-            <h2>Yann Droy</h2>
-              <p>
-                <ul>
-                  <li>Langue: <abbr title="Cet utilisateur a pour langue maternelle le français.">FR-N</abbr> / <abbr title="Ten u&#380;ytkownik pos&#322;uguje si&#281; j&#281;zykiem polskim na r&oacute;wni z j&#281;zykiem ojczystym.">PL-5</abbr> / <abbr title="This user has advanced knowledge of English.">EN-3</abbr> / <abbr title="Questo utente pu&ograve; contribuire con un livello intermedio in italiano.">IT-2</abbr> / <abbr title="Dieser Benutzer beherrscht Deutsch auf grundlegendem Niveau.">DE-1</abbr></li>
-                  <li>e-mail: <a href="mailto:yanndroy@yahoo.fr">yanndroy@yahoo.fr</a></li>
-                  <li>microblogage: <a href="https://www.facebook.com/yann.droy.3">Facebook</a> <a href="https://www.youtube.com/user/DatantPePito">YouTube</a></li>
-                  <li><abbr title="World Cube Association">WCA ID</abbr> : <a href="http://www.worldcubeassociation.org/results/p.php?i=2012DROY01">2012DROY01</a></li>
-                </ul>
-              </p>
+          <h2>Les membres du projets</h2>
+            <p>Ce projets est dirigé par trois membres (Julien Gardet, Yann Droy et Auxence Araujo).</p>
+          <h2>Pourquoi ce projet sur le Rubik's cube ?</h2>
+            <p>Nous sommes fan de Rubik's cube et plus particulièrement de speedcubing, mais nous ne trouvons jamais de programme suffisamment adapter à nos besoin (par exemple des chronomètre qui ne sont pas assez précis ou qui n'ont pas de temps d'inspection).</p>
+          <h2>Pourquoi ce projet est-il sous licenses libre ?</h2>
+            <p>Nous voullons que ce projets puissent être accessible à tous, aussi bien pour les nouveaux et les anciens compétiteurs que pour servir d'exemple et d'aide pour l'éducation. Ainsi en étant libre n'importe qui peut adapter ces programmes à ses besoin suivant les conditions de la <strong style="font-weight:bold;">GNU GPL</strong>.</p>
         </section>
 
         <aside id="sidebar">
