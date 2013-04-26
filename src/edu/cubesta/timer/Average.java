@@ -37,7 +37,6 @@ public class Average {
     
     public static int[][] temps;
     static int best;
-    static int worst;
     static int average;
     public static int nbr = 0;
     static int maxnbr;
