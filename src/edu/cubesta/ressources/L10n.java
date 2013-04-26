@@ -78,7 +78,7 @@ public class L10n {
      */
     
     public static String[] listLanguage(){
-        String[] s = {"en", "de", "fr"};
+        String[] s = {"en", "de", "fr", "pl"};
         return s;
     }
     
@@ -122,7 +122,7 @@ public class L10n {
                 case 2 : retour = "nd"; break;
                 default : retour = "\u00e8me"; break;
             }
-        }else if("de".equals(language)){//Deutsch
+        }else if("de".equals(language) || "pl".equals(language)){//Deutsch
             retour = ".";
         }else{//English and Default
             if(number <= 20){
@@ -305,46 +305,46 @@ public class L10n {
         language = "pl";
         //MAIN I18N
         i18n[0] = "Runda";
-        i18n[1] = "Średnia";
+        i18n[1] = "\u015arednia";
         i18n[2] = "Najlepszy";
         i18n[3] = "Mieszanie";
         i18n[4] = "Zegar";
         i18n[5] = "Ustawienia";
         i18n[6] = "Uwaga";
-        i18n[7] = "Wpisać liczbę ruchów do pomieszania kostki !";
-        i18n[8] = "Wpisać liczbę czasów na średnią ";
-        i18n[9] = "Liczba jest za mała (powyżej 3)";
-        i18n[10] = "Wybraj język !";
+        i18n[7] = "Wpisa\u0107 liczb\u0119 ruch\u00f3w do pomieszania kostki !";
+        i18n[8] = "Wpisa\u0107 liczb\u0119 czas\u00f3w na \u015bredni\u0105 ";
+        i18n[9] = "Liczba jest za ma\u0142a (powy\u017cej 3)";
+        i18n[10] = "Wybraj j\u0119zyk !";
         i18n[11] = "sekund";
         i18n[12] = "To nie jest numer";
-        i18n[13] = "Błąd";
-        i18n[14] = "Czas podglądania";
+        i18n[13] = "B\u0142\u0105d";
+        i18n[14] = "Czas podgl\u0105dania";
         i18n[15] = "Pomoc klawiatury";
         i18n[16] = "Pomoc mieszania";
-        i18n[17] = "Wpisać czas podglądania (w sekundach)!";
+        i18n[17] = "Wpisa\u0107 czas podgl\u0105dania (w sekundach)!";
         //HELP I18N
-        i18nHelp[0] = "Echap : Zamknąć program";
-        i18nHelp[1] = "Spacja : Startować zegar";
-        i18nHelp[2] = "Shift : Startować czas podglądania";
-        i18nHelp[3] = "Enter : Dodać karę 2 sekund";
-        i18nHelp[4] = "D : Ustawić poprzedni czas jako DNF";
-        i18nHelp[5] = "S : Ustawić przyszły czas jako DNS";
-        i18nHelp[6] = "R : Zresetować zegar";
-        i18nHelp[7] = "F1 : Wyświetlić pomoc klawiatury";
-        i18nHelp[8] = "F2 : Wyświetlić pomoc ruchów kostki";
-        i18nHelp[9] = "F3 : Ustawić język";
-        i18nHelp[10] = "F9 : Ustawić czas podglądania";
-        i18nHelp[11] = "F10 : Ustawić liczbę ruchów do pomieszania kostki";
-        i18nHelp[12] = "F11 : Ustawić liczbę czasów do liczenia średniej";
-        i18nHelp[13] = "F12 : Utworzyć nowe mieszanie ";
-        i18nHelp[14] = "F : Przednia ściana";
-        i18nHelp[15] = "B : Tylnia ściana";
-        i18nHelp[16] = "U : Górna ściana";
-        i18nHelp[17] = "D : Dolna ściana";
-        i18nHelp[18] = "R : Prawa ściana";
-        i18nHelp[19] = "L : Lewa ściana";
-        i18nHelp[20] = "  : Kierunkiem ruchu według wskazówek zegara";
-        i18nHelp[21] = "' : Kierunkiem przeciwnym według ruchu wskazówek zegara";
+        i18nHelp[0] = "Echap : Zamkn\u0105\u0107 program";
+        i18nHelp[1] = "Spacja : Startowa\u0107 zegar";
+        i18nHelp[2] = "Shift : Startowa\u0107 czas podgl\u0105dania";
+        i18nHelp[3] = "Enter : Doda\u0107 kar\u0119 2 sekund";
+        i18nHelp[4] = "D : Ustawi\u0107 poprzedni czas jako DNF";
+        i18nHelp[5] = "S : Ustawi\u0107 przysz\u0142y czas jako DNS";
+        i18nHelp[6] = "R : Zresetowa\u0107 zegar";
+        i18nHelp[7] = "F1 : Wy\u015Bwietli\u0107 pomoc klawiatury";
+        i18nHelp[8] = "F2 : Wy\u015Bwietli\u0107 pomoc ruch\u00f3w kostki";
+        i18nHelp[9] = "F3 : Ustawi\u0107 j\u0119zyk";
+        i18nHelp[10] = "F9 : Ustawi\u0107 czas podgl\u0105dania";
+        i18nHelp[11] = "F10 : Ustawi\u0107 liczb\u0119 ruch\u00f3w do pomieszania kostki";
+        i18nHelp[12] = "F11 : Ustawi\u0107 liczb\u0119 czas\u00f3w do liczenia \u015Bredniej";
+        i18nHelp[13] = "F12 : Utworzy\u0107 nowe mieszanie ";
+        i18nHelp[14] = "F : Przednia \u015Bciana";
+        i18nHelp[15] = "B : Tylnia \u015Bciana";
+        i18nHelp[16] = "U : G\u00f3rna \u015Bciana";
+        i18nHelp[17] = "D : Dolna \u015Bciana";
+        i18nHelp[18] = "R : Prawa \u015Bciana";
+        i18nHelp[19] = "L : Lewa \u015Bciana";
+        i18nHelp[20] = "  : Kierunkiem ruchu wed\u0142ug wskaz\u00f3wek zegara";
+        i18nHelp[21] = "' : Kierunkiem przeciwnym wed\u0142ug ruchu wskaz\u00f3wek zegara";
         i18nHelp[22] = "² : Dwa razy";
     }
 }

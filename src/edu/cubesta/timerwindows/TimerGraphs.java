@@ -124,6 +124,10 @@ public class TimerGraphs extends JPanel {
      */
 
     private Graphics drawRoundCenter(String number, String superscript, String round, Graphics g, Font fontN, Font fontE) {
+        if(".".equals(superscript) || "°".equals(superscript)){
+            number = number + superscript;
+            superscript = "";
+        }
         round = " " + round; //ajout d'un espace avant le texte
         g.setFont(fontN);
         int numberWidth = (int)(g.getFontMetrics().getStringBounds(number, g).getWidth());
