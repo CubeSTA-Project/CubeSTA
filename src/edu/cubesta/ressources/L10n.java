@@ -298,7 +298,7 @@ public class L10n {
     }
     
     /**
-     * Tłumaczenie na polski
+     * Tłumaczenie na Polski
      */
     
     private static void setPL() {
@@ -312,7 +312,7 @@ public class L10n {
         i18n[5] = "Ustawienia";
         i18n[6] = "Uwaga";
         i18n[7] = "Wpisać liczbę ruchów do pomieszania kostki !";
-        i18n[8] = "Wpisać liczbę czasów do średnii ";
+        i18n[8] = "Wpisać liczbę czasów na średnią ";
         i18n[9] = "Liczba jest za mała (powyżej 3)";
         i18n[10] = "Wybraj język !";
         i18n[11] = "sekund";
@@ -327,16 +327,16 @@ public class L10n {
         i18nHelp[1] = "Spacja : Startować zegar";
         i18nHelp[2] = "Shift : Startować czas podglądania";
         i18nHelp[3] = "Enter : Dodać karę 2 sekund";
-        i18nHelp[4] = "D : Ustawić poprzedni czasu jako DNF";
-        i18nHelp[5] = "S : Ustawić przyszłego czasu jako DNS";
-        i18nHelp[6] = "R : Resetować zegara";
-        i18nHelp[7] = "F1 : Wyswietlić pomoc klwiatury";
-        i18nHelp[8] = "F2 : Wyswietlić pomoc ruchów kostki";
+        i18nHelp[4] = "D : Ustawić poprzedni czas jako DNF";
+        i18nHelp[5] = "S : Ustawić przyszły czas jako DNS";
+        i18nHelp[6] = "R : Zresetować zegar";
+        i18nHelp[7] = "F1 : Wyświetlić pomoc klawiatury";
+        i18nHelp[8] = "F2 : Wyświetlić pomoc ruchów kostki";
         i18nHelp[9] = "F3 : Ustawić język";
         i18nHelp[10] = "F9 : Ustawić czas podglądania";
         i18nHelp[11] = "F10 : Ustawić liczbę ruchów do pomieszania kostki";
-        i18nHelp[12] = "F11 : Ustawić liczbę czasów do liczenia średnii";
-        i18nHelp[13] = "F12 : Regenerować jednego mieszania ";
+        i18nHelp[12] = "F11 : Ustawić liczbę czasów do liczenia średniej";
+        i18nHelp[13] = "F12 : Utworzyć nowe mieszanie ";
         i18nHelp[14] = "F : Przednia ściana";
         i18nHelp[15] = "B : Tylnia ściana";
         i18nHelp[16] = "U : Górna ściana";
