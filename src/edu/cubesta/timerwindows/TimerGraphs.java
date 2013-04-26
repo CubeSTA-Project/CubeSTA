@@ -51,11 +51,11 @@ public class TimerGraphs extends JPanel {
         g.setColor(Color.WHITE);
         g.fillRect(0,0,this.getWidth(),this.getHeight());
         g.setColor(Color.BLACK);
-        Font font1 = new Font("", Font.BOLD, 50);
-        Font font2 = new Font("Sans", Font.BOLD, 30);
-        Font font3= new Font("Sans", Font.BOLD, 15);
-        Font font4 = new Font("Sans", Font.BOLD, 10);
-        Font font5 = new Font("Sans", Font.BOLD, 9);
+        Font font1 = new Font(Font.SANS_SERIF, Font.BOLD, 50);
+        Font font2 = new Font(Font.SANS_SERIF, Font.BOLD, 30);
+        Font font3= new Font(Font.SANS_SERIF, Font.BOLD, 15);
+        Font font4 = new Font(Font.SANS_SERIF, Font.BOLD, 10);
+        Font font5 = new Font(Font.SANS_SERIF, Font.BOLD, 9);
         String notice = "";
         Color colorNotice = Color.BLACK;
         String text = Timer.time2string(Timer.currentTime());
@@ -99,6 +99,10 @@ public class TimerGraphs extends JPanel {
         g.setColor(Color.BLACK);
         g.setFont(font3);
         g = drawLeftResume(g);
+        g.setColor(Color.BLACK);
+        g.setFont(font4);
+        g.drawString("F1 - Help", this.getWidth() - (int)g.getFontMetrics().getStringBounds("F4 - About", g).getWidth() - 5, this.getHeight() - 20);
+        g.drawString("F4 - About", this.getWidth() - (int)g.getFontMetrics().getStringBounds("F4 - About", g).getWidth() - 5, this.getHeight() - 5);
     }
     
     /**

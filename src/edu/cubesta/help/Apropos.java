@@ -18,37 +18,36 @@
  * Other legal notices on <http://cubesta-project.github.io/CubeSTA/legals.html>.
  */
 /* Project : CubeSTA
- * Location : edu.cubesta.help
- * Class : KeyHelpDialog.java
+ * Location : edu.cubesta.ressources
+ * Class : Apropos.java
  */
 
 package edu.cubesta.help;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- * Créer la boite de dialogue d'aide des touches
+ * Créer la boite de dialogue Apropos
  * @author julien.gardet
  */
-public class KeyHelpDialog extends JDialog {
+public class Apropos extends JDialog {
     
     /**
-     * Permet de créer la fenêtre de la boite de dialogue d'aide des touches
+     * Permet de créer la fenêtre de la boite de dialogue Apropos
      * @param parent
      * Le contenue de la fenêtre
      * @param title
      * Le titre de la fenêtre
      */
-
-    public KeyHelpDialog(JFrame parent, String title) {
+    
+    public Apropos(JFrame parent, String title) {
         super(parent, title);
-        this.setSize(500,320);
+        this.setSize(505,260);
         this.setLocationRelativeTo(null); 
         this.setResizable(false);
-        this.setContentPane(new KeyHelpPanel());
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setContentPane(new AproposPanel());
         this.setVisible(true);
     }
     

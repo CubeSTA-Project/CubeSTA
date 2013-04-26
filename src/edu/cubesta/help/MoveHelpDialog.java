@@ -48,9 +48,6 @@ public class MoveHelpDialog extends JDialog {
         this.setSize(300,250);
         this.setLocationRelativeTo(null); 
         this.setResizable(false);
-        Image icon;
-        icon = Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("edu/cubesta/resources/favicon.png"));
-        this.setIconImage(icon);
         this.setContentPane(new MoveHelpPanel());
         this.setVisible(true);
     }
