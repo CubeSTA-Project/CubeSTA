@@ -43,9 +43,9 @@ public class Apropos extends JDialog {
     
     public Apropos(JFrame parent, String title) {
         super(parent, title);
-        this.setSize(505,260);
+        this.setSize(505,290);
         this.setLocationRelativeTo(null); 
-        this.setResizable(false);
+        this.setResizable(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(new AproposPanel());
         this.setVisible(true);
