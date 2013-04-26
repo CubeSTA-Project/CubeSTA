@@ -225,8 +225,8 @@ public class L10n {
         i18nHelp[1] = "Espace : D\u00e9marre le chronom\u00e8tre";
         i18nHelp[2] = "Majuscule : D\u00e9marre le temps d'inspection";
         i18nHelp[3] = "Entrer : Ajoute une p\u00e9naliter de 2 secondes";
-        i18nHelp[4] = "D : D\u00e9finie le temps pr\u00e9c\u00e9dent comme DNF";
-        i18nHelp[5] = "S : D\u00e9finie le temps suivant comme DNS";
+        i18nHelp[4] = "D : D\u00e9finit le temps pr\u00e9c\u00e9dent comme DNF";
+        i18nHelp[5] = "S : D\u00e9finit le temps suivant comme DNS";
         i18nHelp[6] = "R : Remet à z\u00e9ro tous les temps";
         i18nHelp[7] = "F1 : Afficher l'aide clavier";
         i18nHelp[8] = "F2 : Afficher l'aide de la syntaxe des mouvements";
