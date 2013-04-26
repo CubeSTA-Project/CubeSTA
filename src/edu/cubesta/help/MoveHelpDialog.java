@@ -24,8 +24,6 @@
 
 package edu.cubesta.help;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
@@ -45,9 +43,9 @@ public class MoveHelpDialog extends JDialog {
 
     public MoveHelpDialog(JFrame parent, String title) {
         super(parent, title);
-        this.setSize(300,250);
+        this.setSize(300,280);
         this.setLocationRelativeTo(null); 
-        this.setResizable(false);
+        this.setResizable(true);
         this.setContentPane(new MoveHelpPanel());
         this.setVisible(true);
     }

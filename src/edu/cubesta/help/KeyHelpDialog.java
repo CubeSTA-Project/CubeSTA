@@ -24,8 +24,6 @@
 
 package edu.cubesta.help;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
@@ -45,9 +43,9 @@ public class KeyHelpDialog extends JDialog {
 
     public KeyHelpDialog(JFrame parent, String title) {
         super(parent, title);
-        this.setSize(500,320);
+        this.setSize(500,350);
         this.setLocationRelativeTo(null); 
-        this.setResizable(false);
+        this.setResizable(true);
         this.setContentPane(new KeyHelpPanel());
         this.setVisible(true);
     }
