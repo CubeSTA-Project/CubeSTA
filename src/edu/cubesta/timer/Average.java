@@ -44,7 +44,7 @@ public class Average {
 
     /**
      * Va calculer la moyenne sur les temps donnés
-     * Ainsi que déterminer le meilleur et le moins bon temps
+     * Ainsi que déterminer le meilleur temps
      * @param nombre
      * le nombre de temps qui sont entrés
      */
@@ -71,7 +71,7 @@ public class Average {
             temps[0][nbr] = fait;
             nbr++;
         }else{
-            System.out.print("The average need to be reset");
+            System.out.print("La moyenne doit être remise à zéro");
         }
     }
     
@@ -94,7 +94,7 @@ public class Average {
             }
         }
         for(int i = sortedlist.length; i >= 0; i--){
-            for(int j = i; j < sortedlist.length-1 && sortedlist[j] < 0; j++){ //TRI par selection des nombre négaitf (nombre négatif en bout de chaine)
+            for(int j = i; j < sortedlist.length-1 && sortedlist[j] < 0; j++){ //TRI par sélection des nombre négatifs (nombres négatifs en bout de chaine)
                 tmp = sortedlist[j+1];
                 sortedlist[j+1] = sortedlist[j];
                 sortedlist[j] = tmp;
@@ -154,16 +154,6 @@ public class Average {
     }
     
     /**
-     * Va recueillir le moins bon temps
-     */
-    
-    public static int getWorst(){
-        int[] temptemps = sortTimes(temps[0]);
-        worst = temptemps[(temptemps.length)-1];
-        return worst;
-    }
-    
-    /**
      * Va retourner le tableau des temps
      */
     
@@ -181,7 +171,7 @@ public class Average {
     }
     
     /**
-     * Verifie si l'average est remplis si il est rempli il sera vidé
+     * Verifie si l'average est rempli s'il est rempli, il sera vidé
      * @param nombre 
      * le nombre de temps qui sont entrés
      */
@@ -207,9 +197,9 @@ public class Average {
     }
     
     /**
-     * Permet d'obtenir le numéro du tour effectuer
+     * Permet d'obtenir le numéro du tour effectué
      * @return 
-     * retourne le numéro du tours (0 si il n'est pas définit)
+     * retourne le numéro du tour (0 s'il n'est pas défini)
      */
 
     public static int getRound() {
@@ -223,7 +213,7 @@ public class Average {
     }
     
     /**
-     * Permet de modifier la taille du tableau en cour d'usage
+     * Permet de modifier la taille du tableau en cours d'usage
      * @param size 
      * Nouvelle taille du tableau
      */
@@ -248,5 +238,4 @@ public class Average {
             System.out.println("Pas assez de temps pour moyenne élaguée");
         }
     }
-
- }
+}
