@@ -31,12 +31,13 @@ import javax.swing.JFrame;
  * Créer la boite de dialogue Apropos
  * @author julien.gardet
  */
+
 public class Apropos extends JDialog {
     
     /**
      * Permet de créer la fenêtre de la boite de dialogue Apropos
      * @param parent
-     * Le contenue de la fenêtre
+     * Le contenu de la fenêtre
      * @param title
      * Le titre de la fenêtre
      */
@@ -49,6 +50,5 @@ public class Apropos extends JDialog {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(new AproposPanel());
         this.setVisible(true);
-    }
-    
+    }  
 }
