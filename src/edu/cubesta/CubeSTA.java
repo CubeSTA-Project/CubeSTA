@@ -30,20 +30,21 @@ import edu.cubesta.ressources.L10n;
 import edu.cubesta.timerwindows.TimerWindows;
 
 /**
- * Classe principal permettant d'afficher une fenetre avec un patron mélanger et un chronomètre
+ * Classe principale permettant d'afficher une fenêtre avec un patron mélangé et un chronomètre
  * @author julien.gardet yann.droy auxence.araujo
  * @version 1.0 
  */
+
 public class CubeSTA {
     
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
         L10n l10n = new L10n();
         Dialog dial = new Dialog();
         CubeWindows cube = new CubeWindows();
         TimerWindows time = new TimerWindows();
     }
-   
 }
