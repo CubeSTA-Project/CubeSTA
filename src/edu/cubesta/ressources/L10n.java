@@ -192,7 +192,7 @@ public class L10n {
         i18nHelp[19] = "L : Left side";
         i18nHelp[20] = "  : Clockwise";
         i18nHelp[21] = "' : Counterclockwise";
-        i18nHelp[22] = "² : Twice";
+        i18nHelp[22] = "2 : Twice";
     }
     
     /**
@@ -243,7 +243,7 @@ public class L10n {
         i18nHelp[19] = "L : Face de gauche";
         i18nHelp[20] = "  : Dans le sens horaire";
         i18nHelp[21] = "' : Dans le sens antihoraire";
-        i18nHelp[22] = "² : Deux fois";
+        i18nHelp[22] = "2 : Deux fois";
     }
     
     /**
@@ -294,7 +294,7 @@ public class L10n {
          i18nHelp [19] = "L: Linkenseite";
          i18nHelp [20] = " : Im Uhrzeigersinn";
          i18nHelp [21] = "': Gegen den Uhrzeigersinn";
-         i18nHelp [22] = "²: Zweimal";
+         i18nHelp [22] = "2: Zweimal";
     }
     
     /**
@@ -345,6 +345,6 @@ public class L10n {
         i18nHelp[19] = "L : Lewa \u015Bciana";
         i18nHelp[20] = "  : Kierunkiem ruchu wed\u0142ug wskaz\u00f3wek zegara";
         i18nHelp[21] = "' : Kierunkiem przeciwnym wed\u0142ug ruchu wskaz\u00f3wek zegara";
-        i18nHelp[22] = "² : Dwa razy";
+        i18nHelp[22] = "2 : Dwa razy";
     }
 }
