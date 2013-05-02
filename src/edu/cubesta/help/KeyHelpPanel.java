@@ -45,6 +45,8 @@ public class KeyHelpPanel extends JPanel {
     @Override
     public void paintComponent(Graphics g){
         this.setBackground(Color.WHITE);
+        g.setColor(Color.WHITE);
+        g.fillRect(0,0,this.getWidth(),this.getHeight());
         Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
         g.setColor(Color.black);
         g.setFont(font);
