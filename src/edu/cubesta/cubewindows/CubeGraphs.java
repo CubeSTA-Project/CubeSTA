@@ -30,7 +30,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de créer le contenue de la fenêtre de mélange
+ * Permet de créer le contenu de la fenêtre de mélange
  * @author julien.gardet
  */
 
@@ -57,7 +57,7 @@ public class CubeGraphs extends JPanel {
     }
     
     /**
-     * Permet de créer le contenue de la fenêtre avec les données initial
+     * Permet de créer le contenu de la fenêtre avec les données initiales
      * @param g 
      */
     
@@ -126,11 +126,11 @@ public class CubeGraphs extends JPanel {
     }
     
     /**
-     * Permet de retourner la couleurs corespondant à un caractère
+     * Permet de retourner la couleur correspondant à un caractère
      * @param color
-     * Le caractère corespondant à une couleur (B : blue / W : white / R : red / G : green / Y : yellow / O : orange)
+     * Le caractère correspondant à une couleur (B : blue / W : white / R : red / G : green / Y : yellow / O : orange)
      * @return 
-     * Retourn une couleur (e.g. Color.NomDeLaCouleur)
+     * Une couleur (e.g. Color.NomDeLaCouleur)
      */
     
     private Color getColorCube(char color){
