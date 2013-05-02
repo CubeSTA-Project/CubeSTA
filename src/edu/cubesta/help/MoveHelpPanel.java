@@ -34,10 +34,11 @@ import javax.swing.JPanel;
  * Permet de gerer le contenue de la boite de dialogue d'aide des touches
  * @author julien.gardet
  */
+
 public class MoveHelpPanel extends JPanel {
     
     /**
-     * Permet de créer le contenue de la boite de dialogue d'aide des mouvements
+     * Permet de créer le contenu de la boîte de dialogue d'aide des mouvements
      * @param g 
      */
     
@@ -53,6 +54,5 @@ public class MoveHelpPanel extends JPanel {
         for(int i = 14; i <= 22; i++){
             g.drawString(L10n.getLanguageHelp(i), 10, 50+20*(i-13));
         }
-    }
-    
+    }   
 }
