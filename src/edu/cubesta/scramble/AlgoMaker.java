@@ -25,13 +25,14 @@
 package edu.cubesta.scramble;
 
 /**
- * Permet de gégérer aléatoirement des mélanges
+ * Permet de générer aléatoirement des mélanges
  * @author auxence.araujo
  */
+
 public class AlgoMaker {
     
     /**
-     * Variable Globale
+     * Variable globale
      */
 
     private char[][] scramble;
@@ -56,7 +57,6 @@ public class AlgoMaker {
                     }
                 temporaire2 = temporaire;
                 temporaire = x;
-                //System.out.print(Mouvement[x] + "" + Sens[y] + " " );
                 scramble[0][i-1] = Mouvement[x];
                 scramble[1][i-1] = Sens[y];
             }
@@ -65,10 +65,11 @@ public class AlgoMaker {
     /**
      * Permet de générer un aléatoire entre deux bornes
      * @param min
-     * Valeur minimal de l'aléatoire
+     * Valeur minimale de l'aléatoire
      * @param max
-     * Valeur maximal de l'aléatoire
-     * @return Un entier aléatoire entre min et max
+     * Valeur maximale de l'aléatoire
+     * @return
+     * un entier aléatoire entre min et max
      */
     
     public static int randomBW (int min, int max){
@@ -79,7 +80,7 @@ public class AlgoMaker {
     /**
      * Permet d'obtenir le mélange
      * @return 
-     * Un tableau de caractère bidimensionnel (dans une dimension le mouvement dans l'autre le sens)
+     * un tableau de caractère bidimensionnel (dans une dimension le mouvement dans l'autre le sens)
      */
 
     public char[][] getScramble() {
@@ -94,7 +95,5 @@ public class AlgoMaker {
 
     public void setScramble(char[][] scramble) {
         this.scramble = scramble;
-    }
-    
-    
+    }   
 }
