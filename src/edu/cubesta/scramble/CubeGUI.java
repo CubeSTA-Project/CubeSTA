@@ -25,13 +25,14 @@
 package edu.cubesta.scramble;
 
 /**
- * Permet d'initialiser un tableau de couleurs pour l'affichage du cube et de la mélanger
+ * Permet d'initialiser un tableau de couleurs pour l'affichage du cube et de le mélanger
  * @author julien.gardet
  */
+
 public class CubeGUI {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     private static char[][] cubeGUI;
@@ -55,7 +56,7 @@ public class CubeGUI {
     /**
      * Permet de mélanger l'affichage du cube
      * @param scramble 
-     * Mélange à exécuter
+     * mélange à exécuter
      */
 
     public void scrambleCubeGUI(char[][] scramble) {
@@ -166,12 +167,10 @@ public class CubeGUI {
     /**
      * Permet de modifier l'affichage du cube
      * @param cubeGUI 
-     * Nouvelle affichage du cube
+     * nouvel affichage du cube
      */
 
     public void setCubeGUI(char[][] cubeGUI) {
         CubeGUI.cubeGUI = cubeGUI;
     }
-    
-    
 }
