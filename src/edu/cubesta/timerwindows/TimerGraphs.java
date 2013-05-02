@@ -34,14 +34,15 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de créer le contenue de la fenêtre du chronomètre
+ * Permet de créer le contenu de la fenêtre du chronomètre
  * @author julien.gardet
  */
+
 public class TimerGraphs extends JPanel {
     
     
     /**
-     * Permet de créer le contenue de la fenêtre avec les données initial
+     * Permet de créer le contenu de la fenêtre avec les données initiales
      * @param g 
      */
     
@@ -106,7 +107,7 @@ public class TimerGraphs extends JPanel {
     }
     
     /**
-     * Affiche le numéro du tour centrer
+     * Affiche le numéro du tour centré
      * @param number
      * numéro du tour
      * @param superscript
@@ -120,7 +121,7 @@ public class TimerGraphs extends JPanel {
      * @param fontE
      * police réduite
      * @return 
-     * retourne le graphic finale
+     * retourne le graphic final
      */
 
     private Graphics drawRoundCenter(String number, String superscript, String round, Graphics g, Font fontN, Font fontE) {
@@ -165,7 +166,7 @@ public class TimerGraphs extends JPanel {
      * @param color2
      * La couleur de l'annotation
      * @return 
-     * Retourne le graphic finale
+     * Retourne le graphic final
      */
     
     private Graphics drawTimerCenter(String string, int posY, Graphics g, Font font, String note, Font fontNote, Color color1, Color color2) {
@@ -194,13 +195,13 @@ public class TimerGraphs extends JPanel {
      * @param state
      * Etat du temps (Noir si false et Rouge si true)
      * @param fontN
-     * Police normal
+     * Police normale
      * @param fontI
      * Police réduite
      * @param g
      * Le graphic sur lequel appliquer
      * @return 
-     * Retourn le graphic final
+     * le graphic final
      */
     
     private Graphics drawTimeList(int position, String time, int penality, int state, Font fontN, Font fontI, Graphics g ){
@@ -227,11 +228,11 @@ public class TimerGraphs extends JPanel {
     }
     
     /**
-     * Affiche le résumer à gauche
+     * Affiche le résumé à gauche
      * @param g
      * le graphic sur lequel l'appliquer
      * @return 
-     * Retourne le graphic finale
+     * le graphic finale
      */
     
     private Graphics drawLeftResume(Graphics g){
@@ -256,5 +257,4 @@ public class TimerGraphs extends JPanel {
         g.drawString((Average.getBest() < 0)?"DNF":Timer.time2string(Average.getBest()), posX, 185);
         return g;
     }
-
 }
