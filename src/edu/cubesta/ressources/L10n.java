@@ -67,6 +67,7 @@ public class L10n {
             case "en" : setEN(); break;
             case "pl" : setPL(); break;
             case "de" : setDE(); break;
+            case "it" : setIT(); break;
             default : setEN(); break;
         }
     }
@@ -78,7 +79,7 @@ public class L10n {
      */
     
     public static String[] listLanguage(){
-        String[] s = {"en", "de", "fr", "pl"};
+        String[] s = {"en", "de", "fr", "pl", "it"};
         return s;
     }
     
@@ -122,7 +123,7 @@ public class L10n {
                 case 2 : retour = "nd"; break;
                 default : retour = "\u00e8me"; break;
             }
-        }else if("de".equals(language) || "pl".equals(language)){//Deutsch
+        }else if("de".equals(language) || "pl".equals(language)){//Deutsch & Polski
             retour = ".";
         }else{//English and Default
             if(number <= 20){
@@ -139,7 +140,10 @@ public class L10n {
                     case 3 : retour = "rd"; break;
                     default : retour = "th"; break;
                 } 
-            }
+            }else{
+                switch(number ) // A COMPLETER
+                    retour = "o";
+                }
         }
         return retour;
     }
@@ -346,5 +350,56 @@ public class L10n {
         i18nHelp[20] = "  : Kierunkiem ruchu wed\u0142ug wskaz\u00f3wek zegara";
         i18nHelp[21] = "' : Kierunkiem przeciwnym wed\u0142ug ruchu wskaz\u00f3wek zegara";
         i18nHelp[22] = "2 : Dwa razy";
+    }
+    
+    /**
+     * Traduzione italiana
+     */
+
+    private static void setIT() {
+        language = "it";
+        //MAIN I18N
+        i18n[0] = "Turno";
+        i18n[1] = "Media";
+        i18n[2] = "Migliore";
+        i18n[3] = "Miscela";
+        i18n[4] = "Cronometro";
+        i18n[5] = "Opzione";
+        i18n[6] = "Attenzione";
+        i18n[7] = "Scrivere il numero di movimenti per la miscela !";
+        i18n[8] = "Scrivere il numero di tempi per la media !";
+        i18n[9] = "Il numlero è troppo piccolo (Deve essere più grande di 3)";
+        i18n[10] = "Scegliete la vostra lingua !";
+        i18n[11] = "secondi";
+        i18n[12] = "Non è un numero";
+        i18n[13] = "Errore";
+        i18n[14] = "Inspezione";
+        i18n[15] = "Aiuta di Testiera";
+        i18n[16] = "Aiuta di Miscela";
+        i18n[17] = "Scrivere il tempo di osservazione (secondi) !";
+        //HELP I18N
+        i18nHelp[0] = "Escape : Chiudere il programma";
+        i18nHelp[1] = "Espace : Avviare il cronometro";
+        i18nHelp[2] = "Shift : Avviare il tempo di osservazione";
+        i18nHelp[3] = "Enter : Aggiungere una penalità di 2 secondi";
+        i18nHelp[4] = "D : Assegnare il tempo precedente come DNF";
+        i18nHelp[5] = "S : Assegnare il tempo successivo come DNS";
+        i18nHelp[6] = "R : Azzezare il cronometro";
+        i18nHelp[7] = "F1 : Mostrare l'aiuta di testiera";
+        i18nHelp[8] = "F2 : Mostrare l'aiuta di movimenti di miscela";
+        i18nHelp[9] = "F3 : Cambiare la lingua del programma";
+        i18nHelp[10] = "F9 : Cambiare il tempo di osservazione";
+        i18nHelp[11] = "F10 : Cambiare il numero di movimenti della miscela";
+        i18nHelp[12] = "F11 : Cambiare il numero di tempi della media";
+        i18nHelp[13] = "F12 : Generare una nuova miscela";
+        i18nHelp[14] = "F : Faccia anteriore";
+        i18nHelp[15] = "B : Faccia posteriore";
+        i18nHelp[16] = "U : Faccia superiore";
+        i18nHelp[17] = "D : Faccia inferiore";
+        i18nHelp[18] = "R : Faccia destra";
+        i18nHelp[19] = "L : Faccia sinistra";
+        i18nHelp[20] = "  : Direzione orario";
+        i18nHelp[21] = "' : Direzione antiorario";
+        i18nHelp[22] = "2 : Due volte";
     }
 }
