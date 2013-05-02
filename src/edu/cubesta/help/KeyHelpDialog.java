@@ -31,12 +31,13 @@ import javax.swing.JFrame;
  * Créer la boite de dialogue d'aide des touches
  * @author julien.gardet
  */
+
 public class KeyHelpDialog extends JDialog {
     
     /**
-     * Permet de créer la fenêtre de la boite de dialogue d'aide des touches
+     * Permet de créer la fenêtre de la boîte de dialogue d'aide des touches
      * @param parent
-     * Le contenue de la fenêtre
+     * Le contenu de la fenêtre
      * @param title
      * Le titre de la fenêtre
      */
@@ -48,6 +49,5 @@ public class KeyHelpDialog extends JDialog {
         this.setResizable(true);
         this.setContentPane(new KeyHelpPanel());
         this.setVisible(true);
-    }
-    
+    }   
 }
