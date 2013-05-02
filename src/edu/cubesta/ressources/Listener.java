@@ -37,10 +37,11 @@ import java.awt.event.KeyListener;
  * La classe permet d'écouter sur quelle touche l'utilisateur appuie
  * @author julien.gardet
  */
+
 public class Listener implements KeyListener {
 
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     public static boolean start;
@@ -68,7 +69,7 @@ public class Listener implements KeyListener {
     }
 
     /**
-     * La fonction est appeler lorsque la touche retourne un charactère unicode
+     * La fonction est appelée lorsque la touche retourne un caractère unicode
      * @param e
      */
     
@@ -78,7 +79,7 @@ public class Listener implements KeyListener {
     }
 
     /**
-     * la fonction est appeler lorsque la touche vient d'être appuyer
+     * la fonction est appelée lorsque la touche vient d'être appuyée
      * @param e
      */
     
@@ -159,7 +160,7 @@ public class Listener implements KeyListener {
     }
 
     /**
-     * La fonction est appeler lorsque la touche est relacher
+     * La fonction est appelée lorsque la touche est relachée
      * @param e
      */
     
@@ -169,18 +170,22 @@ public class Listener implements KeyListener {
     }
 
     /**
-     * Affiche une information sur la touche qui vient d'être appuyer,
+     * Affiche une information sur la touche qui vient d'être appuyée,
      * /!\ this method is under copyright,
      * /!\ please use this method only for debugging.
-     * @param e parametre de la touche appuyer
-     * @param keyStatus Statut de la touche (Pressed/Typed/Released)
+     * @param e
+     * la touche appuyée
+     * @param keyStatus
+     * statut de la touche (Pressed/Typed/Released)
      * @deprecated
      */
     
     private void displayInfo(KeyEvent e, String keyStatus) {
+        
         /**
          * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
          */ 
+        
         int id = e.getID();
         String keyString;
         if (id == KeyEvent.KEY_TYPED) {
@@ -232,7 +237,7 @@ public class Listener implements KeyListener {
     }
     
     /**
-     * Ajout ou enlève une pénaliter de deux seconde au temps
+     * Ajoute ou enlève une pénalité de deux secondes au temps
      */
 
     public void penality() {
@@ -250,7 +255,7 @@ public class Listener implements KeyListener {
     }
     
     /**
-     * Définie le temps suivant comme DNS (did not start)
+     * Définit le temps suivant comme DNS (did not start)
      */
 
     public static void didNotStart() {
@@ -267,7 +272,7 @@ public class Listener implements KeyListener {
     }
     
     /**
-     * Définie le temps précédent comme DNF (did not finish)
+     * Définit le temps précédent comme DNF (did not finish)
      */
 
     public static void didNotFinish() {
