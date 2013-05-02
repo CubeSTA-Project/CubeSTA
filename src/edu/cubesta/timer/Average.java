@@ -75,7 +75,7 @@ public class Average {
     }
     
     /**
-     * Tri par insertion et par ordre croissant des valeurs d'un tableau
+     * Tri des valeurs d'un tableau
      * @param liste
      * le tableau contenant les valeurs
      * @return le tableau trié
