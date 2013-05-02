@@ -28,15 +28,16 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- * Créer la boite de dialogue d'aide des mouvements
+ * Créer la boîte de dialogue d'aide des mouvements
  * @author julien.gardet
  */
+
 public class MoveHelpDialog extends JDialog {
     
     /**
-     * Permet de créer la fenêtre de la boite de dialogue d'aide des mouvements
+     * Permet de créer la fenêtre de la boîte de dialogue d'aide des mouvements
      * @param parent
-     * Le contenue de la fenêtre
+     * Le contenu de la fenêtre
      * @param title
      * Le titre de la fenêtre
      */
@@ -48,6 +49,5 @@ public class MoveHelpDialog extends JDialog {
         this.setResizable(true);
         this.setContentPane(new MoveHelpPanel());
         this.setVisible(true);
-    }
-    
+    } 
 }
