@@ -62,9 +62,14 @@ public class Dialog {
         int retour = numberOfScramble;
         try{
             retour = Integer.valueOf(showInputDialog(L10n.getLanguage(5) + " - CubeSTA", L10n.getLanguage(7))).intValue();
-            setNumberOfScramble(retour);
         } catch (NumberFormatException ex) {
             showErrorDialog(L10n.getLanguage(13) + " - CubeSTA", L10n.getLanguage(12));
+        }
+        if(retour < 3){
+            showAlertDialog(L10n.getLanguage(6) + " - CubeSTA", L10n.getLanguage(9));
+        }else{
+            Average.changeAverageSize(retour);
+            setNumberOfScramble(retour);
         }
         return retour;
     }
