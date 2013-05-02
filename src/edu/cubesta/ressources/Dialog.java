@@ -28,13 +28,14 @@ import edu.cubesta.timer.Average;
 import javax.swing.JOptionPane;
 
 /**
- * Permet de gerer le contenue de la boite de dialogue d'aide des mouvements
+ * Permet de gérer le contenu de la boîte de dialogue d'aide des mouvements
  * @author julien.gardet
  */
+
 public class Dialog {
     
     /**
-     * Variable Super Globale
+     * Variables super globales
      */
     
     private static int numberOfScramble;
@@ -42,7 +43,7 @@ public class Dialog {
     private static int inspectionTime;
     
     /**
-     * Définit les variable par défault
+     * Définit les variable par défaut
      */
 
     public Dialog() {
@@ -52,9 +53,9 @@ public class Dialog {
     }
     
     /**
-     * Affiche une boite de dialogue pour changer le nombre de mouvement pour le mélange
+     * Affiche une boîte de dialogue pour changer le nombre de mouvements pour le mélange
      * @return 
-     * Retourne le nombre entrer
+     * Retourne le nombre entré
      */
     
     public static int setNOS(){
@@ -69,9 +70,9 @@ public class Dialog {
     }
     
     /**
-     * Affiche un boite de dialogue pour changer le nombre de temps pour le calcul de l'average
+     * Affiche un boîte de dialogue pour changer le nombre de temps pour le calcul de l'average
      * @return 
-     * Retourn le valeur entrer
+     * La valeur entrée
      */
     
     public static int setNOT(){
@@ -104,7 +105,7 @@ public class Dialog {
     /**
      * Permet de modifier le temps d'inspection
      * @return 
-     * Retourne la valeur entrer
+     * La valeur entrée
      */
     
     public static int setINS(){
@@ -119,13 +120,13 @@ public class Dialog {
     }
     
     /**
-     * Permet de générer une boite de dialogue avec une entrer
+     * Permet de générer une boîte de dialogue avec une entrée
      * @param title
      * Titre de la fenêtre
      * @param question
      * Question à poser
      * @return 
-     * Retourne la valeur entrer
+     * La valeur entrée
      */
     
     private static String showInputDialog(String title, String question){
@@ -134,7 +135,7 @@ public class Dialog {
     }
     
     /**
-     * Affiche une boite de dialogue d'alerte
+     * Affiche une boîte de dialogue d'alerte
      * @param title
      * Titre de la fenêtre
      * @param question 
@@ -146,7 +147,7 @@ public class Dialog {
     }
     
     /**
-     * Affiche une boite de dialogue d'erreur
+     * Affiche une boîte de dialogue d'erreur
      * @param title
      * Titre de la fenêtre
      * @param question 
@@ -158,9 +159,9 @@ public class Dialog {
     }
     
     /**
-     * Permet d'obtenir la variable du nombre de mouvement pour les mélange
+     * Permet d'obtenir la variable du nombre de mouvements pour les mélanges
      * @return 
-     * Retourne la valeur de la variabel
+     * La valeur de la variable
      */
 
     public static int getNumberOfScramble() {
@@ -168,7 +169,7 @@ public class Dialog {
     }
     
     /**
-     * Permet de définir la variable du nombre de mouvement du mélange
+     * Permet de définir la variable du nombre de mouvements du mélange
      * @param numberOfScramble 
      * Valeur à définir pour la variable
      */
@@ -180,7 +181,7 @@ public class Dialog {
     /**
      * Permet d'obtenir la variable du nombre de temps pour l'average
      * @return 
-     * Retourne la valeur de la variable
+     * La valeur de la variable
      */
 
     public static int getNumberOfTime() {
@@ -200,7 +201,7 @@ public class Dialog {
     /**
      * Permet d'obtenir la valeur de la variable du temps d'inspection
      * @return 
-     * Retourne sa valeur
+     * Sa valeur
      */
 
     public static int getInspectionTime() {
@@ -216,5 +217,4 @@ public class Dialog {
     private static void setInspectionTime(int inspectionTime) {
         Dialog.inspectionTime = inspectionTime;
     }
-    
 }
