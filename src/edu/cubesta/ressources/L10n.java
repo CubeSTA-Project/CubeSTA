@@ -125,6 +125,8 @@ public class L10n {
             }
         }else if("de".equals(language) || "pl".equals(language)){//Deutsch & Polski
             retour = ".";
+        }else if("it".equals(language))){//Deutsch & Polski
+            retour = "°";
         }else{//English and Default
             if(number <= 20){
                switch(number){
@@ -140,10 +142,7 @@ public class L10n {
                     case 3 : retour = "rd"; break;
                     default : retour = "th"; break;
                 } 
-            }else{
-                switch(number ) // A COMPLETER
-                    retour = "o";
-                }
+            }
         }
         return retour;
     }
