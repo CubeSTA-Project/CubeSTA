@@ -39,10 +39,11 @@ import javax.swing.JPanel;
  * Permet de créer et gérer la fenêtre de mélange
  * @author julien.gardet
  */
+
 public class CubeWindows extends JFrame {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     private static char[][] cubeGUI;
@@ -88,11 +89,11 @@ public class CubeWindows extends JFrame {
     /**
      * Permet de recharger le mélange de la fenêtre
      */
+    
      public static void changeScreen(){
             createCube();
             CubeGraphs panel = new CubeGraphs(cubeGUI,algoGUI);
             content.add(panel, "cube");
             cl.show(content, "cube");
      }
-
 }
