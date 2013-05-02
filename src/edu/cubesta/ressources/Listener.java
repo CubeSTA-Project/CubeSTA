@@ -129,12 +129,8 @@ public class Listener implements KeyListener {
             DNS = false;
             DNF = false;
         }else if(e.getKeyCode() == KeyEvent.VK_F1){ //F1
-            start = true;
-            Timer.reset();
             KeyHelpDialog khd = new KeyHelpDialog(null, "\u2328 " + L10n.getLanguage(15));
         }else if(e.getKeyCode() == KeyEvent.VK_F2){ //F2
-            start = true;
-            Timer.reset();
             MoveHelpDialog mhd = new MoveHelpDialog(null, "\u2328 " + L10n.getLanguage(16));
         }else if (e.getKeyCode() == KeyEvent.VK_F3) {//F3
             Dialog.setLAN();
