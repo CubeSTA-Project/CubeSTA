@@ -187,7 +187,7 @@ public class TurnCube {
     /**
      * Permet d'obtenir l'affichage du cube
      * @return 
-     * Retourne un tableau bidimensionnel (dans une dimension la couleur, dans l'autre la position)
+     * Retourne un tableau bidimensionnel (dans une dimension la couleur et dans l'autre la position)
      */
 
     public char[][] getCubeGUI() {
