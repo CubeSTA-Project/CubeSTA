@@ -33,10 +33,11 @@ import javax.swing.JPanel;
  * Permet de créer le contenue de la fenêtre de mélange
  * @author julien.gardet
  */
+
 public class CubeGraphs extends JPanel {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     private char[][] cubeGUI;
@@ -52,8 +53,7 @@ public class CubeGraphs extends JPanel {
     
     public CubeGraphs(char[][] cubeGUIsend, char[][] algosend){
         cubeGUI = cubeGUIsend;
-        algo = algosend;
-        
+        algo = algosend; 
     }
     
     /**
@@ -142,6 +142,5 @@ public class CubeGraphs extends JPanel {
         else if(color == 'W'){return Color.WHITE;}
         else{return Color.BLACK;}
 
-    }
-    
+    } 
 }
