@@ -33,13 +33,14 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 /**
- * Permet de gerer le contenue de la boite de dialogue Apropos
+ * Permet de gérer le contenu de la boîte de dialogue Apropos
  * @author julien
  */
+
 public class AproposPanel extends JPanel {
         
     /**
-     * Permet de créer le contenue de la boite de dialogue Apropos
+     * Permet de créer le contenu de la boîte de dialogue Apropos
      * @param g 
      */
     
