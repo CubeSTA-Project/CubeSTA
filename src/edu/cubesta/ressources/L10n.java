@@ -125,7 +125,7 @@ public class L10n {
             }
         }else if("de".equals(language) || "pl".equals(language)){//Deutsch & Polski
             retour = ".";
-        }else if("it".equals(language))){//Deutsch & Polski
+        }else if("it".equals(language)){//Deutsch & Polski
             retour = "°";
         }else{//English and Default
             if(number <= 20){
