@@ -32,20 +32,21 @@ import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
- * Permet de gérer le contenue de la fenêtre du chronomètre
+ * Permet de gérer le contenu de la fenêtre du chronomètre
  * @author julien.gardet
  */
+
 public class TimerWindows extends JFrame {
     
     /**
-     * Variable Globale
+     * Variables globales
      */
 
     private static CardLayout cl = new CardLayout();
     private static JPanel content = new JPanel();
         
     /**
-     * Permet de créer et de gérer le contenue fenêtre du chronomètre
+     * Permet de créer et de gérer le contenu fenêtre du chronomètre
      */
     
     public TimerWindows(){
@@ -82,5 +83,5 @@ public class TimerWindows extends JFrame {
                 Logger.getLogger(TimerWindows.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-     }
+    }
 }
