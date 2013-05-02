@@ -28,6 +28,7 @@ package edu.cubesta.timer;
  * Permet de gérer le fonctionnement du chronomètre
  * @author auxence.araujo
  */
+
 public class Timer {
     
     /**
@@ -78,7 +79,7 @@ public class Timer {
     /**
      * Permet d'obtenir le temps actuel du chronomètre
      * @return 
-     * retourne un temps du type [i]ssmm (human readable)
+     * un temps du type [i]ssmm (human readable)
      */
     
     public static int currentTime(){
@@ -93,11 +94,11 @@ public class Timer {
     }
     
     /**
-     * Convertie un temps au format [i]ssmm en format [i]:ss.mm
+     * Convertit un temps au format [i]ssmm en format [i]:ss.mm
      * @param time
      * temps au format [i]ssmm
      * @return 
-     * retourne un temps au format [i]:ss.mm
+     * un temps au format [i]:ss.mm
      */
     
     public static String time2string(int time){
@@ -112,6 +113,5 @@ public class Timer {
         }
         String text = time/10000 + ":" + zeroSeconde + (time/100-(time/10000*100)) + "." + zeroMillis + time%100;
         return text;
-    }
-    
+    } 
 }
