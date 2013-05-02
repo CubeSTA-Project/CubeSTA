@@ -28,14 +28,14 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- * Créer la boite de dialogue Apropos
+ * Créer la boîte de dialogue Apropos
  * @author julien.gardet
  */
 
 public class Apropos extends JDialog {
     
     /**
-     * Permet de créer la fenêtre de la boite de dialogue Apropos
+     * Permet de créer la fenêtre de la boîte de dialogue Apropos
      * @param parent
      * Le contenu de la fenêtre
      * @param title
