@@ -55,7 +55,7 @@ public class Dialog {
     /**
      * Affiche une boîte de dialogue pour changer le nombre de mouvements pour le mélange
      * @return 
-     * Retourne le nombre entré
+     * le nombre entré
      */
     
     public static int setNOS(){
@@ -72,7 +72,7 @@ public class Dialog {
     /**
      * Affiche un boîte de dialogue pour changer le nombre de temps pour le calcul de l'average
      * @return 
-     * La valeur entrée
+     * la valeur entrée
      */
     
     public static int setNOT(){
@@ -105,7 +105,7 @@ public class Dialog {
     /**
      * Permet de modifier le temps d'inspection
      * @return 
-     * La valeur entrée
+     * la valeur entrée
      */
     
     public static int setINS(){
@@ -126,7 +126,7 @@ public class Dialog {
      * @param question
      * Question à poser
      * @return 
-     * La valeur entrée
+     * la valeur entrée
      */
     
     private static String showInputDialog(String title, String question){
@@ -161,7 +161,7 @@ public class Dialog {
     /**
      * Permet d'obtenir la variable du nombre de mouvements pour les mélanges
      * @return 
-     * La valeur de la variable
+     * la valeur de la variable
      */
 
     public static int getNumberOfScramble() {
@@ -181,7 +181,7 @@ public class Dialog {
     /**
      * Permet d'obtenir la variable du nombre de temps pour l'average
      * @return 
-     * La valeur de la variable
+     * la valeur de la variable
      */
 
     public static int getNumberOfTime() {
@@ -201,7 +201,7 @@ public class Dialog {
     /**
      * Permet d'obtenir la valeur de la variable du temps d'inspection
      * @return 
-     * Sa valeur
+     * sa valeur
      */
 
     public static int getInspectionTime() {
@@ -211,7 +211,7 @@ public class Dialog {
     /**
      * Permet de définir la variable de temps d'inspection
      * @param inspectionTime 
-     * Le nouvelle valeur à définir
+     * la nouvelle valeur à définir
      */
 
     private static void setInspectionTime(int inspectionTime) {
