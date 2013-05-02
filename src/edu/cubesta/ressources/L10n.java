@@ -368,10 +368,10 @@ public class L10n {
         i18n[6] = "Attenzione";
         i18n[7] = "Scrivere il numero di movimenti per la miscela !";
         i18n[8] = "Scrivere il numero di tempi per la media !";
-        i18n[9] = "Il numlero è troppo piccolo (Deve essere più grande di 3)";
+        i18n[9] = "Il numlero \u00e8 troppo piccolo (Deve essere più grande di 3)";
         i18n[10] = "Scegliete la vostra lingua !";
         i18n[11] = "secondi";
-        i18n[12] = "Non è un numero";
+        i18n[12] = "Non \u00e8 un numero";
         i18n[13] = "Errore";
         i18n[14] = "Inspezione";
         i18n[15] = "Aiuta di Testiera";
@@ -379,9 +379,9 @@ public class L10n {
         i18n[17] = "Scrivere il tempo di osservazione (secondi) !";
         //HELP I18N
         i18nHelp[0] = "Escape : Chiudere il programma";
-        i18nHelp[1] = "Espace : Avviare il cronometro";
-        i18nHelp[2] = "Shift : Avviare il tempo di osservazione";
-        i18nHelp[3] = "Enter : Aggiungere una penalità di 2 secondi";
+        i18nHelp[1] = "Spazio : Avviare il cronometro";
+        i18nHelp[2] = "Maiuscolo : Avviare il tempo di osservazione";
+        i18nHelp[3] = "Invio : Aggiungere una penalità di 2 secondi";
         i18nHelp[4] = "D : Assegnare il tempo precedente come DNF";
         i18nHelp[5] = "S : Assegnare il tempo successivo come DNS";
         i18nHelp[6] = "R : Azzezare il cronometro";
