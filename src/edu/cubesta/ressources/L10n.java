@@ -38,7 +38,7 @@ public class L10n {
      */
     
     /**
-     * Variable Globale
+     * Variables globales
      */
     
     private static String language;
@@ -46,7 +46,7 @@ public class L10n {
     private static String[] i18nHelp = new String[23];
     
     /**
-     * Définie la langue d'affichage par défault
+     * Définit la langue d'affichage par défaut
      */
 
     public L10n() {
@@ -74,7 +74,7 @@ public class L10n {
     /**
      * Retourne la liste des langues disponible
      * @return 
-     * retourne la liste des langues
+     * la liste des langues
      */
     
     public static String[] listLanguage(){
@@ -85,9 +85,9 @@ public class L10n {
     /**
      * Retourne l'internationalisation d'un message
      * @param opt
-     * Le numéro du méssage
+     * Le numéro du message
      * @return 
-     * Retourn le message traduit
+     * le message traduit
      */
     
     public static String getLanguage(int opt){
@@ -97,9 +97,9 @@ public class L10n {
     /**
      * Retourne l'internationalisation d'un message d'aide
      * @param opt
-     * Le numéro du méssage
+     * Le numéro du message
      * @return 
-     * Retourne le message traduit
+     * le message traduit
      */
     
     public static String getLanguageHelp(int opt){
@@ -107,11 +107,11 @@ public class L10n {
     }
     
     /**
-     * Retourne l'internationalisation des adjectifs numérals ordinaux
+     * Retourne l'internationalisation des adjectifs ordinaux
      * @param number
      * Le numéro
      * @return 
-     * Retourne l'abreviation
+     * l'abreviation
      */
     
     public static String getOrdinal(int number){
