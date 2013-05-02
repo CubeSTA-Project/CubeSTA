@@ -31,7 +31,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de gerer le contenue de la boite de dialogue d'aide des touches
+ * Permet de gérer le contenu de la boîte de dialogue d'aide des touches
  * @author julien.gardet
  */
 
