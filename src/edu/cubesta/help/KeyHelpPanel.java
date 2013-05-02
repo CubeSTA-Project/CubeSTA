@@ -31,9 +31,10 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
- * Permet de gerer le contenue de la boite de dialogue d'aide des touches
+ * Permet de gérer le contenu de la boîte de dialogue d'aide des touches
  * @author julien.gardet
  */
+
 public class KeyHelpPanel extends JPanel {
     
     /**
@@ -53,6 +54,5 @@ public class KeyHelpPanel extends JPanel {
         for(int i = 0; i <= 13; i++){
             g.drawString(L10n.getLanguageHelp(i), 10, 50+20*i);
         }
-    }
-    
+    }   
 }
