@@ -68,7 +68,6 @@ public class Dialog {
         if(retour < 3){
             showAlertDialog(L10n.getLanguage(6) + " - CubeSTA", L10n.getLanguage(9));
         }else{
-            Average.changeAverageSize(retour);
             setNumberOfScramble(retour);
         }
         return retour;
