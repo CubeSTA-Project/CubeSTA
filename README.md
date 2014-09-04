@@ -1,6 +1,8 @@
 CubeSTA
 =======
 
+[![Build Status](https://travis-ci.org/CubeSTA-Project/CubeSTA.svg)](https://travis-ci.org/CubeSTA-Project/CubeSTA)
+
 ISN project
 
 This program is free software: you can redistribute it and/or modify it under
