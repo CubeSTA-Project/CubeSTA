@@ -1,7 +1,9 @@
 CubeSTA
 =======
 
-[![Build Status](https://travis-ci.org/CubeSTA-Project/CubeSTA.svg)](https://travis-ci.org/CubeSTA-Project/CubeSTA)
+[![Status : released](http://img.shields.io/badge/status-released-green.svg)](https://github.com/CubeSTA-Project/CubeSTA/releases)
+[![Version : 1.0](http://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/CubeSTA-Project/CubeSTA/releases/tag/v1.0)
+[![Version : 1.0](http://img.shields.io/badge/license-GNU%20GPL-lightgrey.svg)](http://www.gnu.org/licenses/)
 
 ISN project
 
